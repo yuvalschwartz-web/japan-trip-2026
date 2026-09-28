@@ -1,0 +1,2 @@
+Source: https://github.com/leonxlnx/taste-skill/tree/ce26fc25c0e5e8cab638f883de62d9a86ee5e45b/skills/taste-skill
+Installed 2026-09-28 after review. MIT license (see LICENSE).

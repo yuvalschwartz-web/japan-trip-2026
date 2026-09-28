@@ -1,0 +1,6 @@
+{
+  "name": "japan-trip-2026",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build.mjs" }
+}

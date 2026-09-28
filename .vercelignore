@@ -1,3 +1,12 @@
-source/
+src
+build.mjs
+node_modules
+.env*
+dev-server.mjs
+img/raw
+tools
+CLAUDE.md
+.claude
+source
 itinerary.md
 README.md

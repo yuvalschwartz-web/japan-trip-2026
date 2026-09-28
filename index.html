@@ -2,622 +2,2057 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="מסלול הטיול ליפן, 21/10–5/11/2026">
-<meta name="theme-color" content="#F3F4F7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#11141B" media="(prefers-color-scheme: dark)">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>יפן 2026</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#f3f5f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1316" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="יפן 2026">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<title>מסלול יפן 2026</title>
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<!-- launch screen for iPhone 17 Pro Max (440x956 pt @3x) -->
+<link rel="apple-touch-startup-image" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: light)" href="/icons/splash-1320x2868-light.png">
+<link rel="apple-touch-startup-image" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: dark)" href="/icons/splash-1320x2868-dark.png">
+<link rel="icon" href="/icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192">
+<meta name="robots" content="noindex">
+<meta name="description" content="מסלול הטיול ליפן, 21.10 עד 5.11.2026: יום אחרי יום, הזמנות, אוכל, קניות וציוד">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:title" content="יפן 2026">
+<meta property="og:description" content="המסלול, ההזמנות, האוכל והקניות לטיול, 21.10 עד 5.11">
+<meta property="og:image" content="https://japan-trip-2026-azure.vercel.app/img/inari.jpg">
+<meta property="og:url" content="https://japan-trip-2026-azure.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&display=swap">
-<style>
-:root{
-  --bg:#F3F4F7;
-  --surface:#FFFFFF;
-  --ink:#1B2130;
-  --muted:#5C6478;
-  --line:#DCE0E8;
-  --accent:#C7362F;
-  --accent-soft:#FBE9E7;
-  --add:#2F5E8C;
-  --add-soft:#EAF1F8;
-  --tokyo:#9DB4F5;
-  --kyoto:#F9C68A;
-  --kanazawa:#94E39A;
-  --takayama:#6B50A8;
-  --onsen:#F3EC8C;
-  --matsumoto:#F2A5A5;
-  --home:#C9CED8;
-  --shadow:0 1px 2px rgba(27,33,48,.06),0 4px 14px rgba(27,33,48,.05);
-  --display:"Frank Ruhl Libre","David Libre",Georgia,serif;
-  --body:"IBM Plex Sans Hebrew","Rubik","Segoe UI",Arial,sans-serif;
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Secular+One&display=swap">
+<style>:root{
+  --ground:#f3f5f4; --surface:#ffffff; --sunk:#e9edec; --ink:#172027; --ink2:#46535c; --muted:#5f6c75; --line:#d6dddc; --line2:#e4e9e8;
+  --tokyo:#2d5288; --tokyo-soft:#e1e8f3; --tokyo-ink:#234272;
+  --kyoto:#b3452c; --kyoto-soft:#f6e2dc; --kyoto-ink:#943620;
+  --kanazawa:#8c6b10; --kanazawa-soft:#f2e9cf; --kanazawa-ink:#6e540b;
+  --takayama:#3b6d44; --takayama-soft:#dfece1; --takayama-ink:#2d5634;
+  --onsen:#2a6f78; --onsen-soft:#dbebed; --onsen-ink:#1f5960;
+  --matsumoto:#6d4a7c; --matsumoto-soft:#ece2f0; --matsumoto-ink:#573a64;
+  --ok:#256b41; --ok-soft:#dff0e5; --warn:#9a5b00; --warn-soft:#fbecd3; --bad:#b02a2a;
+  --focus:#2d5288;
+  --r:14px; --r-sm:10px;
+  --shadow:0 1px 2px rgba(23,32,39,.06),0 6px 18px -8px rgba(23,32,39,.14);
+  --f-ui:"Assistant",system-ui,"Segoe UI",Arial,sans-serif;
+  --f-display:"Secular One","Assistant",system-ui,sans-serif;
+  --navh:58px;
+  --glass:rgba(255,255,255,.6); --glass-edge:rgba(23,32,39,.10); --glass-hi:rgba(255,255,255,.95); --glass-lo:rgba(255,255,255,.35);
+  --glass-sheen:rgba(255,255,255,.55); --glass-pill:rgba(23,32,39,.075); --glass-lens:rgba(255,255,255,.38);
+  --float:0 10px 30px -10px rgba(16,40,52,.28),0 2px 6px -2px rgba(16,40,52,.12);
+  --out:cubic-bezier(.2,.8,.2,1);
+  --snap:cubic-bezier(.3,1.15,.5,1);
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#11141B;--surface:#1A1F2A;--ink:#E7E9EF;--muted:#9BA3B5;--line:#2C3342;
-    --accent:#FF7B72;--accent-soft:#3A1F21;--add:#8DB8E6;--add-soft:#1B2838;
-    --tokyo:#6F8CE0;--kyoto:#D9964F;--kanazawa:#4FB45A;--takayama:#8A6FD0;--onsen:#C9BE3E;--matsumoto:#D46E6E;--home:#586070;
-    --shadow:none;
-  }
-}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --ground:#0e1316; --surface:#161d22; --sunk:#1c252b; --ink:#e6ebed; --ink2:#c2ccd1; --muted:#9aa7ae; --line:#2a353c; --line2:#222c32;
+  --tokyo:#86a8de; --tokyo-soft:#172338; --tokyo-ink:#aec6ee;
+  --kyoto:#ee8b72; --kyoto-soft:#381b14; --kyoto-ink:#f4ae9c;
+  --kanazawa:#d9b75c; --kanazawa-soft:#30270f; --kanazawa-ink:#e9cf89;
+  --takayama:#80c08a; --takayama-soft:#152c1a; --takayama-ink:#a8d8af;
+  --onsen:#6bbfc7; --onsen-soft:#102c2e; --onsen-ink:#9bd5db;
+  --matsumoto:#bb98cd; --matsumoto-soft:#2a1e32; --matsumoto-ink:#d4bce0;
+  --ok:#5cc288; --ok-soft:#15301f; --warn:#e3a54a; --warn-soft:#352612; --bad:#f07a7a;
+  --focus:#86a8de; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px -10px rgba(0,0,0,.6);
+  --glass:rgba(30,38,44,.58); --glass-edge:rgba(255,255,255,.10); --glass-hi:rgba(255,255,255,.22); --glass-lo:rgba(255,255,255,.06);
+  --glass-sheen:rgba(255,255,255,.10); --glass-pill:rgba(255,255,255,.11); --glass-lens:rgba(255,255,255,.16);
+  --float:0 12px 34px -10px rgba(0,0,0,.7),0 2px 8px -2px rgba(0,0,0,.5);
+}}
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --bg:#11141B;--surface:#1A1F2A;--ink:#E7E9EF;--muted:#9BA3B5;--line:#2C3342;
-  --accent:#FF7B72;--accent-soft:#3A1F21;--add:#8DB8E6;--add-soft:#1B2838;
-  --tokyo:#6F8CE0;--kyoto:#D9964F;--kanazawa:#4FB45A;--takayama:#8A6FD0;--onsen:#C9BE3E;--matsumoto:#D46E6E;--home:#586070;
-  --shadow:none;
+  --ground:#0e1316; --surface:#161d22; --sunk:#1c252b; --ink:#e6ebed; --ink2:#c2ccd1; --muted:#9aa7ae; --line:#2a353c; --line2:#222c32;
+  --tokyo:#86a8de; --tokyo-soft:#172338; --tokyo-ink:#aec6ee;
+  --kyoto:#ee8b72; --kyoto-soft:#381b14; --kyoto-ink:#f4ae9c;
+  --kanazawa:#d9b75c; --kanazawa-soft:#30270f; --kanazawa-ink:#e9cf89;
+  --takayama:#80c08a; --takayama-soft:#152c1a; --takayama-ink:#a8d8af;
+  --onsen:#6bbfc7; --onsen-soft:#102c2e; --onsen-ink:#9bd5db;
+  --matsumoto:#bb98cd; --matsumoto-soft:#2a1e32; --matsumoto-ink:#d4bce0;
+  --ok:#5cc288; --ok-soft:#15301f; --warn:#e3a54a; --warn-soft:#352612; --bad:#f07a7a;
+  --focus:#86a8de; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 20px -10px rgba(0,0,0,.6);
+  --glass:rgba(30,38,44,.58); --glass-edge:rgba(255,255,255,.10); --glass-hi:rgba(255,255,255,.22); --glass-lo:rgba(255,255,255,.06);
+  --glass-sheen:rgba(255,255,255,.10); --glass-pill:rgba(255,255,255,.11); --glass-lens:rgba(255,255,255,.16);
+  --float:0 12px 34px -10px rgba(0,0,0,.7),0 2px 8px -2px rgba(0,0,0,.5);
 }
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.6;margin:0}
-.wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:24px 64px}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.2}
-b,strong{font-weight:600}
-a{color:var(--add)}
-:focus-visible{outline:2px solid var(--add);outline-offset:2px}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ground);color:var(--ink);font:400 16px/1.55 var(--f-ui);margin:0}
+::selection{background:var(--tokyo-soft);color:var(--ink)}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px;border-radius:6px}
+.ic{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
 
-/* header */
-.top{display:grid;gap:10px;margin-bottom:18px}
-.top .eyebrow{font-size:12.5px;letter-spacing:.08em;color:var(--muted);font-weight:600}
-.top h1{font-size:clamp(34px,8vw,52px);font-weight:900}
-.top p{margin:0;color:var(--muted);max-width:60ch}
-.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--muted);margin-top:4px}
-.legend span{display:inline-flex;align-items:center;gap:6px}
-.sw{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
-.sw.own{background:var(--surface)}
-.sw.add{background:var(--add-soft);border:1px dashed var(--add)}
-.sw.red{background:var(--accent)}
+.wrap{max-width:720px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:0 calc(var(--navh) + 56px + env(safe-area-inset-bottom,0px))}
 
-/* route strip */
-.route{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;margin-inline:-16px;padding-inline:16px;border-bottom:1px solid var(--line)}
-.strip{display:grid;grid-template-columns:repeat(16,1fr);gap:3px}
-.strip a{display:grid;place-items:center;height:34px;border-radius:5px;text-decoration:none;color:#1B2130;font-size:11.5px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.05;text-align:center}
-.strip a small{display:block;font-weight:500;font-size:9.5px;opacity:.8}
-.strip a.dark{color:#fff}
-.cities{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:6px;font-size:11.5px;color:var(--muted)}
-.cities span{display:inline-flex;align-items:center;gap:5px}
-.cities i{width:9px;height:9px;border-radius:2px;display:inline-block}
+/* top */
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding-block:20px 14px}
+.top .brand{font:400 1.5rem/1.1 var(--f-display);letter-spacing:-.01em;margin:0}
+.top .brand .arr{color:var(--muted);font-family:var(--f-ui);font-weight:600;margin-inline:.25em}
+.top .sub{margin:4px 0 0;color:var(--muted);font-size:.95rem}
+#save{font-size:.82rem;color:var(--muted);white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+#save::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--muted)}
+#save[data-state=live]::before,#save[data-state=saved]::before{background:var(--ok)}
+#save[data-state=saving]::before{background:var(--warn)}
+#save[data-state=error]::before,#save[data-state=full]::before{background:var(--bad)}
+#save[data-state=readonly]::before,#save[data-state=local]::before{background:var(--line)}
 
-/* sections */
-section{margin-top:34px}
-section>h2{font-size:26px;font-weight:700;margin-bottom:12px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}
-
-/* checklist */
-.todo{list-style:none;margin:0;padding:6px 0}
-.todo li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:10px 14px;border-bottom:1px solid var(--line)}
-.todo li:last-child{border-bottom:0}
-.todo input{width:20px;height:20px;margin-top:3px;accent-color:var(--add)}
-.todo label{cursor:pointer}
-.todo .when{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:99px;margin-inline-end:6px;background:var(--accent-soft);color:var(--accent);font-variant-numeric:tabular-nums}
-.todo .when.soon{background:var(--add-soft);color:var(--add)}
-.todo li.done label{color:var(--muted);text-decoration:line-through}
-.todo .sub{display:block;font-size:13px;color:var(--muted)}
-
-/* city block */
-.city{margin-top:30px}
-.cityhead{display:grid;grid-template-columns:8px 1fr;gap:12px;align-items:stretch;margin-bottom:10px}
-.cityhead .bar{border-radius:4px}
-.cityhead h2{font-size:28px;font-weight:900}
-.cityhead .dates{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
-.hotel{margin-top:8px;font-size:14px;padding:10px 12px;border-radius:8px;background:var(--surface);border:1px solid var(--line)}
-.hotel .lbl{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--muted);display:block;margin-bottom:2px}
-.hotel ol{margin:0;padding-inline-start:20px}
-.hotel .pref{font-weight:600}
-.hotel .pref::after{content:"  · מודגש בגיליון";font-weight:400;font-size:12px;color:var(--muted)}
+/* calendar */
+.cal{display:grid;gap:10px;margin-bottom:18px}
+.calrow{display:grid;gap:6px}
+.calcity{font-weight:700;font-size:.95rem;display:flex;align-items:baseline;gap:8px}
+.calcity small{font-weight:400;color:var(--muted);font-size:.85rem}
+.tiles{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.tile{--c:var(--tokyo);--soft:var(--tokyo-soft);position:relative;display:grid;justify-items:center;align-content:center;gap:0;min-height:62px;padding:6px 2px 8px;border:0;cursor:pointer;
+  background:var(--surface);color:var(--ink);
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);
+  box-shadow:inset 0 0 0 1px var(--line);transition:background-color .18s ease,color .18s ease}
+/* a travel day: the region being left in the reading-start corner, the next one in the other */
+.tile.split{background:linear-gradient(225deg,var(--s1) 0 50%,var(--soft) 50% 100%)}
+.tile::after{content:"";position:absolute;top:0;inset-inline-end:0;width:17px;height:17px;background:linear-gradient(225deg,var(--c) 0 50%,transparent 50%);opacity:.9}
+[dir=rtl] .tile{clip-path:polygon(12px 0,100% 0,100% 100%,0 100%,0 12px)}
+[dir=rtl] .tile::after{inset-inline-end:auto;left:0;background:linear-gradient(135deg,var(--c) 0 50%,transparent 50%)}
+.tile .wd{font-size:.78rem;color:var(--muted);line-height:1.2}
+.tile .dn{font:400 1.45rem/1.05 var(--f-display);font-variant-numeric:tabular-nums}
+.tile .pips{position:absolute;inset-inline:8px;bottom:6px;height:3px;border-radius:2px;background:transparent}
+.tile .pips i{display:block;height:100%;width:calc(var(--p)*100%);background:var(--c);border-radius:2px;opacity:.55}
+@media (hover:hover){.tile:hover{background:var(--soft)}}
+@media (hover:hover){.tile.split:hover{background:linear-gradient(225deg,var(--s1) 0 50%,var(--soft) 50% 100%)}}
+.tile.sel{background:var(--c);color:#fff;box-shadow:none}
+.tile.sel .wd{color:rgba(255,255,255,.85)}
+.tile.sel .pips i{background:#fff}
+.tile.sel::after{opacity:0}
+.tile.split.sel{background:linear-gradient(225deg,var(--c1) 0 50%,var(--c) 50% 100%)}
+.tile.today .dn{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tile.sel{color:#0e1316}:root:not([data-theme="light"]) .tile.sel .wd{color:rgba(14,19,22,.75)}:root:not([data-theme="light"]) .tile.sel .pips i{background:#0e1316}}
+:root[data-theme="dark"] .tile.sel{color:#0e1316}
+:root[data-theme="dark"] .tile.sel .wd{color:rgba(14,19,22,.75)}
+:root[data-theme="dark"] .tile.sel .pips i{background:#0e1316}
 
 /* day */
-.day{margin-top:12px;overflow:hidden}
-.dayhead{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
-.num{display:grid;place-items:center;min-width:46px;height:46px;border-radius:8px;font-family:var(--display);font-weight:900;font-size:22px;color:#1B2130;font-variant-numeric:tabular-nums}
-.num.dark{color:#fff}
-.dayhead h3{font-size:19px;font-weight:700}
-.dayhead .meta{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
-.daybody{padding:10px 14px 14px;display:grid;gap:10px}
-.own ul,.add ul{margin:0;padding-inline-start:18px;display:grid;gap:4px}
-.own li::marker{color:var(--muted)}
-.tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.05em;color:var(--muted);margin-bottom:4px}
-.add{background:var(--add-soft);border:1px dashed var(--add);border-radius:8px;padding:10px 12px}
-.add .tag{color:var(--add)}
-.add li::marker{color:var(--add)}
-.t{font-variant-numeric:tabular-nums;font-weight:600;color:var(--add);white-space:nowrap}
-.note{font-size:13.5px;border-inline-start:3px solid var(--muted);padding-inline-start:10px;color:var(--muted)}
-.note b{color:var(--ink)}
-.red{color:var(--accent);font-weight:700}
-.orange{color:#C8740A;font-weight:600}
-.empty{color:var(--muted);font-style:italic;font-size:14px}
-.move{font-size:13.5px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
-.move .pill{background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:1px 10px;font-variant-numeric:tabular-nums}
+.day{--c:var(--tokyo);--soft:var(--tokyo-soft);--cink:var(--tokyo-ink)}
+.dayhead{display:flex;gap:14px;align-items:center;margin:6px 0 10px}
+.dayno{flex:none;width:58px;height:58px;display:grid;place-items:center;background:var(--c);color:#fff;
+  clip-path:polygon(12px 0,100% 0,100% 100%,0 100%,0 12px)}
+.day.split .dayno{background:linear-gradient(225deg,var(--c1) 0 50%,var(--c) 50% 100%)}
+.dayno span{font:400 .95rem/1 var(--f-display);text-align:center;padding-inline:4px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dayno{color:#0e1316}}
+:root[data-theme="dark"] .dayno{color:#0e1316}
+.dayhead h1{font:700 1.35rem/1.2 var(--f-ui);margin:0;text-wrap:balance}
+.daytitle{margin:2px 0 0;color:var(--cink);font-weight:600}
+.brief{margin:0 0 14px;color:var(--ink2);max-width:62ch}
 
-/* tables */
-.tbl{overflow-x:auto}
-table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
-th,td{text-align:start;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-size:12px;letter-spacing:.04em;color:var(--muted);font-weight:700}
-tfoot td{font-weight:700;border-bottom:0}
-.jr{font-size:11px;font-weight:700;padding:0 6px;border-radius:4px;background:var(--add-soft);color:var(--add)}
-.bus{font-size:11px;font-weight:700;padding:0 6px;border-radius:4px;background:var(--bg);color:var(--muted);border:1px solid var(--line)}
-.prose{padding:14px 16px;display:grid;gap:10px}
-.prose p{margin:0;max-width:65ch}
-.prose ul{margin:0;padding-inline-start:18px;display:grid;gap:6px}
-.opt{display:grid;gap:12px}
-.opt .card{padding:14px 16px}
-.opt h3{font-size:18px;margin-bottom:6px}
-.opt .rec{font-size:12px;font-weight:700;color:var(--add);background:var(--add-soft);border-radius:99px;padding:1px 8px;margin-inline-start:6px;font-family:var(--body)}
-.foot{margin-top:40px;font-size:12.5px;color:var(--muted)}
-@media (max-width:420px){
-  .strip a{height:30px;font-size:10.5px}
-  .strip a small{display:none}
+/* item rows */
+.timeline,.todo,.places,.areas,.checks{list-style:none;margin:0;padding:0}
+.timeline{display:grid;gap:0;border-top:1px solid var(--line2)}
+.it{display:grid;grid-template-columns:52px 44px minmax(0,1fr) 40px;gap:0 8px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line2)}
+.todo .it,.places .it{grid-template-columns:44px minmax(0,1fr) 40px}
+.it .tm{font-weight:700;font-variant-numeric:tabular-nums;padding-top:10px;color:var(--cink,var(--ink2));font-size:.95rem}
+.chk{width:44px;height:44px;display:grid;place-items:center;border:0;background:none;cursor:pointer;padding:0}
+.chk .ic{width:26px;height:26px;padding:3px;border-radius:8px;box-shadow:inset 0 0 0 1.75px var(--line);stroke:transparent;stroke-width:2.5;transition:background-color .15s ease,box-shadow .15s ease}
+@media (hover:hover){.chk:hover .ic{box-shadow:inset 0 0 0 1.75px var(--muted)}}
+.chk[aria-checked=true] .ic{background:var(--ok);box-shadow:none;stroke:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chk[aria-checked=true] .ic{stroke:#0e1316}}
+:root[data-theme="dark"] .chk[aria-checked=true] .ic{stroke:#0e1316}
+.it .body{min-width:0;padding-top:8px}
+.ttl{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;font-weight:700;line-height:1.35}
+.ttl .lock{width:16px;height:16px;color:var(--cink,var(--muted))}
+.it.done .ttl>span:first-of-type,.it.done .ttl>span{color:var(--muted)}
+.it.done .ttl>span:not(.pill):not(.price){text-decoration:line-through;text-decoration-thickness:1.5px;text-decoration-color:var(--muted)}
+.it.fixed .ttl{color:var(--cink)}
+.desc{margin:4px 0 0;color:var(--ink2);font-size:.95rem;max-width:62ch}
+.desc b{color:var(--ink);font-weight:700}
+.unote{display:flex;gap:6px;margin:6px 0 0;padding:6px 10px;background:var(--sunk);border-radius:var(--r-sm);font-size:.92rem;color:var(--ink)}
+.unote .ic{width:16px;height:16px;margin-top:3px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tag{display:inline-flex;align-items:center;gap:4px;font-size:.8rem;font-weight:600;padding:2px 8px 2px 9px;border-radius:999px;background:var(--sunk);color:var(--ink2)}
+.tag .ic{width:14px;height:14px}
+/* categories stay neutral; color is reserved for state: have a ticket (green), still to book (amber) */
+.t-ticket{background:var(--ok-soft);color:var(--ok)} .t-book{background:var(--warn-soft);color:var(--warn)}
+
+.gf-full{background:var(--ok-soft);color:var(--ok)} .gf-menu{background:none;color:var(--ok);box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--ok) 55%,transparent)} .gf-opts{background:var(--sunk);color:var(--ink2)}
+.links{display:flex;flex-wrap:wrap;gap:0 18px;margin-top:2px}
+.links a,.linkbtn{display:inline-flex;align-items:center;gap:5px;min-height:44px;font-size:.92rem;font-weight:600;color:var(--cink,var(--tokyo-ink));text-decoration:none;border:0;background:none;padding:0;cursor:pointer}
+.links a .ic,.linkbtn .ic{width:17px;height:17px}
+@media (hover:hover){.links a:hover,.linkbtn:hover{text-decoration:underline;text-underline-offset:3px}}
+.more{width:40px;height:44px;display:grid;place-items:center;border:0;background:none;color:var(--muted);cursor:pointer;border-radius:10px}
+.more .ic{width:18px;height:18px}
+@media (hover:hover){.more:hover{background:var(--sunk);color:var(--ink)}}
+.more.sm{height:40px}
+body.ro .more,body.ro .addbtn,body.ro [data-bnote]{display:none}
+body.ro .chk{pointer-events:none}
+.pill{font-size:.78rem;font-weight:700;padding:1px 8px;border-radius:999px}
+.pill.ok{background:var(--ok-soft);color:var(--ok)} .pill.warn{background:var(--warn-soft);color:var(--warn)}
+.price{font-weight:600;color:var(--muted);font-size:.85rem;letter-spacing:.04em}
+
+/* editor */
+.it.editing{display:block;padding:12px 0}
+.ed{display:flex;flex-wrap:wrap;gap:10px;padding:14px;background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow)}
+.ed label{display:grid;gap:4px;font-size:.85rem;font-weight:600;color:var(--ink2)}
+.ed label.grow{flex:1 1 220px} .ed label.full{flex:1 1 100%}
+.ed input,.ed textarea,.notes textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--ground);border:1px solid var(--line);border-radius:var(--r-sm);padding:9px 11px;min-height:44px;width:100%}
+.ed input[type=time]{width:auto;min-width:0}
+.ed textarea,.notes textarea{resize:vertical;line-height:1.45}
+.ed input:focus,.ed textarea:focus,.notes textarea:focus{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px color-mix(in srgb,var(--focus) 25%,transparent)}
+.edact{display:flex;flex-wrap:wrap;gap:8px;flex:1 1 100%}
+.primary,.ghost,.danger,.addbtn{min-height:44px;padding:0 16px;border-radius:12px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;border:0}
+.primary{background:var(--ink);color:var(--ground)}
+.ghost{background:var(--sunk);color:var(--ink)}
+.danger{background:none;color:var(--bad);margin-inline-start:auto}
+@media (hover:hover){.primary:hover{opacity:.9} .ghost:hover{background:var(--line2)}}
+.reset{flex:1 1 100%;min-height:32px;color:var(--muted)}
+.addbtn{width:100%;justify-content:center;margin-top:10px;background:none;color:var(--ink2);box-shadow:inset 0 0 0 1.5px var(--line);border-radius:12px}
+@media (hover:hover){.addbtn:hover{box-shadow:inset 0 0 0 1.5px var(--muted);color:var(--ink)}}
+.addbtn .ic{width:18px;height:18px}
+
+.notes{display:grid;gap:6px;margin-top:22px;font-weight:700;font-size:.95rem}
+.notes textarea{font-weight:400}
+.daynav{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
+.daynav .ghost .ic{width:18px;height:18px}
+
+/* pages */
+.pageh{font:400 1.7rem/1.15 var(--f-display);margin:8px 0 6px;letter-spacing:-.01em}
+.lede{margin:0 0 16px;color:var(--ink2);max-width:62ch}
+.sech{font:700 1.15rem/1.3 var(--f-ui);margin:28px 0 8px}
+
+/* tickets */
+.tickets{display:grid;gap:12px}
+.ticket{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:14px 16px;position:relative}
+.tk-top{display:flex;gap:12px;align-items:flex-start}
+.tk-top>.ic{width:26px;height:26px;color:var(--tokyo-ink);margin-top:2px}
+.tk-top h3{margin:0;font-size:1.08rem;line-height:1.3}
+.tk-top p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+.tk-route{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;margin:14px 0 10px;padding-block:12px;border-block:1.5px dashed var(--line)}
+.tk-route>div:not(.tk-mid){display:grid}
+.tk-route b{font:400 1.6rem/1 var(--f-display);font-variant-numeric:tabular-nums}
+.tk-route span{font-size:.85rem;color:var(--muted)}
+.tk-route>div:last-child{text-align:end}
+.tk-mid{text-align:center;font-size:.82rem;color:var(--muted);position:relative}
+.tk-mid::before{content:"";display:block;height:1.5px;background:var(--line);margin-bottom:4px}
+.tk-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px 16px;margin:10px 0 0}
+.tk-facts div{min-width:0}
+.tk-facts dt{font-size:.8rem;color:var(--muted)}
+.tk-facts dd{margin:0;font-weight:600;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.code{font-variant-numeric:tabular-nums;letter-spacing:.06em;direction:ltr;unicode-bidi:isolate}
+.copy{width:44px;height:44px;display:inline-grid;place-items:center;border:0;background:none;color:var(--muted);cursor:pointer;border-radius:8px}
+@media (hover:hover){.copy:hover{background:var(--sunk);color:var(--ink)}}
+.copy .ic{width:17px;height:17px}
+.copy.copied{color:var(--ok)}
+.missing{display:flex;gap:6px;align-items:flex-start;margin:10px 0 0;padding:8px 10px;border-radius:var(--r-sm);background:var(--warn-soft);color:var(--warn);font-weight:600;font-size:.92rem}
+.missing .ic{width:18px;height:18px;margin-top:2px}
+.ticket .ed{box-shadow:none;background:var(--ground);margin-top:10px}
+
+/* segmented */
+.seg{position:relative;display:flex;gap:4px;padding:4px;background:var(--sunk);border-radius:12px;margin:18px 0 4px}
+.seg button{position:relative;z-index:1;flex:1 1 0;min-width:0;min-height:40px;border:0;border-radius:9px;background:none;font-weight:700;color:var(--ink2);cursor:pointer;white-space:nowrap}
+.seg button[aria-selected=true]{color:var(--ink)}
+.seg-thumb{--w:calc((100% - 8px - (var(--sn) - 1) * 4px) / var(--sn));position:absolute;inset-block:4px;inset-inline-start:calc(4px + var(--si) * (var(--w) + 4px));width:var(--w);border-radius:9px;background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+
+/* food */
+details{border-radius:var(--r)}
+summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;font-weight:700;min-height:48px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";margin-inline-start:auto;width:9px;height:9px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-3px) rotate(45deg);transition:transform .18s ease}
+details[open]>summary::after{transform:translateY(2px) rotate(-135deg)}
+.waiter,.watch,.inf,.box{background:var(--surface);box-shadow:var(--shadow);padding:4px 16px;margin-bottom:10px}
+.waiter[open],.watch[open],.inf[open]{padding-bottom:14px}
+.phr{display:grid;gap:10px}
+.ph{display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:0 6px;padding:10px 12px;background:var(--ground);border-radius:var(--r-sm)}
+.ph .es{margin:0;font-weight:700;font-size:1.08rem;text-align:left;grid-column:1;line-height:1.4}
+.ph .he{margin:2px 0 0;color:var(--muted);font-size:.9rem;grid-column:1}
+.ph .copy{grid-column:2;grid-row:1/3;align-self:center}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:4px 20px}
+.cols h3{font-size:.98rem;margin:8px 0 4px}
+.cols ul{margin:0;padding-inline-start:18px;color:var(--ink2);font-size:.94rem}
+.cols li{margin:3px 0}
+
+/* shopping */
+.areas{display:grid;gap:0;border-top:1px solid var(--line2);margin-top:8px}
+.area{padding:14px 0;border-bottom:1px solid var(--line2)}
+.area h3{margin:0;font-size:1.05rem}
+.hours{display:flex;gap:6px;margin:6px 0 0;font-size:.9rem;color:var(--ink2)}
+.hours .ic{width:16px;height:16px;margin-top:3px;color:var(--muted)}
+.box{padding:14px 16px;margin-top:22px}
+.box h2{display:flex;align-items:center;gap:8px;font-size:1.05rem;margin:0 0 6px}
+.steps{margin:0;padding-inline-start:20px;color:var(--ink2)}
+.steps li{margin:6px 0}
+
+/* packing */
+.packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.pack{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:8px 12px 12px}
+.pack h3{display:flex;align-items:center;gap:8px;margin:4px 4px 2px;font-size:1rem}
+.pack h3>span:first-child{flex:1;min-width:0}
+.pack h3 .more{margin-inline-end:-4px}
+.pack-ed{padding:0}
+.pack-ed .ed{box-shadow:none}
+.cnt{font-weight:600;color:var(--muted);font-size:.85rem;font-variant-numeric:tabular-nums}
+.ck{display:grid;grid-template-columns:44px minmax(0,1fr) 40px;align-items:center;border-bottom:1px solid var(--line2);min-height:46px}
+.ck:last-child{border-bottom:0}
+.ck small{display:block;color:var(--muted);font-size:.82rem}
+.ck.done>span{color:var(--muted);text-decoration:line-through}
+.pack .addbtn{margin-top:8px;min-height:40px}
+.pack .it.editing{padding:8px 0}
+.pack .ed{box-shadow:none;background:var(--ground)}
+
+.info{display:grid;gap:0}
+.inf summary .ic{color:var(--muted)}
+.inf-b{color:var(--ink2);font-size:.95rem}
+.inf-b p{margin:6px 0} .inf-b ul{margin:6px 0;padding-inline-start:20px} .inf-b li{margin:4px 0}
+.inf-b b{color:var(--ink)}
+.inf-b a{color:var(--tokyo-ink);font-weight:600}
+.sources{color:var(--muted);font-size:.85rem;margin-top:18px}
+bdi,.ltr{unicode-bidi:isolate}
+
+/* nav: a floating Liquid Glass tab bar as in iOS 26. What scrolls under it shows through, blurred;
+   a glass pill sits on the current tab. Press and slide along the bar: the pill grows into a lens,
+   follows the finger, and the tab under it opens on release. */
+.nav{position:fixed;z-index:10;inset-inline:max(14px,env(safe-area-inset-left,0px));bottom:max(10px,calc(env(safe-area-inset-bottom,0px) - 12px));
+  max-width:520px;margin:0 auto;border-radius:999px;isolation:isolate;
+  background:var(--glass);-webkit-backdrop-filter:blur(12px) saturate(1.9) brightness(1.04);backdrop-filter:blur(12px) saturate(1.9) brightness(1.04);
+  box-shadow:inset 0 0 0 .5px var(--glass-edge),inset 0 1px 1px var(--glass-hi),inset 0 -1px 1px var(--glass-lo),var(--float);
+  transition:translate .22s var(--out),opacity .18s ease}
+/* the sheen along the top rim */
+.nav::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:linear-gradient(to bottom,var(--glass-sheen),transparent 42%)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.nav{background:color-mix(in srgb,var(--surface) 96%,transparent)}}
+.nav-in{position:relative;display:grid;grid-template-columns:repeat(5,1fr);padding:4px;touch-action:none}
+.nav-ind{position:absolute;inset-block:4px;inset-inline-start:4px;width:calc((100% - 8px) / 5);border-radius:999px;pointer-events:none;
+  background:var(--glass-pill);box-shadow:inset 0 1px 0 var(--glass-lo);
+  translate:calc(var(--ti,0) * -100%) 0;transition:translate .3s var(--snap),scale .2s var(--out),background-color .2s ease,box-shadow .2s ease}
+[dir=ltr] .nav-ind{translate:calc(var(--ti,0) * 100%) 0}
+.nav-in.press .nav-ind{scale:1.1 1.16;background:var(--glass-lens);box-shadow:inset 0 0 0 .5px var(--glass-edge),inset 0 1px 1px var(--glass-hi),0 6px 16px -6px rgba(0,0,0,.3)}
+.nav-in.drag .nav-ind{transition:scale .2s var(--out),background-color .2s ease,box-shadow .2s ease}
+.nav button{position:relative;z-index:1;min-height:var(--navh);border:0;background:none;display:grid;justify-items:center;align-content:center;gap:1px;font-size:.76rem;font-weight:600;color:var(--ink2);cursor:pointer;padding:4px 0;border-radius:999px;transition:color .15s ease}
+.nav button .ic{width:24px;height:24px}
+.nav button[aria-current=page]{color:var(--tokyo)}
+.nav button[aria-current=page] .ic{stroke-width:2.1}
+/* typing: the keyboard takes the bottom of the screen, so the bar steps aside */
+body:has(#view :is(input,textarea):focus) .nav{translate:0 calc(100% + 40px);opacity:0;pointer-events:none}
+
+@media (min-width:640px){
+  .tile{min-height:70px}
+  .tile .dn{font-size:1.7rem}
+  .top .brand{font-size:1.8rem}
 }
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (max-width:360px){
+  .tiles{gap:4px}
+  .tile .dn{font-size:1.25rem}
+  .it{grid-template-columns:44px 40px minmax(0,1fr) 36px;gap:0 6px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
-/* app */
-.status{font-size:14px;font-weight:600;color:var(--add);background:var(--add-soft);border-radius:8px;padding:8px 12px;justify-self:start}
-.strip a.today{outline:2px solid var(--ink);outline-offset:1px}
-.day.today{border-color:var(--ink);border-width:2px}
-.day.today .dayhead h3::after{content:"היום";font-family:var(--body);font-size:12px;font-weight:700;color:var(--surface);background:var(--ink);border-radius:99px;padding:1px 9px;margin-inline-start:8px;vertical-align:middle}
-.day,.city,section{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 80px)}
-.fab{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));inset-inline-start:16px;z-index:6;background:var(--ink);color:var(--surface);border:0;border-radius:99px;padding:10px 18px;font:600 15px var(--body);box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer}
-.offline{font-size:12.5px;color:var(--muted)}
+/* app shell additions */
+.wrap{padding-top:env(safe-area-inset-top,0px)}
+#save[data-state=offline]::before{background:var(--warn)}
+#save[data-state=nosync]::before{background:var(--warn)}
+#install{display:flex;gap:12px;align-items:center;margin:0 0 16px;padding:12px 14px;background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow)}
+#install[hidden]{display:none}
+#install img{width:44px;height:44px;border-radius:10px;flex:none}
+#install p{margin:0;font-size:.92rem;color:var(--ink2);flex:1}
+#install b{color:var(--ink)}
+#install .primary{min-height:40px;padding:0 14px;flex:none}
+#install .x{width:40px;height:40px;border:0;background:none;color:var(--muted);cursor:pointer;border-radius:10px;flex:none;display:grid;place-items:center}
+@media (hover:hover){#install .x:hover{background:var(--sunk)}}
+
+/* booking categories */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 6px}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;border:0;background:var(--sunk);color:var(--ink2);font-weight:700;font-size:.92rem;cursor:pointer}
+.chip .ic{width:17px;height:17px}
+@media (hover:hover){.chip:hover{background:var(--line2)}}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--ground)}
+.cnt-dot{min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--warn-soft);color:var(--warn);font-size:.75rem;display:inline-grid;place-items:center;font-variant-numeric:tabular-nums}
+.chip[aria-pressed=true] .cnt-dot{background:var(--warn);color:var(--ground)}
+.bcat-h{display:flex;align-items:center;gap:8px}
+.bcat-h .ic{width:22px;height:22px;color:var(--tokyo-ink)}
+.subh{font-size:.95rem;color:var(--ink2);margin:16px 0 4px}
+
+/* undo bar + jump highlight */
+#toast{position:fixed;z-index:20;inset-inline:16px;bottom:calc(var(--navh) + 30px + max(10px,calc(env(safe-area-inset-bottom,0px) - 12px)));max-width:560px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:6px 6px 6px 16px;padding-inline-start:16px;border-radius:16px;background:var(--ink);color:var(--ground);box-shadow:var(--float);font-weight:600}
+#toast[hidden]{display:none}
+#toast span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#toast button{flex:none;min-height:44px;padding:0 14px;border:0;border-radius:9px;background:none;color:inherit;font-weight:700;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.flash{animation:flash 1.8s ease}
+@keyframes flash{0%,40%{box-shadow:0 0 0 3px var(--focus)}100%{box-shadow:0 0 0 3px transparent}}
+
+/* photos */
+.pic{display:block;position:relative;width:100%;max-width:460px;aspect-ratio:16/9;margin:10px 0 4px;padding:0;border:0;border-radius:12px;overflow:hidden;background:var(--sunk);cursor:zoom-in}
+.pic img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+@media (hover:hover){.pic:hover img{transform:scale(1.03)}}
+.it.done .pic img{filter:grayscale(.7);opacity:.6}
+.area .pic{max-width:none}
+.ticket .pic.wide{width:calc(100% + 32px);max-width:none;margin:-14px -16px 14px;border-radius:var(--r) var(--r) 0 0;aspect-ratio:2/1}
+
+/* day cover */
+.dayhead.has-hero{display:block;position:relative;margin:4px 0 14px;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.pic.hero{max-width:none;margin:0;border-radius:0;aspect-ratio:16/10;max-height:360px}
+.dayhead-t{display:flex;gap:14px;align-items:center}
+.has-hero .dayhead-t{position:absolute;inset-inline:0;bottom:0;align-items:flex-end;padding:56px 14px 14px;background:linear-gradient(to top,rgba(8,12,16,.82),rgba(8,12,16,.45) 55%,transparent);color:#fff;pointer-events:none}
+.has-hero h1{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.has-hero .daytitle{color:rgba(255,255,255,.92)}
+.has-hero .dayno{width:52px;height:52px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .has-hero .dayno{color:#0e1316}}
+
+/* photo viewer */
+#lb{padding:0;border:0;background:transparent;max-width:min(94vw,900px);max-height:92vh;overflow:visible;color:#fff}
+#lb::backdrop{background:rgba(6,9,12,.94)}
+#lb figure{margin:0;display:grid;gap:10px}
+#lb img{display:block;max-width:100%;max-height:78vh;margin:0 auto;border-radius:12px;object-fit:contain}
+#lb figcaption{display:grid;gap:2px;padding:12px 14px;border-radius:12px;background:rgba(14,19,22,.92);text-align:start;font-size:.9rem}
+#lb figcaption b{font-size:1.05rem}
+#lb figcaption span{color:rgba(255,255,255,.75)}
+#lb figcaption a{color:#fff}
+.lb-x{position:absolute;top:-52px;inset-inline-end:0;width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;cursor:pointer}
+.lb-x .ic{width:22px;height:22px}
+.credits{padding-inline-start:18px;font-size:.88rem}
+.credits li{margin:3px 0}
+
+/* header: city names in their calendar colors */
+/* region colors: tiles, the day, its stations, labels */
+.r-tokyo{--c:var(--tokyo);--soft:var(--tokyo-soft);--cink:var(--tokyo-ink)}
+.r-kyoto{--c:var(--kyoto);--soft:var(--kyoto-soft);--cink:var(--kyoto-ink)}
+.r-kanazawa{--c:var(--kanazawa);--soft:var(--kanazawa-soft);--cink:var(--kanazawa-ink)}
+.r-takayama{--c:var(--takayama);--soft:var(--takayama-soft);--cink:var(--takayama-ink)}
+.r-onsen{--c:var(--onsen);--soft:var(--onsen-soft);--cink:var(--onsen-ink)}
+.r-matsumoto{--c:var(--matsumoto);--soft:var(--matsumoto-soft);--cink:var(--matsumoto-ink)}
+.c-tokyo{color:var(--tokyo-ink)} .c-kyoto{color:var(--kyoto-ink)} .c-kanazawa{color:var(--kanazawa-ink)} .c-takayama{color:var(--takayama-ink)} .c-onsen{color:var(--onsen-ink)} .c-matsumoto{color:var(--matsumoto-ink)}
+
+/* the day as a metro line: the line runs through the check column; checking a stop fills it */
+.timeline{--tmw:52px;--gap:8px;--mid:34px;border-top:0;margin-top:4px}
+.timeline .it{position:relative;border-bottom:0;padding:12px 0 14px}
+.timeline .it::before{content:"";position:absolute;top:0;bottom:0;inset-inline-start:calc(var(--tmw) + var(--gap) + 20px);width:4px;border-radius:2px;background:var(--c);opacity:.28}
+.timeline .it.done::before{opacity:1}
+.timeline .it:first-child::before{top:var(--mid)}
+.timeline .it:last-child::before{bottom:auto;height:var(--mid)}
+.timeline .it:only-child::before{display:none}
+.timeline .chk{position:relative;z-index:1}
+.timeline .chk .ic{width:28px;height:28px;padding:4px;border-radius:50%;background:var(--ground);box-shadow:inset 0 0 0 3.5px var(--c)}
+@media (hover:hover){.timeline .chk:hover .ic{background:var(--soft)}}
+.timeline .chk[aria-checked=true] .ic{background:var(--c);box-shadow:none}
+.timeline .it.fixed .chk .ic{box-shadow:inset 0 0 0 3.5px var(--c),0 0 0 3px var(--ground),0 0 0 5.5px var(--c)}
+.timeline .it.minor .chk .ic{width:20px;height:20px;padding:2px;box-shadow:inset 0 0 0 3px var(--c)}
+.timeline .it.minor .ttl{font-weight:600}
+.timeline .it .tm{color:var(--cink)}
+.pill.now{background:var(--c);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pill.now{color:#0e1316}}
+:root[data-theme="dark"] .pill.now{color:#0e1316}
+.timeline .it.next .chk .ic{animation:ping 1.6s ease-out 3}
+@keyframes ping{0%{box-shadow:inset 0 0 0 3.5px var(--c),0 0 0 0 color-mix(in srgb,var(--c) 55%,transparent)}100%{box-shadow:inset 0 0 0 3.5px var(--c),0 0 0 12px transparent}}
+.timeline .it.editing::before{display:none}
+@media (max-width:360px){.timeline{--tmw:44px;--gap:6px}.timeline .it::before{inset-inline-start:calc(var(--tmw) + var(--gap) + 18px)}}
+
+/* previous / next day */
+.daynav{align-items:stretch}
+.dnav{--c:var(--tokyo);flex:0 1 50%;min-height:60px;display:flex;align-items:center;gap:8px;padding:8px 12px;border:0;border-radius:12px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);color:var(--ink);text-align:start;cursor:pointer}
+@media (hover:hover){.dnav:hover{box-shadow:inset 0 0 0 1.5px var(--c)}}
+.dnav span{display:grid;min-width:0;flex:1}
+.dnav small{color:var(--muted);font-size:.8rem}
+.dnav b{font-size:.92rem;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.dnav .ic{width:18px;height:18px;color:var(--c)}
+.dnav.next{margin-inline-start:auto}
+
+/* taste pass */
+.desc,.brief,.lede,.inf-b p{text-wrap:pretty}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.primary,.ghost,.addbtn,.chip,.seg button,.dnav,.tile,.nav button,.linkbtn,.copy,.more,.pic,#toast button{transition:transform .12s ease,background-color .18s ease,box-shadow .18s ease}
+.primary:active,.ghost:active,.addbtn:active,.chip:active,.seg button:active,.dnav:active,.nav button:active,#toast button:active{transform:scale(.97)}
+.tile:active{transform:translateY(1px)}
+.chk:active .ic,.copy:active,.more:active{transform:scale(.92)}
+/* illustration note sits under the photo, not on it */
+.pic-cap{display:block;margin:0 0 2px;font-size:.78rem;color:var(--muted)}
+.empty{margin:6px 4px 2px;color:var(--muted);font-size:.92rem}
+.skip{position:absolute;inset-inline-start:12px;top:-60px;z-index:30;padding:10px 14px;border-radius:10px;background:var(--ink);color:var(--ground);font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+#view:focus{outline:none}
+#lb figcaption small{color:rgba(255,255,255,.75);font-size:.85rem}
+.credits small{display:block;color:var(--muted)}
+
+/* iPhone pass: touch feel */
+html{-webkit-tap-highlight-color:transparent;background:var(--ground)}
+button,.tile,.nav,.chip,summary{touch-action:manipulation;-webkit-user-select:none;user-select:none}
+img{-webkit-user-drag:none;-webkit-touch-callout:none}
+.swipehint{display:none;margin:10px 0 0;text-align:center;font-size:.82rem;color:var(--muted)}
+@media (pointer:coarse){.swipehint{display:block}}
+
+/* motion: short and quiet. Presses answer at once, nothing waits on an animation, and only
+   transform and opacity move, so the compositor can run it at the screen's refresh rate. */
+.primary,.ghost,.addbtn,.chip,.seg button,.dnav,.tile,.linkbtn,.copy,.more,.pic,#toast button{transition:transform .16s var(--out),background-color .15s ease,box-shadow .15s ease,color .15s ease}
+.primary:active,.ghost:active,.addbtn:active,.chip:active,.seg button:active,.dnav:active,#toast button:active{transform:scale(.97);transition-duration:.05s}
+.tile:active{transform:scale(.95);transition-duration:.05s}
+.pic:active{transform:scale(.985);transition-duration:.05s}
+.nav button:active .ic{transform:scale(.9)}
+.nav button .ic{transition:transform .16s var(--out)}
+.seg-thumb{will-change:transform}
+
+/* calendar: the chosen day gives a small nod */
+.tile.sel.pop{animation:tpop .22s var(--out)}
+@keyframes tpop{from{transform:scale(.93)}}
+.tile.today:not(.sel){box-shadow:inset 0 0 0 2px var(--c)}
+
+/* checking a stop: the tick draws and the line fills */
+.chk.just .ic{stroke-dasharray:20;animation:cpop .2s var(--out),draw .22s var(--out) backwards}
+.chk.just[aria-checked=false] .ic{animation:cpop .18s var(--out)}
+@keyframes cpop{from{transform:scale(.8)}}
+@keyframes draw{from{stroke-dashoffset:20}to{stroke-dashoffset:0}}
+.timeline .it.just.done::before{transform-origin:top;animation:fill .28s var(--out)}
+@keyframes fill{from{transform:scaleY(0)}}
+.burst{position:fixed;z-index:40;width:0;height:0;pointer-events:none}
+.burst i{position:absolute;left:-4px;top:-6px;width:8px;height:12px;border-radius:2px}
+
+/* status dot breathes while saving */
+#save[data-state=saving]::before,#save[data-state=connecting]::before{animation:breathe 1s ease-in-out infinite alternate}
+@keyframes breathe{to{opacity:.3}}
+
+/* toast */
+#toast:not([hidden]){animation:toastin .2s var(--out)}
+#toast.out{animation:toastout .15s ease-in forwards}
+@keyframes toastin{from{opacity:0;transform:translateY(12px)}}
+@keyframes toastout{to{opacity:0;transform:translateY(8px)}}
+
+/* opening a card */
+details.opening>summary~*{animation:fadein .18s ease-out}
+
+/* photo viewer: grows out of the tapped photo, swipe down to close */
+#lb[open]{animation:lbin .2s var(--out)}
+#lb[open]::backdrop{animation:fadein .2s ease}
+#lb.out{animation:lbout .15s ease-in forwards}
+#lb.out::backdrop{animation:fadeout .15s ease-in forwards}
+#lb figure{touch-action:none}
+@keyframes lbin{from{opacity:0;transform:scale(.96)}}
+@keyframes lbout{to{opacity:0;transform:scale(.97)}}
+@keyframes fadein{from{opacity:0}}
+@keyframes fadeout{to{opacity:0}}
+::view-transition-group(photo){animation-duration:.26s;animation-timing-function:var(--out)}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.2s}
+::view-transition-old(photo),::view-transition-new(photo){height:100%;object-fit:cover}
+
+/* swiping between days and tabs: the page follows the finger */
+#view,.day{touch-action:pan-y;touch-action:pan-y pinch-zoom}
+#view.swiping,.day.swiping{will-change:transform,opacity}
+
+@media (prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
+
+/* Japan: the sheet vs. suggestions. A stop from the sheet is a solid station; a suggestion is a dashed one on
+   a dashed stretch of line, with a dashed "הצעה" label, as the old page drew suggestions in a dashed frame. */
+.calcity{flex-wrap:wrap;gap:2px 8px}
+.calcity small span{font-weight:600}
+.legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin:2px 0 0;font-size:.82rem;color:var(--muted)}
+.legend>span{display:inline-flex;align-items:center;gap:6px}
+.legend .tag{margin:0;font-size:.76rem}
+.lg{display:inline-block;width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 3px var(--ink2)}
+.lg.sug{box-shadow:none;border:2px dashed var(--ink2)}
+.pill.sug{padding:0 7px;border:1.5px dashed currentColor;color:var(--cink,var(--tokyo-ink));font-weight:700;background:none}
+.t-red{background:color-mix(in srgb,var(--bad) 13%,transparent);color:var(--bad)}
+.t-check{background:var(--warn-soft);color:var(--warn)}
+.timeline .it.sug::before{background:repeating-linear-gradient(to bottom,var(--c) 0 6px,transparent 6px 11px)}
+.timeline .it.sug .chk .ic{box-shadow:none;border:2.5px dashed var(--c)}
+.timeline .it.sug.minor .chk .ic{border-width:2px}
+.timeline .it.sug .chk[aria-checked=true] .ic{border-style:solid;background:var(--c)}
+.timeline .it.sug.next .chk .ic{animation:none}
+.tm.when{font-weight:600;font-size:.85rem;line-height:1.3}
+.sheet{display:flex;flex-wrap:wrap;gap:2px 8px;margin:0 0 8px;font-size:.88rem;color:var(--muted)}
+.sheet>span{font-weight:700;color:var(--ink2)}
+.tip{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline;margin:6px 0 0;font-size:.92rem;color:var(--ink2);max-width:62ch}
+.codeline{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:4px 0 0;font-size:.92rem;color:var(--ink2)}
+.codeline .code{font-weight:700;color:var(--ink)}
+.ph .es[lang=ja]{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",system-ui,sans-serif;font-weight:600;text-align:left}
+.ph .ro{margin:2px 0 0;grid-column:1;text-align:left;color:var(--ink2);font-size:.9rem}
+.ph .copy{grid-row:1/4}
+.tbl{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:.9rem}
+.tbl th{padding:4px 6px 6px;text-align:start;font-size:.8rem;font-weight:600;color:var(--muted)}
+.tbl td{padding:8px 6px;border-top:1px solid var(--line2);vertical-align:top}
+.tbl td:first-child,.tbl td:last-child{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink)}
+.tbl td:last-child,.tbl th:last-child{text-align:end}
+.tbl tfoot td{border-top:1.5px solid var(--line)}
+.k{display:inline-block;margin-inline-start:4px;padding:0 6px;border-radius:999px;background:var(--sunk);color:var(--ink2);font-size:.72rem;font-weight:700;white-space:nowrap}
+.k.jr{background:var(--ok-soft);color:var(--ok)}
+.tip.allsug{margin:0 0 12px}
+.opts{margin:4px 0 6px;padding-inline-start:20px;color:var(--ink2)}
+.opts li{margin:2px 0}
+.opts li.pref{color:var(--ink);font-weight:700}
+.opts small{margin-inline-start:6px;font-size:.78rem;font-weight:600;color:var(--muted)}
+/* English place names inside Hebrew lists: each name is its own run, so commas don't shuffle them */
+.desc b,.tip b,.brief b,.inf-b b,.steps b,.ttl bdi{unicode-bidi:isolate}
+/* the three-city route is longer than "ברצלונה ← מדריד": the sync status may take two short lines */
+.top>div{min-width:0}
+#save{white-space:normal;max-width:8.5em;line-height:1.25;text-align:start;flex:0 1 auto}
+#save::before{flex:none}
+@media (max-width:360px){.top .brand{font-size:1.3rem}}
 </style>
 </head>
 <body>
-
-<div class="wrap" dir="rtl" lang="he">
-
-<header class="top">
-  <div class="eyebrow">21/10 – 5/11/2026 · 16 ימים · 6 אזורים</div>
-  <h1>יפן 2026</h1>
-  <p>התכנון שלכם מהגיליון נשאר בדיוק כמו שהוא. בימים שהיו ריקים או רשומים בשורה אחת הוספתי פירוט, וכל תוספת שלי מסומנת כ״הצעה״ במסגרת כחולה מקווקוות.</p>
-  <div class="legend">
-    <span><i class="sw own"></i>התכנון שלכם</span>
-    <span><i class="sw add"></i>הצעה שלי</span>
-    <span><i class="sw red"></i>מסומן באדום בגיליון</span>
+<a class="skip" href="#view">דילוג לתוכן</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3.5 8.5V6.5A1.5 1.5 0 0 1 5 5h14a1.5 1.5 0 0 1 1.5 1.5v2a2.5 2.5 0 0 0 0 5v2A1.5 1.5 0 0 1 19 17H5a1.5 1.5 0 0 1-1.5-1.5v-2a2.5 2.5 0 0 0 0-5z"/><path d="M14.5 5.5v2M14.5 10.5v1M14.5 14.5v2"/></symbol>
+  <symbol id="i-food" viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V3M8 12v9M17 21V3c-2 1.5-3 4-3 7v3h3"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5.5 8h13l-1 12.5h-11z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></symbol>
+  <symbol id="i-backpack" viewBox="0 0 24 24"><path d="M6 10a6 6 0 0 1 12 0v9.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19.5z"/><path d="M9.5 4.5V3.5h5v1M9 14h6v3.5H9z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M13.5 5H19v5.5M19 5l-8 8M17 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 4 18.5v-10A1.5 1.5 0 0 1 5.5 7H10"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5.5 12.5l4.2 4.2L18.5 7.5"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M15.5 4.5l4 4L9 19H5v-4z"/><path d="M13.5 6.5l4 4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2"/><path d="M15.5 8.5V6A1.5 1.5 0 0 0 14 4.5H6A1.5 1.5 0 0 0 4.5 6v8A1.5 1.5 0 0 0 6 15.5h2.5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l9 15.5H3z"/><path d="M12 10v4.5M12 17.2v.1"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M10.5 13.5L4 11l1.5-1.5 7 .5 4-4.5c1-1 2.8-1.3 3.3-.8s.2 2.3-.8 3.3l-4.5 4 .5 7L13.5 20.5 11 14z"/><path d="M6.5 17.5l-2 .5.5-2"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><path d="M6 15.5V7a3.5 3.5 0 0 1 3.5-3.5h5A3.5 3.5 0 0 1 18 7v8.5a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M6 11h12M9 14.5h.01M15 14.5h.01M8.5 17.5L6.5 21M15.5 17.5l2 3.5"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18.5V6M3 14h18v4.5M21 14v-2.5a3 3 0 0 0-3-3h-7V14"/><circle cx="7" cy="11" r="1.8"/></symbol>
+  <symbol id="i-museum" viewBox="0 0 24 24"><path d="M3.5 9.5L12 4.5l8.5 5M5 9.5v8M9.5 9.5v8M14.5 9.5v8M19 9.5v8M3.5 20h17"/></symbol>
+  <symbol id="i-rest" viewBox="0 0 24 24"><path d="M5 11V8.5A2.5 2.5 0 0 1 7.5 6h9A2.5 2.5 0 0 1 19 8.5V11"/><path d="M3.5 13a1.5 1.5 0 0 1 3 0v1.5h11V13a1.5 1.5 0 0 1 3 0v4.5h-17zM5.5 17.5V19M18.5 17.5V19"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 21v-5M7 16h10l-3-4h2l-4-7-4 7h2z"/></symbol>
+  <symbol id="i-walk" viewBox="0 0 24 24"><circle cx="13" cy="4.5" r="1.8"/><path d="M10 21l2-6 3 3v3M9 12.5l1.5-4.5 3.5 1.5 2 3.5M12 15l-1-4.5M7.5 10.5l3-2.5"/></symbol>
+  <symbol id="i-wheat" viewBox="0 0 24 24"><path d="M12 21V9M12 13c-2.5 0-4-1.5-4-4 2.5 0 4 1.5 4 4zM12 13c2.5 0 4-1.5 4-4-2.5 0-4 1.5-4 4zM12 9c-2 0-3.2-1.2-3.2-3.2 2 0 3.2 1.2 3.2 3.2zM12 9c2 0 3.2-1.2 3.2-3.2-2 0-3.2 1.2-3.2 3.2zM12 17c-2.5 0-4-1.5-4-4 2.5 0 4 1.5 4 4zM12 17c2.5 0 4-1.5 4-4-2.5 0-4 1.5-4 4z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4.5 5.5h15v10h-8l-4 3.5v-3.5h-3z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3.5h12v17l-2-1.3-2 1.3-2-1.3-2 1.3-2-1.3-2 1.3z"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2 2A15.5 15.5 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+  <symbol id="i-bus" viewBox="0 0 24 24"><rect x="4.5" y="3.5" width="15" height="14" rx="2.5"/><path d="M4.5 11h15M8 17.5V20M16 17.5V20M8 14.5h.01M16 14.5h.01"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5l7 2.5v5.5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5.5 21V4M5.5 4.5h11l-2 3.5 2 3.5h-11"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9.5 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M14.5 6l-6 6 6 6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-torii" viewBox="0 0 24 24"><path d="M3 5.5c3 .8 6 1.2 9 1.2s6-.4 9-1.2M4.5 9.5h15M7 7v13.5M17 7v13.5M12 7v2.5"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24"><path d="M5 4.5h14l-7 8zM12 12.5V20M8.5 20.5h7"/></symbol>
+  <symbol id="i-steam" viewBox="0 0 24 24"><path d="M4 16.5c0 2.2 3.6 4 8 4s8-1.8 8-4M4 16.5c0-1.3 1.3-2.4 3.3-3.1M20 16.5c0-1.3-1.3-2.4-3.3-3.1M9 11.5c-1.2-1.3 1.2-2.7 0-4s1.2-2.7 0-4M12.5 12c-1.2-1.3 1.2-2.7 0-4s1.2-2.7 0-4M16 11.5c-1.2-1.3 1.2-2.7 0-4s1.2-2.7 0-4"/></symbol>
+</svg>
+<div>
+  <div class="wrap">
+    <header class="top">
+      <div>
+        <p class="brand"><span class="c-tokyo">טוקיו</span><span class="arr">←</span><span class="c-kyoto">קיוטו</span><span class="arr">←</span><span class="c-takayama">האלפים</span></p>
+        <p class="sub"><span id="countdown"></span></p>
+      </div>
+      <span id="save" role="status" aria-live="polite"></span>
+    </header>
+    <div id="install" hidden></div>
+    <main id="view" tabindex="-1"></main>
+    <div id="toast" role="status" aria-live="polite" hidden></div>
+    <dialog id="lb" aria-label="תמונה"><figure><img alt=""><figcaption></figcaption></figure><button type="button" class="lb-x" aria-label="סגירה"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></dialog>
   </div>
-  <div class="status" id="status" hidden></div>
-</header>
-<button class="fab" id="todayBtn" type="button" hidden>היום ↓</button>
-
-<nav class="route" aria-label="ימי הטיול">
-  <div class="strip">
-    <a href="#d1" style="background:var(--tokyo)">1<small>21/10</small></a>
-    <a href="#d2" style="background:var(--tokyo)">2<small>22/10</small></a>
-    <a href="#d3" style="background:var(--tokyo)">3<small>23/10</small></a>
-    <a href="#d4" style="background:var(--tokyo)">4<small>24/10</small></a>
-    <a href="#d5" style="background:var(--kyoto)">5<small>25/10</small></a>
-    <a href="#d6" style="background:var(--kyoto)">6<small>26/10</small></a>
-    <a href="#d7" style="background:var(--kyoto)">7<small>27/10</small></a>
-    <a href="#d8" style="background:var(--kanazawa)">8<small>28/10</small></a>
-    <a href="#d9" style="background:var(--kanazawa)">9<small>29/10</small></a>
-    <a href="#d10" class="dark" style="background:var(--takayama)">10<small>30/10</small></a>
-    <a href="#d11" style="background:var(--onsen)">11<small>31/10</small></a>
-    <a href="#d12" style="background:var(--matsumoto)">12<small>1/11</small></a>
-    <a href="#d13" style="background:var(--matsumoto)">13<small>2/11</small></a>
-    <a href="#d14" style="background:var(--tokyo)">14<small>3/11</small></a>
-    <a href="#d15" style="background:var(--tokyo)">15<small>4/11</small></a>
-    <a href="#d16" style="background:var(--home)">✈<small>5/11</small></a>
-  </div>
-  <div class="cities">
-    <span><i style="background:var(--tokyo)"></i>טוקיו</span>
-    <span><i style="background:var(--kyoto)"></i>קיוטו</span>
-    <span><i style="background:var(--kanazawa)"></i>קנזאווה</span>
-    <span><i style="background:var(--takayama)"></i>טקאיאמה</span>
-    <span><i style="background:var(--onsen)"></i>אונסן</span>
-    <span><i style="background:var(--matsumoto)"></i>מצומוטו</span>
-  </div>
-</nav>
-
-<section id="todo">
-  <h2>להזמין עכשיו</h2>
-  <div class="card">
-    <ul class="todo" id="todolist">
-      <li><input type="checkbox" id="t1"><label for="t1"><span class="when">30/9</span><b>אוטובוס Nohi קנזאווה ← שיראקאווה-גו ל-30/10</b><span class="sub">ההזמנה נפתחת בדיוק חודש מראש, והמקומות מסוימים חובה. באותה הזדמנות להזמין גם שיראקאווה-גו ← טקאיאמה. באתר japanbusonline.com</span></label></li>
-      <li><input type="checkbox" id="t2"><label for="t2"><span class="when">1/10</span><b>אוטובוס קמיקוצ'י ← מצומוטו ל-1/11</b><span class="sub">מאז 2025 כל האוטובוסים של Alpico בקו הזה דורשים הזמנה. ההזמנה נפתחת חודש מראש</span></label></li>
-      <li><input type="checkbox" id="t3"><label for="t3"><span class="when">עכשיו</span><b>teamLab Planets ל-23/10</b><span class="sub">כניסה בחלונות זמן, והכרטיסים נגמרים מראש</span></label></li>
-      <li><input type="checkbox" id="t4"><label for="t4"><span class="when">עכשיו</span><b>Shibuya Sky ל-21/10, בערב</b><span class="sub">כרטיסים לשעות השקיעה נגמרים מהר. אם ההזמנה עוד לא נפתחה לתאריך, לבדוק שוב בתחילת אוקטובר</span></label></li>
-      <li><input type="checkbox" id="t5"><label for="t5"><span class="when">עכשיו</span><b>לסגור מלונות שעדיין פתוחים</b><span class="sub">קיוטו (3 אפשרויות), טקאיאמה (3), אונסן (2), גינזה (2). את המלון בגינזה כדאי לסגור לפני 27/10 בגלל שליחת המזוודות</span></label></li>
-      <li><input type="checkbox" id="t6"><label for="t6"><span class="when soon">עד שבוע לפני</span><b>רכבות</b><span class="sub">שינקנסן שינגאווה ← קיוטו (25/10), קיוטו ← קנזאווה (28/10), Azusa מצומוטו ← שינג'וקו (3/11)</span></label></li>
-      <li><input type="checkbox" id="t7"><label for="t7"><span class="when soon">מהגיליון</span><b>סדנת Chopsticks Studio Ginza</b><span class="sub">דרך Klook, קוד הנחה OMERZTRAVEL</span></label></li>
-      <li><input type="checkbox" id="t8"><label for="t8"><span class="when soon">מהגיליון</span><b>ארוחת ערב שווה בגינזה ב-4/11</b></label></li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= TOKYO ================= -->
-<div class="city" id="tokyo1">
-  <div class="cityhead"><div class="bar" style="background:var(--tokyo)"></div>
-    <div><h2>טוקיו</h2><div class="dates">21/10 – 24/10 · 4 לילות</div>
-      <div class="hotel"><span class="lbl">מלון</span><b>All Day Place Shibuya</b></div>
+  <nav class="nav" aria-label="ניווט">
+    <div class="nav-in">
+      <span class="nav-ind" aria-hidden="true"></span>
+      <button data-tab="plan"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>מסלול</button>
+      <button data-tab="book"><svg class="ic" aria-hidden="true"><use href="#i-ticket"/></svg>הזמנות</button>
+      <button data-tab="food"><svg class="ic" aria-hidden="true"><use href="#i-food"/></svg>אוכל</button>
+      <button data-tab="shop"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>קניות</button>
+      <button data-tab="more"><svg class="ic" aria-hidden="true"><use href="#i-backpack"/></svg>ציוד ומידע</button>
     </div>
-  </div>
-
-  <article class="card day" id="d1">
-    <div class="dayhead"><div class="num" style="background:var(--tokyo)">1</div><div><h3>שיבויה</h3><div class="meta">רביעי · 21/10</div></div></div>
-    <div class="daybody">
-      <div class="own"><ul>
-        <li>נוחתים ב-13:20, הגעה למלון ב-15:30.</li>
-        <li>הליכה ל-<b>shibuya crossing</b>, יש תצפית על הכביש מהסניף של סטארבקס.</li>
-        <li>פסל <b>Hachiko</b> + באותו איזור בית קפה <b>hoshino coffee</b> ולטעום את הסופלה פנקייק המפורסם.</li>
-        <li>קניון <b>Shibuya Parco</b> – קומה 6 קומת האנימה, הגג פתוח עם צמחיה.</li>
-        <li>רחוב <b>Center Gai</b> – אורות, מסעדות וחנויות. יש דון קיחוטה ופמילי מארט באיזור.</li>
-        <li>בערב – <span class="red">shibuya sky</span> תצפית ולבקר בקניון שתחתיו <b>shibuya scramble square</b>.</li>
-        <li>אפשר לעבור שוב ב-<b>shibuya crossing</b> ולראות את האיזור בחושך.</li>
-        <li>לסיים את היום בבר <span class="red">The SG club</span>, תשע דקות מהמלון.</li>
-      </ul></div>
-    </div>
-  </article>
-
-  <article class="card day" id="d2">
-    <div class="dayhead"><div class="num" style="background:var(--tokyo)">2</div><div><h3>הארג'וקו</h3><div class="meta">חמישי · 22/10</div></div></div>
-    <div class="daybody">
-      <div class="own"><ul>
-        <li>טיול במקדש <b>meiji</b></li>
-        <li>להסתובב ב-<b>yoyogi park</b> הצמוד למקדש</li>
-        <li>רחוב <b>takeshita</b> – רחוב אוכל צבעוני, טוסט קשת בענן</li>
-        <li>רחוב <b>omotesando</b> יוקרתי – (נעליים – abc mart, נעליים לרומי Onitsuka Tiger)</li>
-        <li><i>המלצה</i> – סושי מסוע עם כוכב מישלן <b>Kaiten Sushi Ginza</b>, אודון קרבונרה <b>Menchirashi</b>, אפשר גם <b>luke's lobster</b></li>
-        <li>להסתובב ב-<b>cat street</b> – רחוב חנויות בוטיק ויד שנייה מקומיות</li>
-        <li>קניון <b>Miyashita Park</b> – קרוב למלון, חנויות בגדים ומותגים ובגג יש פארק חמוד.</li>
-      </ul></div>
-      <div class="note"><b>הערה שלכם:</b> לוקח למזוודות יומיים להגיע</div>
-    </div>
-  </article>
-
-  <article class="card day" id="d3">
-    <div class="dayhead"><div class="num" style="background:var(--tokyo)">3</div><div><h3>אסקוסה + אקיהברה</h3><div class="meta">שישי · 23/10</div></div></div>
-    <div class="daybody">
-      <div class="own"><ul>
-        <li>מתחילים ב-<b>Kappabashi Dori</b> – Kappabashi Hondōri Shopping Street – רחוב קניות לכלי מטבח</li>
-        <li>ממשיכים ל-<b>Nakamise Shopping Street</b> – חטיפים ואוכל יפניים, מזכרות וכו'.</li>
-        <li>מוביל ישירות למקדש <b>Senso-ji</b></li>
-        <li>רכבת ישירה / שיט ממפרץ אסאקוסה לכיוון אודהיבה, ורכבת Yurikamome ל-<span class="red">Teamlab Planets</span></li>
-        <li>בערב – אקיהברה (רוב החנויות נסגרות ב-20:00)</li>
-        <li>ללכת באיזור החנות <b>yodobashi akiba</b> והארקייד <b>TAITO Station Akihabara</b></li>
-        <li>א.ערב – לזרום באקיהברה/לחזור לשיבויה</li>
-        <li><b>Pokemon Center Shibuya</b> – להביא לרומי בובה קטנה :)</li>
-        <li><span class="red">The Bellwood</span> – בר מאוד שווה, מקום 48 בעולם</li>
-      </ul></div>
-      <div class="note"><b>הערה שלכם:</b> להזמין מראש נסיעות בין ערים</div>
-    </div>
-  </article>
-
-  <article class="card day" id="d4">
-    <div class="dayhead"><div class="num" style="background:var(--tokyo)">4</div><div><h3>שינג'וקו</h3><div class="meta">שבת · 24/10</div></div></div>
-    <div class="daybody">
-      <div class="own"><ul>
-        <li>לטייל בגנים יפניים – <b>shinjuku gyoen</b></li>
-        <li><i>אופציה א.בוקר</i> – <b>Isetan Shinjuku</b> כלבו אוכל ענק (דון קיחוטה ויוניקלו באיזור),</li>
-        <li>יש בכלבו חנות שוקולד בעבודת יד <b>Jean-Paul Hevin Shinjuku Isetan</b></li>
-        <li>להמשיך לאזור המרכזי ולראות את החתול המפורסם – <b>the giant 3d cat</b></li>
-        <li>לראות פסל גודזילה – <b>godzila head</b></li>
-        <li>להמשיך רובע האורות האדומים המפורסם – <b>Kabukicho</b></li>
-        <li><i>אופציה</i> לקפה ולפנקייק יפני אוורירי – <b>bam bi coffee</b></li>
-        <li><i>אופציית צהרים</i> – סושי מסוע <b>odeo shinjukuminami guchiten</b></li>
-        <li>תצפית חינמית יפה – <b>Tokyo Metropolitan Government Building</b></li>
-        <li>לטייל ב-<b>Shinjuku Central Park</b> וחזרה למלון</li>
-        <li>ללכת בערב לרחוב הברים – <b>omoide yokocho</b></li>
-      </ul></div>
-      <div class="add"><span class="tag">הצעה · לקראת מחר</span><ul>
-        <li>לארוז הערב את מה שצריך לקיוטו. אם אתם רוצים לנסוע בשינקנסן בלי מזוודות גדולות, ראו <a href="#bags">מזוודות</a>.</li>
-      </ul></div>
-    </div>
-  </article>
+  </nav>
 </div>
+<script>const DATA = { items: [] };
+/* city: where the night is spent. from: where the day starts, when it is a travel day;
+   switchAt: the stop after which the day's line takes the new region's color. */
+DATA.days = [
+  { date: "2026-10-21", city: "tokyo", title: "שיבויה" },
+  { date: "2026-10-22", city: "tokyo", title: "הארג'וקו" },
+  { date: "2026-10-23", city: "tokyo", title: "אסקוסה ואקיהברה" },
+  { date: "2026-10-24", city: "tokyo", title: "שינג'וקו" },
+  { date: "2026-10-25", city: "kyoto", from: "tokyo", switchAt: "d1025-train", title: "מגיעים לקיוטו, מרכז העיר וגיון" },
+  { date: "2026-10-26", city: "kyoto", title: "פושימי אינארי והיגשיאמה" },
+  { date: "2026-10-27", city: "kyoto", title: "ארשיאמה וביתן הזהב" },
+  { date: "2026-10-28", city: "kanazawa", from: "kyoto", switchAt: "d1028-train", title: "מקיוטו לקנזאווה", sheet: "Kyoto-Kanazawa" },
+  { date: "2026-10-29", city: "kanazawa", title: "קנזאווה: הגן, השוק והסמוראים", sheet: "Kanazawa sites (Kenrokuen garden, Omicho fish market, Nagamachi samurai district)" },
+  { date: "2026-10-30", city: "takayama", from: "kanazawa", switchAt: "d1030-bus", title: "שיראקאווה-גו וטקאיאמה", sheet: "Kanazawa-shirkawa go-takayama" },
+  { date: "2026-10-31", city: "onsen", from: "takayama", switchAt: "d1031-bus", title: "טקאיאמה, ובערב אונסן", sheet: "Takayama-onsen" },
+  { date: "2026-11-01", city: "matsumoto", from: "onsen", switchAt: "d1101-bus", title: "קמיקוצ'י ומצומוטו", sheet: "Onsen- Kamikochi - Matsumoto" },
+  { date: "2026-11-02", city: "matsumoto", title: "עמק קיסו: ממגומה לצומגו", sheet: "Matsumoto - Kiso valley - Matsumoto" },
+  { date: "2026-11-03", city: "tokyo", from: "matsumoto", switchAt: "d1103-azusa", title: "חוזרים לטוקיו: גינזה" },
+  { date: "2026-11-04", city: "tokyo", title: "צוקיג'י וגינזה" },
+  { date: "2026-11-05", city: "tokyo", title: "חזרה הביתה" },
+];
+DATA.regions = {
+  tokyo: { label: "טוקיו" }, kyoto: { label: "קיוטו" }, kanazawa: { label: "קנזאווה" },
+  takayama: { label: "טקאיאמה" }, onsen: { label: "Okuhida" }, matsumoto: { label: "מצומוטו" },
+};
+// the calendar: one row per part of the trip
+DATA.rows = [
+  { label: `<span class="c-tokyo">טוקיו</span> ו<span class="c-kyoto">קיוטו</span>`, sub: `4 לילות בשיבויה, 3 בקיוטו`, from: 0, to: 7 },
+  { label: `<span class="c-kanazawa">קנזאווה</span> ו<span class="c-takayama">האלפים</span>`, sub: `<span class="c-kanazawa">קנזאווה</span>, <span class="c-takayama">טקאיאמה</span>, <span class="c-onsen">Okuhida</span>, <span class="c-matsumoto">מצומוטו</span>`, from: 7, to: 13 },
+  { label: `<span class="c-tokyo">טוקיו, גינזה</span>`, sub: `2 לילות, וב-<bdi>5.11</bdi> טסים הביתה`, from: 13, to: 16 },
+];
+DATA.tags = {
+  temple: { label: "מקדש", icon: "torii" },
+  museum: { label: "מוזיאון", icon: "museum" },
+  shop: { label: "קניות", icon: "bag" },
+  food: { label: "אוכל", icon: "food" },
+  bar: { label: "בר", icon: "glass" },
+  onsen: { label: "אונסן", icon: "steam" },
+  rest: { label: "מנוחה", icon: "rest" },
+  view: { label: "אתר ונוף", icon: "eye" },
+  nature: { label: "טבע ופארק", icon: "tree" },
+  move: { label: "נסיעה", icon: "walk" },
+  red: { label: "אדום בגיליון", icon: "flag" },
+  check: { label: "לברר אם שווה", icon: "alert" },
+  ticket: { label: "יש כרטיס", icon: "ticket" },
+  book: { label: "להזמין", icon: "clock" },
+};
+// rough clock times for the plan's "morning / noon / evening" labels, used only to keep items in order
+DATA.whenKey = { "בוקר": "08:00", "צהריים": "12:30", "אחה״צ": "15:00", "שקיעה": "17:30", "ערב": "19:00", "לילה": "22:00" };
+// one day's stops, in the order they happen; sug: an addition that is not in the sheet
+const day = (date, arr) => arr.forEach((x, i) => DATA.items.push({ list: "day:" + date, order: i, ...x }));
 
-<!-- ================= KYOTO ================= -->
-<div class="city" id="kyoto">
-  <div class="cityhead"><div class="bar" style="background:var(--kyoto)"></div>
-    <div><h2>קיוטו</h2><div class="dates">25/10 – 27/10 · 3 לילות</div>
-      <div class="hotel"><span class="lbl">מלון · אפשרויות מהגיליון</span><ol>
-        <li class="pref">Kyoto Granbell Hotel</li>
-        <li>Aoi Hotel Kyoto</li>
-        <li>Mitsui Garden Hotel Kyoto Kawaramachi Jokyoji</li>
-      </ol></div>
-    </div>
-  </div>
+DATA.days[1].brief = "<b>הערה שלכם:</b> לוקח למזוודות יומיים להגיע.";
+DATA.days[2].brief = "<b>הערה שלכם:</b> להזמין מראש נסיעות בין ערים. הכל מרוכז בלשונית \"הזמנות\".";
 
-  <article class="card day" id="d5">
-    <div class="dayhead"><div class="num" style="background:var(--kyoto)">5</div><div><h3>מגיעים לקיוטו · מרכז העיר וגיון</h3><div class="meta">ראשון · 25/10</div></div></div>
-    <div class="daybody">
-      <div class="note"><b>הערה שלכם:</b> רכבת מ-Shinagawa station משיבויה לקיוטו</div>
-      <div class="add"><span class="tag">הצעה</span><ul>
-        <li><span class="t">בוקר</span> שינקנסן Nozomi משינגאווה לקיוטו, כשעתיים ורבע. כדאי לשבת בצד ימין (מושבים E) כדי לראות את הר פוג'י.</li>
-        <li><span class="t">צהריים</span> להשאיר מזוודות במלון (צ'ק-אין בדרך כלל מ-15:00) ולצאת ל-<b>Nishiki Market</b>, "המטבח של קיוטו": 400 מטר של דוכנים. לנסות טמאגויאקי, תמנון קטן על שיפוד עם ביצה בפנים וממתקי מאצ'ה. רוב הדוכנים נסגרים בסביבות 17:00–18:00.</li>
-        <li><span class="t">אחה״צ</span> להמשיך לקניות ב-<b>Teramachi</b> ו-<b>Shinkyogoku</b>, שני רחובות מקורים שמתחברים לנישיקי.</li>
-        <li><span class="t">שקיעה</span> לחצות את נהר הקאמו לגיון: <b>Hanamikoji</b> (רחוב בתי התה, ולפעמים רואים מאיקו בסביבות 18:00; אסור לצלם בסמטאות הפרטיות) ו-<b>Shirakawa</b>, התעלה עם עצי הערבה.</li>
-        <li><span class="t">ערב</span> <b>Yasaka Shrine</b> מואר בלילה, ואחר כך ארוחת ערב בסמטת <b>Pontocho</b> לאורך הנהר.</li>
-      </ul></div>
-    </div>
-  </article>
+/* 21.10 Wed */
+day("2026-10-21", [
+  { id: "d1021-land", time: "13:20", kind: "fixed", title: "נוחתים ביפן", tags: ["move"], desc: "הגעה למלון ב-15:30.", book: "bk-flight-out" },
+  { id: "d1021-hotel", time: "15:30", title: "All Day Place Shibuya", tags: ["rest"], book: "bk-hotel-shibuya", map: "All Day Place Shibuya" },
+  { id: "d1021-crossing", title: "Shibuya Crossing", tags: ["view"], desc: "יש תצפית על הכביש מהסניף של סטארבקס.", map: "Shibuya Scramble Crossing" },
+  { id: "d1021-hachiko", title: "פסל Hachiko ו-Hoshino Coffee", tags: ["view", "food"], desc: "באותו אזור בית הקפה <b>Hoshino Coffee</b>, ולטעום את הסופלה פנקייק המפורסם.", map: "Hachiko Statue, Shibuya" },
+  { id: "d1021-parco", title: "Shibuya Parco", tags: ["shop"], desc: "קומה 6 היא קומת האנימה, והגג פתוח עם צמחייה.", map: "Shibuya PARCO" },
+  { id: "d1021-centergai", title: "רחוב Center Gai", tags: ["shop", "food"], desc: "אורות, מסעדות וחנויות. יש דון קיחוטה ופמילי מארט באזור.", map: "Center Gai, Shibuya" },
+  { id: "d1021-sky", when: "ערב", title: "Shibuya Sky", tags: ["view", "red"], desc: "תצפית, ולבקר בקניון שמתחת, <b>Shibuya Scramble Square</b>.", book: "tb-shibuyasky", map: "SHIBUYA SKY" },
+  { id: "d1021-night", title: "שוב ב-Shibuya Crossing, בחושך", tags: ["view"], desc: "אפשר לעבור שוב ולראות את האזור בלילה." },
+  { id: "d1021-sg", when: "לילה", title: "בר The SG Club", tags: ["bar", "red"], desc: "לסיים את היום כאן, תשע דקות מהמלון.", map: "The SG Club, Shibuya" },
+]);
 
-  <article class="card day" id="d6">
-    <div class="dayhead"><div class="num" style="background:var(--kyoto)">6</div><div><h3>פושימי אינארי + היגשיאמה</h3><div class="meta">שני · 26/10</div></div></div>
-    <div class="daybody">
-      <div class="add"><span class="tag">הצעה</span><ul>
-        <li><span class="t">07:00</span> <b>Fushimi Inari</b>: אלפי שערים כתומים. פתוח 24 שעות והכניסה חינם. בשעה הזאת כמעט אין אנשים. כדאי לעלות לפחות עד צומת <b>Yotsutsuji</b> (35–45 דקות עלייה), שם יש תצפית על העיר. מתחנת קיוטו זה 5 דקות ברכבת JR Nara לתחנת Inari.</li>
-        <li><span class="t">09:30</span> מונית או אוטובוס ל-<b>Kiyomizu-dera</b>, המקדש עם במת העץ הגדולה מעל העמק.</li>
-        <li>לרדת ברגל ב-<b>Sannenzaka</b> וב-<b>Ninenzaka</b>, רחובות אבן עתיקים עם חנויות ובתי תה. יש שם סטארבקס בבית עץ מסורתי עם חדרי טטאמי.</li>
-        <li>תמונה של פגודת <b>Yasaka (Hokan-ji)</b> מרחוב Yasaka-dori, ואחר כך הסמטה <b>Ishibe-koji</b> ומקדש <b>Kodai-ji</b>.</li>
-        <li><span class="t">אחה״צ</span> לבחור אחת משתי אפשרויות:
-          <br>א. <b>Philosopher's Path</b>, שביל לאורך תעלה, עד <b>Ginkaku-ji</b> (ביתן הכסף).
-          <br>ב. מנוחה וקניות ב-Kawaramachi, כולל <b>Pokémon Center Kyoto</b> ו-<b>Nintendo Kyoto</b> בבניין Takashimaya.</li>
-        <li><span class="t">ערב</span> ארוחה חופשית באזור Kawaramachi או Kiyamachi.</li>
-      </ul></div>
-    </div>
-  </article>
+/* 22.10 Thu */
+day("2026-10-22", [
+  { id: "d1022-meiji", title: "מקדש Meiji", tags: ["temple"], desc: "טיול במקדש.", map: "Meiji Jingu" },
+  { id: "d1022-yoyogi", title: "פארק Yoyogi", tags: ["nature"], desc: "להסתובב בפארק הצמוד למקדש.", map: "Yoyogi Park" },
+  { id: "d1022-takeshita", title: "רחוב Takeshita", tags: ["food", "shop"], desc: "רחוב אוכל צבעוני, טוסט קשת בענן.", map: "Takeshita Street" },
+  { id: "d1022-omotesando", title: "Omotesando", tags: ["shop"], desc: "רחוב יוקרתי. נעליים: <b>ABC-Mart</b>, ונעליים לרומי ב-<b>Onitsuka Tiger</b>.", map: "Omotesando" },
+  { id: "d1022-lunch", title: "המלצה: סושי, אודון או לובסטר", tags: ["food"], desc: "סושי מסוע עם כוכב מישלן ב-<b>Kaiten Sushi Ginza</b>, אודון קרבונרה ב-<b>Menchirashi</b>, ואפשר גם <b>Luke's Lobster</b>. הפרטים בלשונית \"אוכל\"." },
+  { id: "d1022-cat", title: "Cat Street", tags: ["shop"], desc: "רחוב של חנויות בוטיק ויד שנייה מקומיות.", map: "Cat Street, Harajuku" },
+  { id: "d1022-miyashita", title: "Miyashita Park", tags: ["shop", "nature"], desc: "קניון קרוב למלון, חנויות בגדים ומותגים, ובגג יש פארק חמוד.", map: "MIYASHITA PARK, Shibuya" },
+]);
 
-  <article class="card day" id="d7">
-    <div class="dayhead"><div class="num" style="background:var(--kyoto)">7</div><div><h3>ארשיאמה + ביתן הזהב</h3><div class="meta">שלישי · 27/10</div></div></div>
-    <div class="daybody">
-      <div class="note"><b>הערה שלכם:</b> לוודא מאיפה לאיפה כדי להשתמש בשירות של שליחת מזוודות ← ראו <a href="#bags">מזוודות</a></div>
-      <div class="add"><span class="tag">הצעה</span><ul>
-        <li><span class="t">07:30</span> רכבת JR Sagano מקיוטו ל-Saga-Arashiyama (15 דקות), ומשם ל-<b>יער הבמבוק</b> לפני ההמונים.</li>
-        <li><span class="t">08:30</span> הגן של <b>Tenryu-ji</b>, ואחריו <b>Okochi Sanso</b>: וילה עם גן ותצפית, והכרטיס כולל תה ירוק וממתק.</li>
-        <li>גשר <b>Togetsukyo</b> ורחוב הראשי. מי שרוצה יכול לטפס 20 דקות לפארק הקופים <b>Iwatayama</b>, עם תצפית על העיר.</li>
-        <li><span class="t">צהריים</span> יודופו (טופו חם, מאכל מקומי של ארשיאמה) או סובה באזור.</li>
-        <li><span class="t">אחה״צ</span> מונית ל-<b>Kinkaku-ji</b>, ביתן הזהב, כ-30 דקות. לידו נמצא גן הסלעים של <b>Ryoan-ji</b> למי שעוד יש כוח.</li>
-        <li><span class="t">ערב</span> לארוז ולשלוח את המזוודות הגדולות מהקבלה של המלון. סיום בארוחה ליד המלון.</li>
-      </ul></div>
-    </div>
-  </article>
-</div>
+/* 23.10 Fri */
+day("2026-10-23", [
+  { id: "d1023-kappabashi", title: "Kappabashi Dori", tags: ["shop"], desc: "מתחילים כאן. Kappabashi Hondōri Shopping Street, רחוב קניות לכלי מטבח.", map: "Kappabashi Dougu Street" },
+  { id: "d1023-nakamise", title: "Nakamise Shopping Street", tags: ["food", "shop"], desc: "חטיפים ואוכל יפני, מזכרות וכו'. הרחוב מוביל ישר למקדש.", map: "Nakamise Shopping Street" },
+  { id: "d1023-sensoji", title: "מקדש Senso-ji", tags: ["temple"], map: "Senso-ji" },
+  { id: "d1023-teamlab", title: "teamLab Planets", tags: ["museum", "red"], desc: "רכבת ישירה, או שיט ממפרץ אסאקוסה לכיוון אודאיבה, ומשם רכבת <b>Yurikamome</b>.", book: "tb-teamlab", map: "teamLab Planets TOKYO" },
+  { id: "d1023-akiba", when: "ערב", title: "אקיהברה", tags: ["shop"], desc: "רוב החנויות נסגרות ב-20:00. ללכת באזור החנות <b>Yodobashi Akiba</b> והארקייד <b>TAITO Station Akihabara</b>.", map: "Yodobashi Camera Multimedia Akiba" },
+  { id: "d1023-dinner", title: "ארוחת ערב: לזרום", tags: ["food"], desc: "באקיהברה, או לחזור לשיבויה." },
+  { id: "d1023-pokemon", title: "Pokémon Center Shibuya", tags: ["shop"], desc: "להביא לרומי בובה קטנה :)", map: "Pokemon Center Shibuya" },
+  { id: "d1023-bellwood", when: "לילה", title: "בר The Bellwood", tags: ["bar", "red"], desc: "בר מאוד שווה, מקום 48 בעולם.", map: "The Bellwood, Shibuya" },
+]);
 
-<!-- ================= KANAZAWA ================= -->
-<div class="city" id="kanazawa">
-  <div class="cityhead"><div class="bar" style="background:var(--kanazawa)"></div>
-    <div><h2>קנזאווה</h2><div class="dates">28/10 – 29/10 · 2 לילות</div>
-      <div class="hotel"><span class="lbl">מלון</span><b>KUMU Kanazawa by THE SHARE HOTELS</b></div>
-    </div>
-  </div>
+/* 24.10 Sat */
+day("2026-10-24", [
+  { id: "d1024-gyoen", title: "Shinjuku Gyoen", tags: ["nature"], desc: "לטייל בגנים היפניים.", map: "Shinjuku Gyoen National Garden" },
+  { id: "d1024-isetan", title: "Isetan Shinjuku", tags: ["food", "shop"], desc: "אופציה לארוחת בוקר: כלבו אוכל ענק, ודון קיחוטה ויוניקלו באזור. בכלבו יש חנות שוקולד בעבודת יד, <b>Jean-Paul Hévin</b>.", map: "Isetan Shinjuku" },
+  { id: "d1024-cat", title: "החתול התלת-ממדי הענק", tags: ["view"], desc: "להמשיך לאזור המרכזי ולראות את החתול המפורסם (the giant 3D cat).", map: "Cross Shinjuku Vision" },
+  { id: "d1024-godzilla", title: "ראש גודזילה", tags: ["view"], desc: "פסל גודזילה (Godzilla Head).", map: "Godzilla Head, Shinjuku" },
+  { id: "d1024-kabukicho", title: "Kabukicho", tags: ["view"], desc: "רובע האורות האדומים המפורסם.", map: "Kabukicho" },
+  { id: "d1024-bambi", title: "Bam Bi Coffee", tags: ["food"], desc: "אופציה לקפה ולפנקייק יפני אוורירי.", map: "bam bi coffee, Shinjuku" },
+  { id: "d1024-sushi", title: "צהריים: סושי מסוע", tags: ["food"], desc: "אופציה: <b>odeo shinjukuminami guchiten</b>." },
+  { id: "d1024-tmg", title: "Tokyo Metropolitan Government Building", tags: ["view"], desc: "תצפית חינמית יפה.", map: "Tokyo Metropolitan Government Building" },
+  { id: "d1024-central", title: "Shinjuku Central Park", tags: ["nature"], desc: "לטייל בפארק, וחזרה למלון.", map: "Shinjuku Central Park" },
+  { id: "d1024-omoide", when: "ערב", title: "Omoide Yokocho", tags: ["bar", "food"], desc: "רחוב הברים.", map: "Omoide Yokocho" },
+  { id: "d1024-pack", sug: 1, when: "לילה", title: "לארוז לקיוטו", tags: ["rest"], desc: "אם רוצים לנסוע בשינקנסן בלי מזוודות גדולות, האפשרויות בלשונית \"ציוד ומידע\", תחת מזוודות." },
+]);
 
-  <article class="card day" id="d8">
-    <div class="dayhead"><div class="num" style="background:var(--kanazawa)">8</div><div><h3>Kyoto-Kanazawa</h3><div class="meta">רביעי · 28/10</div></div></div>
-    <div class="daybody">
-      <div class="own"><ul><li>Kyoto-Kanazawa</li></ul></div>
-      <div class="add"><span class="tag">הצעה</span><ul>
-        <li><span class="t">בוקר</span> רכבת <b>Thunderbird</b> מקיוטו ל-Tsuruga (כשעה) ומשם החלפה ל-<b>Hokuriku Shinkansen</b> עד קנזאווה. בסך הכל כשעתיים, בכרטיס אחד.</li>
-        <li>לצאת מהתחנה דרך שער העץ <b>Tsuzumi-mon</b> ולצלם אותו. משם מונית או אוטובוס קצר ל-KUMU להשאיר תיקים.</li>
-        <li><span class="t">אחה״צ</span> <b>Higashi Chaya</b>, רובע בתי התה של הגיישות. לטעום גלידה מצופה עלה זהב (קנזאווה מייצרת כמעט את כל עלי הזהב ביפן) ולהיכנס לבית התה ההיסטורי <b>Shima</b>. רוב החנויות נסגרות בסביבות 17:00.</li>
-        <li>הליכה על גדת נהר Asano לרובע <b>Kazuemachi</b>, שהוא קטן ושקט יותר.</li>
-        <li><span class="t">ערב</span> ארוחה באזור <b>Katamachi</b>. מאכל מקומי לנסות: <b>קנזאווה אודן</b>.</li>
-      </ul></div>
-    </div>
-  </article>
+DATA.days[4].brief = "<b>הערה שלכם:</b> רכבת מ-Shinagawa station משיבויה לקיוטו.";
+DATA.days[6].brief = "<b>הערה שלכם:</b> לוודא מאיפה לאיפה, כדי להשתמש בשירות של שליחת מזוודות. האפשרויות בלשונית \"ציוד ומידע\", תחת מזוודות.";
 
-  <article class="card day" id="d9">
-    <div class="dayhead"><div class="num" style="background:var(--kanazawa)">9</div><div><h3>Kanazawa sites</h3><div class="meta">חמישי · 29/10</div></div></div>
-    <div class="daybody">
-      <div class="own"><ul><li>Kanazawa sites (<b>Kenrokuen garden</b>, <b>Omicho fish market</b>, <b>Nagamachi samurai district</b>)</li></ul></div>
-      <div class="add"><span class="tag">הצעה · סדר היום</span><ul>
-        <li><span class="t">08:00</span> <b>Kenrokuen</b>, אחד משלושת הגנים הכי מפורסמים ביפן. מאמצע אוקטובר הגן נפתח ב-8:00, ובבוקר הוא הכי שקט.</li>
-        <li>ישר ממנו לפארק <b>Kanazawa Castle</b> הצמוד, שהכניסה אליו חינם.</li>
-        <li><span class="t">10:00</span> <b>21st Century Museum</b>, 5 דקות הליכה. המיצג המפורסם הוא "הבריכה" של Leandro Erlich, והכניסה אליו בחלונות זמן. המוזיאון פתוח בחמישי (סגור בשני).</li>
-        <li><span class="t">צהריים</span> <b>Omicho market</b>, קרוב למלון. לאכול <b>kaisendon</b>, קערת אורז עם פירות ים טריים. יש תורות בשעות השיא.</li>
-        <li><span class="t">אחה״צ</span> <b>Nagamachi</b>, רובע הסמוראים: קירות בוץ, תעלות, ובית הסמוראים <b>Nomura-ke</b> עם גן קטן ויפה.</li>
-        <li><span class="t">ערב</span> לארוז תיק קטן לשלושת הימים בהרים.</li>
-      </ul></div>
-    </div>
-  </article>
-</div>
+/* 25.10 Sun */
+day("2026-10-25", [
+  { id: "d1025-train", sug: 1, when: "בוקר", title: "שינקנסן Nozomi משינגאווה לקיוטו", tags: ["move"], desc: "כשעתיים ורבע. כדאי לשבת בצד ימין (מושבים E) כדי לראות את הר פוג'י.", book: "tb-shinkansen" },
+  { id: "d1025-bags", sug: 1, when: "צהריים", title: "להשאיר מזוודות במלון", tags: ["move"], desc: "צ'ק-אין בדרך כלל מ-15:00.", book: "tb-hotel-kyoto" },
+  { id: "d1025-nishiki", sug: 1, title: "Nishiki Market", tags: ["food"], desc: "\"המטבח של קיוטו\": 400 מטר של דוכנים. לנסות טמאגויאקי, תמנון קטן על שיפוד עם ביצה בפנים, וממתקי מאצ'ה. רוב הדוכנים נסגרים בסביבות 17:00-18:00.", map: "Nishiki Market, Kyoto" },
+  { id: "d1025-teramachi", sug: 1, when: "אחה״צ", title: "Teramachi ו-Shinkyogoku", tags: ["shop"], desc: "שני רחובות קניות מקורים שמתחברים לנישיקי.", map: "Teramachi Street, Kyoto" },
+  { id: "d1025-gion", sug: 1, when: "שקיעה", title: "גיון: Hanamikoji ו-Shirakawa", tags: ["view"], desc: "לחצות את נהר הקאמו לגיון. <b>Hanamikoji</b> הוא רחוב בתי התה, ולפעמים רואים שם מאיקו בסביבות 18:00 (אסור לצלם בסמטאות הפרטיות). <b>Shirakawa</b> היא התעלה עם עצי הערבה.", map: "Hanamikoji Street, Kyoto" },
+  { id: "d1025-yasaka", sug: 1, when: "ערב", title: "Yasaka Shrine", tags: ["temple"], desc: "המקדש מואר בלילה.", map: "Yasaka Shrine" },
+  { id: "d1025-pontocho", sug: 1, when: "ערב", title: "ארוחת ערב בסמטת Pontocho", tags: ["food"], desc: "לאורך הנהר.", map: "Pontocho Alley" },
+]);
 
-<!-- ================= TAKAYAMA ================= -->
-<div class="city" id="takayama">
-  <div class="cityhead"><div class="bar" style="background:var(--takayama)"></div>
-    <div><h2>שיראקאווה-גו וטקאיאמה</h2><div class="dates">30/10 · לילה 1</div>
-      <div class="hotel"><span class="lbl">מלון · אפשרויות מהגיליון</span><ol>
-        <li class="pref">Hida Takayama Onsen Takayama Green Hotel – KEIO GROUP HOTELS</li>
-        <li>hotel around TAKAYAMA, an Ascend Collection Hotel</li>
-        <li>HOTEL AMANEK HidaTakayama</li>
-      </ol></div>
-    </div>
-  </div>
+/* 26.10 Mon */
+day("2026-10-26", [
+  { id: "d1026-inari", sug: 1, time: "07:00", title: "Fushimi Inari", tags: ["temple"], desc: "אלפי שערים כתומים. פתוח 24 שעות והכניסה חינם, ובשעה הזאת כמעט אין אנשים. כדאי לעלות לפחות עד צומת <b>Yotsutsuji</b> (35-45 דקות עלייה), שם יש תצפית על העיר. מתחנת קיוטו: 5 דקות ברכבת JR Nara לתחנת Inari.", map: "Fushimi Inari Taisha" },
+  { id: "d1026-kiyomizu", sug: 1, time: "09:30", title: "Kiyomizu-dera", tags: ["temple", "view"], desc: "מונית או אוטובוס. המקדש עם במת העץ הגדולה מעל העמק.", map: "Kiyomizu-dera" },
+  { id: "d1026-sannenzaka", sug: 1, title: "Sannenzaka ו-Ninenzaka", tags: ["shop", "view"], desc: "לרדת ברגל ברחובות האבן העתיקים, עם חנויות ובתי תה. יש שם סטארבקס בבית עץ מסורתי עם חדרי טטאמי.", map: "Ninenzaka, Kyoto" },
+  { id: "d1026-pagoda", sug: 1, title: "פגודת Yasaka ו-Kodai-ji", tags: ["temple"], desc: "תמונה של הפגודה (Hokan-ji) מרחוב Yasaka-dori, ואחר כך הסמטה <b>Ishibe-koji</b> ומקדש <b>Kodai-ji</b>.", map: "Hokan-ji Temple (Yasaka Pagoda)" },
+  { id: "d1026-pm", sug: 1, when: "אחה״צ", title: "לבחור: שביל הפילוסופים או קניות", tags: ["nature", "shop"], desc: "א. <b>Philosopher's Path</b>, שביל לאורך תעלה, עד <b>Ginkaku-ji</b> (ביתן הכסף).<br>ב. מנוחה וקניות ב-Kawaramachi, כולל <b>Pokémon Center Kyoto</b> ו-<b>Nintendo Kyoto</b> בבניין Takashimaya.", map: "Philosopher's Path, Kyoto" },
+  { id: "d1026-dinner", sug: 1, when: "ערב", title: "ארוחה חופשית", tags: ["food"], desc: "באזור Kawaramachi או Kiyamachi." },
+]);
 
-  <article class="card day" id="d10">
-    <div class="dayhead"><div class="num dark" style="background:var(--takayama)">10</div><div><h3>Kanazawa-shirkawa go-takayama</h3><div class="meta">שישי · 30/10</div></div></div>
-    <div class="daybody">
-      <div class="own"><ul><li>Kanazawa-shirkawa go-takayama</li></ul></div>
-      <div class="note"><b>הערה שלכם:</b> קנזווה-טאקימה (מסעדת קובה ביף בטאקימה)-אונסן</div>
-      <div class="move"><span class="pill">קנזאווה ← שיראקאווה-גו · 75 דק' · ~¥2,800</span><span class="pill">שיראקאווה-גו ← טקאיאמה · 50 דק' · ~¥2,800</span></div>
-      <div class="add"><span class="tag">הצעה</span><ul>
-        <li><span class="t">בוקר</span> אוטובוס Nohi מתחנת קנזאווה. <b>מקום מסומן חובה</b>, וההזמנה נפתחת ב-30/9.</li>
-        <li><b>Shirakawa-go</b>, שלוש עד ארבע שעות: להתחיל בתצפית <b>Shiroyama</b> מלמעלה (שאטל קצר או 20 דקות הליכה בעלייה), אחר כך <b>Wada House</b>, הבית הגדול עם גג הקש שאפשר להיכנס אליו, מקדש <b>Myozen-ji</b>, וגשר התלייה <b>Deai-bashi</b>.</li>
-        <li><span class="t">אחה״צ</span> אוטובוס לטקאיאמה ובדיקה למלון. <b>Green Hotel</b> קרוב לתחנה.</li>
-        <li><span class="t">ערב</span> בשר לפי ההערה שלכם. הבשר המקומי בטקאיאמה נקרא <b>Hida beef</b>, ואגיו ברמה של קובה. מסעדה מוכרת: <b>Maruaki</b>, ליד התחנה.</li>
-      </ul></div>
-    </div>
-  </article>
-</div>
+/* 27.10 Tue */
+day("2026-10-27", [
+  { id: "d1027-bamboo", sug: 1, time: "07:30", title: "יער הבמבוק בארשיאמה", tags: ["nature"], desc: "רכבת JR Sagano מקיוטו ל-Saga-Arashiyama (15 דקות), ומשם ליער, לפני ההמונים.", map: "Arashiyama Bamboo Grove" },
+  { id: "d1027-tenryuji", sug: 1, time: "08:30", title: "Tenryu-ji ו-Okochi Sanso", tags: ["temple", "nature"], desc: "הגן של Tenryu-ji, ואחריו <b>Okochi Sanso</b>: וילה עם גן ותצפית, והכרטיס כולל תה ירוק וממתק.", map: "Tenryu-ji" },
+  { id: "d1027-togetsukyo", sug: 1, title: "גשר Togetsukyo", tags: ["view"], desc: "והרחוב הראשי. מי שרוצה יכול לטפס 20 דקות לפארק הקופים <b>Iwatayama</b>, עם תצפית על העיר.", map: "Togetsukyo Bridge" },
+  { id: "d1027-lunch", sug: 1, when: "צהריים", title: "יודופו או סובה", tags: ["food"], desc: "יודופו (טופו חם) הוא מאכל מקומי של ארשיאמה." },
+  { id: "d1027-kinkakuji", sug: 1, when: "אחה״צ", title: "Kinkaku-ji, ביתן הזהב", tags: ["temple"], desc: "מונית, כ-30 דקות. לידו גן הסלעים של <b>Ryoan-ji</b>, למי שעוד יש כוח.", map: "Kinkaku-ji" },
+  { id: "d1027-ship", sug: 1, when: "ערב", title: "לשלוח את המזוודות הגדולות", tags: ["move"], desc: "מהקבלה של המלון, ואחר כך ארוחה ליד המלון. האפשרויות בלשונית \"ציוד ומידע\", תחת מזוודות." },
+]);
 
-<!-- ================= ONSEN ================= -->
-<div class="city" id="onsen">
-  <div class="cityhead"><div class="bar" style="background:var(--onsen)"></div>
-    <div><h2>אונסן · Okuhida</h2><div class="dates">31/10 · לילה 1</div>
-      <div class="hotel"><span class="lbl">ריוקאן · אפשרויות מהגיליון</span><ol>
-        <li class="pref">Miyama Ouan</li>
-        <li>Ryokan Kutsuroginoya Yuu</li>
-      </ol>
-      <div style="font-size:13px;color:var(--muted);margin-top:4px">שני הריוקנים נמצאים באזור האונסן <b>Okuhida</b>, כשעה מטקאיאמה ובדרך לקמיקוצ'י. Miyama Ouan נמצא ב-Hirayu Onsen ויש לו הסעה חינם מתחנת האוטובוס. Kutsuroginoya Yuu נמצא ב-Hitoegane, דקה מתחנת Ippousui.</div></div>
-    </div>
-  </div>
+DATA.days[9].brief = "<b>הערה שלכם:</b> קנזווה-טאקימה (מסעדת קובה ביף בטאקימה)-אונסן";
+DATA.days[10].brief = "שני הריוקנים שבגיליון נמצאים באזור <b>Okuhida Onsen</b>, כשעה מטקאיאמה ובדרך לקמיקוצ'י. Miyama Ouan נמצא ב-Hirayu, ויש לו הסעה חינם מתחנת האוטובוס. Kutsuroginoya Yuu נמצא ב-Hitoegane, דקה מתחנת Ippousui.";
 
-  <article class="card day" id="d11">
-    <div class="dayhead"><div class="num" style="background:var(--onsen)">11</div><div><h3>Takayama-onsen</h3><div class="meta">שבת · 31/10</div></div></div>
-    <div class="daybody">
-      <div class="own"><ul><li>Takayama-onsen</li></ul></div>
-      <div class="move"><span class="pill">טקאיאמה ← Hirayu Onsen · כשעה · ~¥1,600 · בלי הזמנה</span></div>
-      <div class="add"><span class="tag">הצעה</span><ul>
-        <li><span class="t">07:30</span> שוק הבוקר <b>Miyagawa</b> לאורך הנהר: ירקות, מיסו, חמוצים ומלאכת יד. פתוח עד הצהריים.</li>
-        <li><b>Sanmachi Suji</b>, העיר העתיקה: בתי עץ כהים ומבשלות סאקה, שמזהים לפי כדור ענפי הארז שתלוי בכניסה (<i>sugidama</i>). ברוב המבשלות יש טעימות.</li>
-        <li>לנשנש ברחוב <b>סושי Hida beef</b>, שמוגש על קרקר אורז.</li>
-        <li><b>Takayama Jinya</b>, בית המושל ההיסטורי מתקופת אדו.</li>
-        <li><span class="t">~14:00</span> לאסוף את התיקים ולעלות לאוטובוס מתחנת Nohi (ליד תחנת הרכבת) ל-Okuhida. האוטובוסים יוצאים בערך כל שעה.</li>
-        <li><span class="t">ערב</span> צ'ק-אין, אונסן בחוץ, וארוחת <b>קאיסקי</b> בריוקאן. כדאי לאשר מראש את שעת הארוחה.</li>
-      </ul></div>
-    </div>
-  </article>
-</div>
+/* 28.10 Wed */
+day("2026-10-28", [
+  { id: "d1028-train", sug: 1, when: "בוקר", title: "Thunderbird ושינקנסן לקנזאווה", tags: ["move"], desc: "מקיוטו ל-Tsuruga (כשעה), ושם החלפה ל-<b>Hokuriku Shinkansen</b> עד קנזאווה. בסך הכל כשעתיים, בכרטיס אחד.", book: "tb-kanazawa" },
+  { id: "d1028-gate", sug: 1, title: "שער Tsuzumi-mon", tags: ["view"], desc: "לצאת מהתחנה דרך שער העץ ולצלם אותו. משם מונית או אוטובוס קצר ל-KUMU, להשאיר תיקים.", book: "bk-hotel-kanazawa", map: "Tsuzumi-mon Gate, Kanazawa Station" },
+  { id: "d1028-chaya", sug: 1, when: "אחה״צ", title: "Higashi Chaya", tags: ["view", "food"], desc: "רובע בתי התה של הגיישות. לטעום גלידה מצופה עלה זהב (קנזאווה מייצרת כמעט את כל עלי הזהב ביפן), ולהיכנס לבית התה ההיסטורי <b>Shima</b>. רוב החנויות נסגרות בסביבות 17:00.", map: "Higashi Chaya District" },
+  { id: "d1028-kazue", sug: 1, title: "Kazuemachi", tags: ["view"], desc: "הליכה על גדת נהר Asano, לרובע קטן ושקט יותר.", map: "Kazuemachi Chaya District" },
+  { id: "d1028-dinner", sug: 1, when: "ערב", title: "ארוחת ערב ב-Katamachi", tags: ["food"], desc: "מאכל מקומי לנסות: <b>קנזאווה אודן</b>.", map: "Katamachi, Kanazawa" },
+]);
 
-<!-- ================= MATSUMOTO ================= -->
-<div class="city" id="matsumoto">
-  <div class="cityhead"><div class="bar" style="background:var(--matsumoto)"></div>
-    <div><h2>קמיקוצ'י ומצומוטו</h2><div class="dates">1/11 – 2/11 · 2 לילות</div>
-      <div class="hotel"><span class="lbl">מלון</span><b>Onyado Nono Matsumoto Natural Hot Spring</b>
-        <div style="font-size:13px;color:var(--muted);margin-top:2px">גם כאן יש אונסן במלון, ובלילה מגישים ראמן חינם (<i>yonaki soba</i>).</div></div>
-    </div>
-  </div>
+/* 29.10 Thu */
+day("2026-10-29", [
+  { id: "d1029-kenrokuen", sug: 1, time: "08:00", title: "Kenrokuen", tags: ["nature"], desc: "אחד משלושת הגנים המפורסמים ביותר ביפן. מאמצע אוקטובר הוא נפתח ב-8:00, ובבוקר הוא הכי שקט.", map: "Kenroku-en" },
+  { id: "d1029-castle", sug: 1, title: "פארק Kanazawa Castle", tags: ["view"], desc: "ישר מהגן לפארק הטירה הצמוד. הכניסה חינם.", map: "Kanazawa Castle Park" },
+  { id: "d1029-museum", sug: 1, time: "10:00", title: "21st Century Museum", tags: ["museum"], desc: "5 דקות הליכה. המיצג המפורסם הוא \"הבריכה\" של Leandro Erlich, והכניסה אליו בחלונות זמן. פתוח בחמישי (סגור בשני).", map: "21st Century Museum of Contemporary Art, Kanazawa" },
+  { id: "d1029-omicho", sug: 1, when: "צהריים", title: "Omicho Market", tags: ["food"], desc: "קרוב למלון. לאכול <b>kaisendon</b>, קערת אורז עם פירות ים טריים. בשעות השיא יש תורים.", map: "Omicho Market" },
+  { id: "d1029-nagamachi", sug: 1, when: "אחה״צ", title: "Nagamachi ובית Nomura-ke", tags: ["view", "museum"], desc: "רובע הסמוראים: קירות בוץ ותעלות. בבית הסמוראים Nomura-ke יש גן קטן ויפה.", map: "Nomura-ke Samurai House" },
+  { id: "d1029-pack", sug: 1, when: "ערב", title: "לארוז תיק קטן לשלושת הימים בהרים", tags: ["rest"] },
+]);
 
-  <article class="card day" id="d12">
-    <div class="dayhead"><div class="num" style="background:var(--matsumoto)">12</div><div><h3>Onsen- Kamikochi - Matsumoto</h3><div class="meta">ראשון · 1/11</div></div></div>
-    <div class="daybody">
-      <div class="own"><ul><li>Onsen- Kamikochi - Matsumoto</li></ul></div>
-      <div class="move"><span class="pill">Hirayu ← קמיקוצ'י · 25 דק' · ~¥1,500 · כרטיס ביום עצמו</span><span class="pill">קמיקוצ'י ← Shin-Shimashima ← מצומוטו · כשעה וחצי · ~¥3,800 · הזמנה חובה</span></div>
-      <div class="add"><span class="tag">הצעה</span><ul>
-        <li><span class="t">בוקר</span> אחרי ארוחת הבוקר בריוקאן, אוטובוס מ-Hirayu Onsen לקמיקוצ'י. אפשר לקנות כרטיס בתחנה ביום עצמו.</li>
-        <li>לרדת בתחנה <b>Taisho-ike</b>, לפני התחנה האחרונה, וללכת לאורך נהר Azusa דרך <b>Tashiro Pond</b> עד גשר <b>Kappa-bashi</b>. כשעה של הליכה שטוחה ויפה במיוחד.</li>
-        <li>מי שרוצה עוד: <b>Myojin Pond</b>, כשעה לכל כיוון מ-Kappa-bashi.</li>
-        <li>בתחילת נובמבר עצי הלגש בעמק צהובים-זהובים, זו עונה מצוינת. בבוקר הטמפרטורה קרובה ל-0°, אז צריך מעיל ושכבות. בסוף שבוע יש יותר מטיילים.</li>
-        <li>בתחנת האוטובוס בקמיקוצ'י יש לוקרים לתיקים קטנים.</li>
-        <li><span class="t">אחה״צ</span> אוטובוס Alpico ל-Shin-Shimashima (הזמנה מראש) ומשם רכבת קצרה למצומוטו.</li>
-        <li><span class="t">ערב</span> <b>Nawate-dori</b>, רחוב הצפרדעים, ו-<b>Nakamachi</b>, רחוב של מחסנים לבנים. ארוחת ערב: <b>שינשו סובה</b>, הסובה המקומית של נאגאנו.</li>
-      </ul></div>
-    </div>
-  </article>
+/* 30.10 Fri */
+day("2026-10-30", [
+  { id: "d1030-bus", sug: 1, when: "בוקר", title: "אוטובוס Nohi לשיראקאווה-גו", tags: ["move"], desc: "מתחנת קנזאווה, 75 דקות, בערך ¥2,800. <b>מקום מסומן חובה</b>, וההזמנה נפתחת ב-30.9.", book: "tb-nohi" },
+  { id: "d1030-shirakawa", sug: 1, title: "Shirakawa-go", tags: ["view"], desc: "שלוש עד ארבע שעות. להתחיל בתצפית <b>Shiroyama</b> מלמעלה (שאטל קצר, או 20 דקות הליכה בעלייה), אחר כך <b>Wada House</b>, הבית הגדול עם גג הקש שאפשר להיכנס אליו, מקדש <b>Myozen-ji</b>, וגשר התלייה <b>Deai-bashi</b>.", map: "Shirakawa-go" },
+  { id: "d1030-bus2", sug: 1, when: "אחה״צ", title: "אוטובוס לטקאיאמה", tags: ["move"], desc: "50 דקות, בערך ¥2,800, ואז צ'ק-אין. Green Hotel (המודגש בגיליון) קרוב לתחנה.", book: "tb-hotel-takayama" },
+  { id: "d1030-beef", sug: 1, when: "ערב", title: "Hida beef ב-Maruaki", tags: ["food"], desc: "הבשר לפי ההערה שלכם: בטקאיאמה הוואגיו המקומי נקרא <b>Hida beef</b>, ברמה של קובה. Maruaki היא מסעדה מוכרת ליד התחנה.", map: "Maruaki, Takayama" },
+]);
 
-  <article class="card day" id="d13">
-    <div class="dayhead"><div class="num" style="background:var(--matsumoto)">13</div><div><h3>Matsumoto - Kiso valley - Matsumoto</h3><div class="meta">שני · 2/11</div></div></div>
-    <div class="daybody">
-      <div class="own"><ul><li>Matsumoto - Kiso valley - Matsumoto</li></ul></div>
-      <div class="add"><span class="tag">הצעה</span><ul>
-        <li><span class="t">08:30</span> <b>Matsumoto Castle</b>, "טירת העורב" השחורה, בשעת הפתיחה. זו אחת מחמש הטירות ביפן שהוכרזו כאוצר לאומי, והמגדל מעץ מקורי. המדרגות בפנים תלולות מאוד. כשעה.</li>
-        <li><span class="t">~10:30</span> רכבת <b>Shinano</b> מהירה מתחנת מצומוטו ל-Nakatsugawa (כ-1:15), ומשם אוטובוס של 25 דקות ל-<b>Magome</b>.</li>
-        <li><span class="t">צהריים</span> ארוחה במגומה, ואחר כך הליכה בדרך <b>Nakasendo</b> העתיקה מ-<b>Magome</b> ל-<b>Tsumago</b>: 8 ק"מ, 2.5–3 שעות, ובכיוון הזה רוב הדרך בירידה. באמצע יש בית תה עתיק שמגיש תה חינם. לאורך הדרך תלויים פעמונים להרחקת דובים, ומצלצלים בהם כשעוברים.</li>
-        <li><span class="t">אחה״צ</span> להסתובב ב-Tsumago, עיירת דואר שמורה ובלי חוטי חשמל. משם אוטובוס של 15 דקות לתחנת Nagiso ורכבת חזרה למצומוטו (כשעתיים).</li>
-        <li><b>אם רוצים יום קל יותר:</b> לוותר על ההליכה ולנסוע ל-<b>Narai-juku</b>, עיירת דואר באורך קילומטר, כשעה ברכבת מקומית ממצומוטו.</li>
-        <li><span class="t">ערב</span> לארוז לטוקיו. החלק ההררי נגמר.</li>
-      </ul></div>
-    </div>
-  </article>
-</div>
+/* 31.10 Sat */
+day("2026-10-31", [
+  { id: "d1031-market", sug: 1, time: "07:30", title: "שוק הבוקר Miyagawa", tags: ["food", "shop"], desc: "לאורך הנהר: ירקות, מיסו, חמוצים ומלאכת יד. פתוח עד הצהריים.", map: "Miyagawa Morning Market" },
+  { id: "d1031-sanmachi", sug: 1, title: "Sanmachi Suji, העיר העתיקה", tags: ["view", "food"], desc: "בתי עץ כהים ומבשלות סאקה, שמזהים לפי כדור ענפי הארז שתלוי בכניסה (<i>sugidama</i>). ברוב המבשלות יש טעימות. לנשנש ברחוב <b>סושי Hida beef</b>, שמוגש על קרקר אורז.", map: "Sanmachi Suji, Takayama" },
+  { id: "d1031-jinya", sug: 1, title: "Takayama Jinya", tags: ["museum"], desc: "בית המושל ההיסטורי מתקופת אדו.", map: "Takayama Jinya" },
+  { id: "d1031-bus", sug: 1, time: "14:00", title: "אוטובוס Nohi ל-Okuhida", tags: ["move"], desc: "בסביבות 14:00: לאסוף את התיקים ולעלות לאוטובוס מתחנת Nohi, ליד תחנת הרכבת. כשעה, בערך ¥1,600, בלי הזמנה. האוטובוסים יוצאים בערך כל שעה." },
+  { id: "d1031-ryokan", sug: 1, when: "ערב", title: "אונסן וארוחת קאיסקי בריוקאן", tags: ["onsen", "food"], desc: "צ'ק-אין, אונסן בחוץ וארוחת קאיסקי. כדאי לאשר מראש את שעת הארוחה.", book: "tb-hotel-onsen" },
+]);
 
-<!-- ================= TOKYO 2 ================= -->
-<div class="city" id="tokyo2">
-  <div class="cityhead"><div class="bar" style="background:var(--tokyo)"></div>
-    <div><h2>טוקיו · גינזה</h2><div class="dates">3/11 – 5/11 · 2 לילות</div>
-      <div class="hotel"><span class="lbl">מלון · אפשרויות מהגיליון</span><ol>
-        <li>ginza hotel by grandbell</li>
-        <li class="pref">millennium mitsui garden hotel tokyo</li>
-      </ol></div>
-    </div>
-  </div>
+/* 1.11 Sun */
+day("2026-11-01", [
+  { id: "d1101-bus", sug: 1, when: "בוקר", title: "אוטובוס מ-Hirayu לקמיקוצ'י", tags: ["move"], desc: "אחרי ארוחת הבוקר בריוקאן. 25 דקות, בערך ¥1,500, וקונים כרטיס בתחנה ביום עצמו." },
+  { id: "d1101-walk", sug: 1, title: "מ-Taisho-ike עד Kappa-bashi", tags: ["nature"], desc: "לרדת בתחנה <b>Taisho-ike</b>, לפני התחנה האחרונה, וללכת לאורך נהר Azusa דרך <b>Tashiro Pond</b> עד גשר <b>Kappa-bashi</b>. כשעה של הליכה שטוחה ויפה במיוחד. בתחילת נובמבר עצי הלגש בעמק צהובים-זהובים. בבוקר קרוב ל-0°, אז צריך מעיל ושכבות.", map: "Kappa Bridge, Kamikochi" },
+  { id: "d1101-myojin", sug: 1, title: "Myojin Pond, למי שרוצה עוד", tags: ["nature"], desc: "כשעה לכל כיוון מ-Kappa-bashi. בתחנת האוטובוס בקמיקוצ'י יש לוקרים לתיקים קטנים.", map: "Myojin Pond, Kamikochi" },
+  { id: "d1101-alpico", sug: 1, when: "אחה״צ", title: "Alpico ל-Shin-Shimashima, ורכבת למצומוטו", tags: ["move"], desc: "כשעה וחצי, בערך ¥3,800. <b>הזמנה חובה.</b>", book: "tb-alpico" },
+  { id: "d1101-nawate", sug: 1, when: "ערב", title: "Nawate-dori ו-Nakamachi", tags: ["view", "shop"], desc: "רחוב הצפרדעים, ורחוב של מחסנים לבנים.", book: "bk-hotel-matsumoto", map: "Nawate Street, Matsumoto" },
+  { id: "d1101-soba", sug: 1, when: "ערב", title: "ארוחת ערב: שינשו סובה", tags: ["food"], desc: "הסובה המקומית של נאגאנו. במלון מגישים ראמן חינם בלילה (<i>yonaki soba</i>)." },
+]);
 
-  <article class="card day" id="d14">
-    <div class="dayhead"><div class="num" style="background:var(--tokyo)">14</div><div><h3>גינזה</h3><div class="meta">שלישי · 3/11</div></div></div>
-    <div class="daybody">
-      <div class="add"><span class="tag">הצעה · הגעה</span><ul>
-        <li>כדי להגיע לגינזה בסביבות 13:00: רכבת <b>Azusa</b> ממצומוטו לשינג'וקו (כ-2:40, בסביבות 10:00), ומשם קו Marunouchi לגינזה (17 דקות).</li>
-        <li>3/11 הוא <b>חג לאומי ביפן</b> (יום התרבות). בחגים סוגרים את הרחוב הראשי של גינזה, Chuo-dori, לרכבים מהצהריים, והוא הופך למדרחוב.</li>
-      </ul></div>
-      <div class="own"><ul>
-        <li>מגיעים בסביבות 13:00 לגינזה, א.צהריים – לזרום (<i>אופציה</i> – ראמן <b>Ginza Hachigou</b>)</li>
-        <li>סדנת צ'ופסטיקס <span class="red">Chopsticks Studio Ginza</span> – לקבוע דרך Klook, קוד הנחה OMERZTRAVEL</li>
-        <li><b>Mitsukoshi</b> – כלבו ענק, עם מיצג דגים נדירים בקומה 9, אופנת יוקרה, קומת אוכל תת-קרקעית</li>
-        <li>(בכל הרחוב הבא יש הרבה חנויות אופנה, גם <b>uniqlo</b> חנות הדגל)</li>
-        <li><b>Nissan Crossing</b> – תצוגת מכוניות עתידניות</li>
-        <li><b>Ginza six</b> – קניון חנויות יוקרה</li>
-        <li><b>HAKUHINKAN TOY PARK</b> – חנות צעצועים גדולה, מסלול מכוניות על שלט</li>
-        <li><i>אופציה אם לא נעשה קודם בערב</i> – שיבויה</li>
-        <li><b>Pokemon Center Shibuya</b> – להביא לרומי בובה קטנה :)</li>
-        <li><span class="red">The Bellwood</span> – בר מאוד שווה, מקום 48 בעולם</li>
-      </ul></div>
-      <div class="note"><b>הערה שלכם:</b> תכנית קנזווה, טאקימה, אונסן, מצאמוטו ← בוצע, ראו ימים 8–13</div>
-    </div>
-  </article>
+/* 2.11 Mon */
+day("2026-11-02", [
+  { id: "d1102-castle", sug: 1, time: "08:30", title: "Matsumoto Castle", tags: ["museum", "view"], desc: "\"טירת העורב\" השחורה, בשעת הפתיחה. אחת מחמש הטירות ביפן שהוכרזו כאוצר לאומי, והמגדל מעץ מקורי. המדרגות בפנים תלולות מאוד. כשעה.", map: "Matsumoto Castle" },
+  { id: "d1102-train", sug: 1, time: "10:30", title: "רכבת Shinano ל-Nakatsugawa", tags: ["move"], desc: "כשעה ורבע, ומשם אוטובוס של 25 דקות ל-<b>Magome</b>." },
+  { id: "d1102-hike", sug: 1, when: "צהריים", title: "Nakasendo: ממגומה לצומגו", tags: ["nature", "food"], desc: "ארוחה במגומה, ואחר כך הליכה בדרך העתיקה: 8 ק\"מ, 2.5-3 שעות, ובכיוון הזה רוב הדרך בירידה. באמצע יש בית תה עתיק שמגיש תה חינם. לאורך הדרך תלויים פעמונים להרחקת דובים, ומצלצלים בהם כשעוברים.", map: "Magome-juku" },
+  { id: "d1102-tsumago", sug: 1, when: "אחה״צ", title: "Tsumago, וחזרה למצומוטו", tags: ["view", "move"], desc: "עיירת דואר שמורה, בלי חוטי חשמל. משם אוטובוס של 15 דקות לתחנת Nagiso, ורכבת חזרה למצומוטו (כשעתיים).", map: "Tsumago-juku" },
+  { id: "d1102-easy", sug: 1, title: "אם רוצים יום קל יותר: Narai-juku", tags: ["view"], desc: "במקום ההליכה: עיירת דואר באורך קילומטר, כשעה ברכבת מקומית ממצומוטו.", map: "Narai-juku" },
+  { id: "d1102-pack", sug: 1, when: "ערב", title: "לארוז לטוקיו", tags: ["rest"], desc: "החלק ההררי נגמר." },
+]);
 
-  <article class="card day" id="d15">
-    <div class="dayhead"><div class="num" style="background:var(--tokyo)">15</div><div><h3>גינזה</h3><div class="meta">רביעי · 4/11</div></div></div>
-    <div class="daybody">
-      <div class="own"><ul>
-        <li>לפתוח את הבוקר ב-<b>Fish Market Tsukiji Outer Market</b></li>
-        <li><b>Matsuya</b> – כלבו ענק (אופנה, גלריית אומנות ואוכל)</li>
-        <li><b>Seiko House Ginza Clock Tower</b> – השעון מצלצל כל שעה, מתחת יש חנויות מותגי יוקרה עילית כמו wako ו-seiko</li>
-        <li><b>Ginza Sony Park</b> – בניין סוני, <span class="orange">לברר האם שווה</span></li>
-        <li><b>Hankyu</b> – כלבו ענק אופנת גברים</li>
-        <li><span class="red">א.ערב – להזמין ארוחה שווה בגינזה</span></li>
-      </ul></div>
-      <div class="add"><span class="tag">הצעה</span><ul>
-        <li>בשוק <b>Tsukiji</b> כדאי להגיע לפני 9:00. רוב הדוכנים נסגרים עד 14:00.</li>
-      </ul></div>
-    </div>
-  </article>
+DATA.days[13].brief = "3.11 הוא <b>חג לאומי ביפן</b> (יום התרבות). בחגים סוגרים את Chuo-dori, הרחוב הראשי של גינזה, לרכבים מהצהריים, והוא הופך למדרחוב.<br><b>הערה שלכם:</b> תכנית קנזווה, טאקימה, אונסן, מצאמוטו ← בוצע, ראו ימים 8 עד 13.";
 
-  <article class="card day" id="d16">
-    <div class="dayhead"><div class="num" style="background:var(--home)">✈</div><div><h3>חזרה</h3><div class="meta">חמישי · 5/11</div></div></div>
-    <div class="daybody">
-      <div class="own"><ul><li>השלמת קניות ואוכל בגינזה והסביבה, ונסיעה לשדה מהמלון בסביבות 12:00 :)</li></ul></div>
-    </div>
-  </article>
-</div>
+/* 3.11 Tue */
+day("2026-11-03", [
+  { id: "d1103-azusa", sug: 1, time: "10:00", title: "Azusa ממצומוטו לשינג'וקו", tags: ["move"], desc: "כשעתיים ו-40 דקות, ומשם קו Marunouchi לגינזה (17 דקות).", book: "tb-azusa" },
+  { id: "d1103-arrive", time: "13:00", title: "מגיעים לגינזה", tags: ["food"], desc: "צהריים: לזרום. אופציה: ראמן <b>Ginza Hachigou</b>.", book: "tb-hotel-ginza" },
+  { id: "d1103-chopsticks", title: "סדנת צ'ופסטיקס", tags: ["red"], desc: "<b>Chopsticks Studio Ginza</b>. לקבוע דרך Klook, קוד הנחה OMERZTRAVEL.", book: "tb-chopsticks" },
+  { id: "d1103-mitsukoshi", title: "Mitsukoshi", tags: ["shop", "food"], desc: "כלבו ענק, עם מיצג דגים נדירים בקומה 9, אופנת יוקרה וקומת אוכל תת-קרקעית. בכל הרחוב הבא יש הרבה חנויות אופנה, גם חנות הדגל של <b>Uniqlo</b>.", map: "Ginza Mitsukoshi" },
+  { id: "d1103-nissan", title: "Nissan Crossing", tags: ["view"], desc: "תצוגת מכוניות עתידניות.", map: "NISSAN CROSSING, Ginza" },
+  { id: "d1103-six", title: "Ginza Six", tags: ["shop"], desc: "קניון של חנויות יוקרה.", map: "GINZA SIX" },
+  { id: "d1103-hakuhinkan", title: "Hakuhinkan Toy Park", tags: ["shop"], desc: "חנות צעצועים גדולה, עם מסלול מכוניות על שלט.", map: "Hakuhinkan Toy Park, Ginza" },
+  { id: "d1103-shibuya", when: "ערב", title: "אופציה: שיבויה", tags: ["shop", "bar", "red"], desc: "אם לא נעשה קודם: <b>Pokémon Center Shibuya</b> (להביא לרומי בובה קטנה :)), ו-<b>The Bellwood</b>, בר מאוד שווה, מקום 48 בעולם." },
+]);
 
-<!-- ================= LOGISTICS ================= -->
-<section id="bags">
-  <h2>מזוודות</h2>
-  <div class="opt">
-    <div class="card"><h3>א. מקיוטו ישר לגינזה<span class="rec">מומלץ</span></h3>
-      <p style="margin:0">ב-27/10 בערב שולחים את המזוודות הגדולות מהקבלה במלון בקיוטו, בשירות <b>Yamato TA-Q-BIN</b>, למלון בגינזה, עם תאריך הגעה 3/11. המחיר בערך ¥2,000–3,000 למזוודה. את 28/10 עד 3/11 עוברים עם תיק גב או תיק קטן. זה עוזר במיוחד באוטובוסים לשיראקאווה-גו ובקמיקוצ'י.<br><b>לפני כן:</b> לסגור את המלון בגינזה ולשלוח להם מייל כדי לוודא שהם שומרים מזוודות לאורח שמגיע רק בעוד שבוע.</p></div>
-    <div class="card"><h3>ב. מקיוטו למצומוטו</h3>
-      <p style="margin:0">שולחים ל-<b>Onyado Nono Matsumoto</b> לתאריך 1/11. המלון צריך לשמור את המזוודות רק כמה ימים, ומלונות מסכימים לזה בקלות רבה יותר. ב-3/11 לוקחים אותן איתכם ברכבת Azusa, שיש בה מדפים למזוודות.</p></div>
-    <div class="card"><h3>שינקנסן ב-25/10</h3>
-      <p style="margin:0">בשינקנסן, מזוודה שסכום המידות שלה (אורך + רוחב + גובה) מעל 160 ס"מ צריכה מושב עם אזור מזוודות, שמזמינים יחד עם הכרטיס. אפשרות אחרת היא לשלוח את המזוודות ממלון All Day Place ב-23/10 למלון בקיוטו. לפי ההערה שלכם, לוקח להן יומיים להגיע.</p></div>
-  </div>
-</section>
+/* 4.11 Wed */
+day("2026-11-04", [
+  { id: "d1104-tsukiji", title: "Tsukiji Outer Market", tags: ["food"], desc: "לפתוח את הבוקר בשוק הדגים.", tip: "כדאי להגיע לפני 9:00. רוב הדוכנים נסגרים עד 14:00.", map: "Tsukiji Outer Market" },
+  { id: "d1104-matsuya", title: "Matsuya", tags: ["shop"], desc: "כלבו ענק: אופנה, גלריית אמנות ואוכל.", map: "Matsuya Ginza" },
+  { id: "d1104-clock", title: "מגדל השעון, Seiko House Ginza", tags: ["view", "shop"], desc: "השעון מצלצל כל שעה. מתחת יש חנויות של מותגי יוקרה עילית, כמו Wako ו-Seiko.", map: "Wako, Ginza" },
+  { id: "d1104-sony", title: "Ginza Sony Park", tags: ["view", "check"], desc: "בניין סוני.", map: "Ginza Sony Park" },
+  { id: "d1104-hankyu", title: "Hankyu", tags: ["shop"], desc: "כלבו ענק של אופנת גברים.", map: "Hankyu Men's Tokyo" },
+  { id: "d1104-dinner", when: "ערב", title: "ארוחה שווה בגינזה", tags: ["food", "red"], desc: "להזמין מראש.", book: "tb-ginza-dinner" },
+]);
 
-<section id="transport">
-  <h2>תחבורה ו-JR Pass</h2>
-  <div class="card tbl">
-    <table>
-      <thead><tr><th>תאריך</th><th>קטע</th><th>סוג</th><th>לאדם</th></tr></thead>
+/* 5.11 Thu */
+day("2026-11-05", [
+  { id: "d1105-last", title: "השלמת קניות ואוכל", tags: ["shop", "food"], desc: "בגינזה והסביבה." },
+  { id: "d1105-airport", time: "12:00", kind: "fixed", title: "נסיעה לשדה", tags: ["move"], desc: "מהמלון, בסביבות 12:00 :)", tip: "מ-1.11 מקבלים את החזר המס על הקניות במכס בשדה, לפני הצ'ק-אין. כדאי להגיע עם זמן. הפרטים בלשונית \"קניות\".", book: "bk-flight-back" },
+]);
+
+DATA.bookCats = [
+  { id: "flight", label: "טיסות", icon: "plane" },
+  { id: "train", label: "רכבות ואוטובוסים", icon: "train" },
+  { id: "hotel", label: "מלונות", icon: "bed" },
+  { id: "activity", label: "כרטיסים ופעילויות", icon: "ticket" },
+  { id: "food", label: "מסעדות", icon: "food" },
+  { id: "prep", label: "לפני הטיסה", icon: "backpack" },
+  { id: "other", label: "אחר", icon: "plus" },
+];
+DATA.bookings = [
+  { id: "bk-flight-out", cat: "flight", icon: "plane", title: "טיסה הלוך", sub: "נחיתה ביפן ביום רביעי, 21.10.2026",
+    facts: [["נחיתה", "13:20"], ["הגעה למלון", "15:30"]],
+    missing: "מספר הטיסה, שדה התעופה ושעת ההמראה. אפשר לרשום אותם בהערה" },
+  { id: "bk-hotel-shibuya", cat: "hotel", icon: "bed", title: "All Day Place Shibuya", sub: "21.10 עד 25.10, 4 לילות", facts: [["אזור", "שיבויה"], ["לילות", "4"]], map: "All Day Place Shibuya" },
+  { id: "bk-hotel-kanazawa", cat: "hotel", icon: "bed", title: "KUMU Kanazawa by THE SHARE HOTELS", sub: "28.10 עד 30.10, 2 לילות", facts: [["ליד", "Omicho Market"], ["לילות", "2"]], map: "KUMU Kanazawa by THE SHARE HOTELS" },
+  { id: "bk-hotel-matsumoto", cat: "hotel", icon: "bed", title: "Onyado Nono Matsumoto Natural Hot Spring", sub: "1.11 עד 3.11, 2 לילות", facts: [["במלון", "אונסן, וראמן חינם בלילה"], ["לילות", "2"]], map: "Onyado Nono Matsumoto Natural Hot Spring" },
+  { id: "bk-flight-back", cat: "flight", icon: "plane", title: "טיסה חזור", sub: "יום חמישי, 5.11.2026",
+    facts: [["יציאה מהמלון", "בסביבות 12:00"]],
+    missing: "מספר הטיסה ושעת ההמראה" },
+];
+DATA.items.push(
+  { id: "tb-nohi", cat: "train", list: "tobook", title: "אוטובוס Nohi קנזאווה ← שיראקאווה-גו (30.10)", urgent: "נפתח ב-30.9", desc: "ההזמנה נפתחת בדיוק חודש מראש, והמקומות מסומנים חובה. באותה הזדמנות להזמין גם שיראקאווה-גו ← טקאיאמה.", url: "https://japanbusonline.com/en", urlLabel: "japanbusonline.com", order: 1 },
+  { id: "tb-alpico", cat: "train", list: "tobook", title: "אוטובוס Alpico קמיקוצ'י ← מצומוטו (1.11)", urgent: "נפתח ב-1.10", desc: "מאז 2025 כל האוטובוסים של Alpico בקו הזה דורשים הזמנה, דרך Shin-Shimashima. ההזמנה נפתחת חודש מראש.", order: 2 },
+  { id: "tb-teamlab", cat: "activity", list: "tobook", title: "teamLab Planets (23.10)", urgent: "עכשיו", desc: "כניסה בחלונות זמן, והכרטיסים נגמרים מראש.", url: "https://www.teamlab.art/e/planets/", urlLabel: "teamlab.art", order: 3 },
+  { id: "tb-shibuyasky", cat: "activity", list: "tobook", title: "Shibuya Sky (21.10, בערב)", urgent: "עכשיו", desc: "כרטיסים לשעות השקיעה נגמרים מהר. אם ההזמנה עוד לא נפתחה לתאריך, לבדוק שוב בתחילת אוקטובר.", url: "https://www.shibuya-scramble-square.com/sky/", urlLabel: "shibuya-scramble-square.com", order: 4 },
+  { id: "tb-hotel-kyoto", cat: "hotel", list: "tobook", title: "מלון בקיוטו (25.10 עד 28.10)", urgent: "עכשיו", desc: "האפשרויות מהגיליון:<ol class=opts><li class=pref><bdi>Kyoto Granbell Hotel</bdi><small>מודגש בגיליון</small></li><li><bdi>Aoi Hotel Kyoto</bdi></li><li><bdi>Mitsui Garden Hotel Kyoto Kawaramachi Jokyoji</bdi></li></ol>", order: 5 },
+  { id: "tb-hotel-takayama", cat: "hotel", list: "tobook", title: "מלון בטקאיאמה (30.10)", urgent: "עכשיו", desc: "האפשרויות מהגיליון:<ol class=opts><li class=pref><bdi>Hida Takayama Onsen Takayama Green Hotel, KEIO GROUP HOTELS</bdi><small>מודגש בגיליון</small></li><li><bdi>hotel around TAKAYAMA, an Ascend Collection Hotel</bdi></li><li><bdi>HOTEL AMANEK HidaTakayama</bdi></li></ol>", order: 6 },
+  { id: "tb-hotel-onsen", cat: "hotel", list: "tobook", title: "ריוקאן ב-Okuhida (31.10)", urgent: "עכשיו", desc: "האפשרויות מהגיליון:<ol class=opts><li class=pref><bdi>Miyama Ouan</bdi><small>מודגש בגיליון</small></li><li><bdi>Ryokan Kutsuroginoya Yuu</bdi></li></ol>כדאי לאשר גם את שעת ארוחת הערב.", order: 7 },
+  { id: "tb-hotel-ginza", cat: "hotel", list: "tobook", title: "מלון בגינזה (3.11 עד 5.11)", urgent: "לפני 27.10", desc: "האפשרויות מהגיליון:<ol class=opts><li><bdi>ginza hotel by grandbell</bdi></li><li class=pref><bdi>millennium mitsui garden hotel tokyo</bdi><small>מודגש בגיליון</small></li></ol>לסגור לפני 27.10, בגלל שליחת המזוודות.", order: 8 },
+  { id: "tb-shinkansen", cat: "train", list: "tobook", title: "שינקנסן שינגאווה ← קיוטו (25.10)", urgent: "עד שבוע לפני", desc: "מזוודה שסכום המידות שלה מעל 160 ס\"מ צריכה מושב עם אזור מזוודות, שמזמינים יחד עם הכרטיס.", url: "https://smart-ex.jp/en/", urlLabel: "smart-ex.jp", order: 9 },
+  { id: "tb-kanazawa", cat: "train", list: "tobook", title: "רכבת קיוטו ← קנזאווה (28.10)", urgent: "עד שבוע לפני", desc: "Thunderbird עד Tsuruga, ומשם Hokuriku Shinkansen.", url: "https://www.westjr.co.jp/global/en/", urlLabel: "JR West", order: 10 },
+  { id: "tb-azusa", cat: "train", list: "tobook", title: "Azusa מצומוטו ← שינג'וקו (3.11)", urgent: "עד שבוע לפני", url: "https://www.eki-net.com/en/", urlLabel: "eki-net.com", order: 11 },
+  { id: "tb-chopsticks", cat: "activity", list: "tobook", title: "סדנת Chopsticks Studio Ginza (3.11)", urgent: "מהגיליון", desc: "דרך Klook.", code: ["קוד הנחה", "OMERZTRAVEL"], url: "https://www.klook.com/", urlLabel: "klook.com", order: 12 },
+  { id: "tb-ginza-dinner", cat: "food", list: "tobook", title: "ארוחת ערב שווה בגינזה (4.11)", urgent: "מהגיליון", order: 13 },
+  { id: "tb-bags", cat: "prep", list: "tobook", sug: 1, title: "לוודא שהמלון בגינזה שומר מזוודות שבוע", urgent: "אחרי שסוגרים", desc: "אם שולחים את המזוודות מקיוטו ישר לגינזה. האפשרויות בלשונית \"ציוד ומידע\", תחת מזוודות.", order: 14 },
+  { id: "tb-insurance", cat: "prep", list: "tobook", sug: 1, title: "ביטוח נסיעות", urgent: "לפני הטיסה", order: 15 },
+  { id: "tb-esim", cat: "prep", list: "tobook", sug: 1, title: "eSIM או חבילת גלישה ליפן", urgent: "לפני הטיסה", order: 16 },
+  { id: "tb-suica", cat: "prep", list: "tobook", sug: 1, title: "Suica או PASMO בטלפון", urgent: "לפני הטיסה", desc: "לרכבות ולאוטובוסים בתוך הערים, וגם לתשלום בחנויות נוחות. באייפון מוסיפים אותו ב-Wallet.", order: 17 }
+);
+// the old page's checklist (t1..t8) saved ticks per device; they carry over once, on first open
+DATA.oldTodo = { t1: ["tb-nohi"], t2: ["tb-alpico"], t3: ["tb-teamlab"], t4: ["tb-shibuyasky"], t5: ["tb-hotel-kyoto", "tb-hotel-takayama", "tb-hotel-onsen", "tb-hotel-ginza"], t6: ["tb-shinkansen", "tb-kanazawa", "tb-azusa"], t7: ["tb-chopsticks"], t8: ["tb-ginza-dinner"] };
+
+DATA.phrases = [
+  { ja: "英語のメニューはありますか？", ro: "Eigo no menyū wa arimasu ka?", he: "יש תפריט באנגלית?" },
+  { ja: "おすすめは何ですか？", ro: "Osusume wa nan desu ka?", he: "מה אתם ממליצים?" },
+  { ja: "これをください。", ro: "Kore o kudasai.", he: "את זה, בבקשה (ומצביעים)" },
+  { ja: "お水をください。", ro: "Omizu o kudasai.", he: "מים, בבקשה" },
+  { ja: "カードで払えますか？", ro: "Kādo de haraemasu ka?", he: "אפשר לשלם בכרטיס אשראי?" },
+  { ja: "お会計をお願いします。", ro: "Okaikei o onegai shimasu.", he: "את החשבון, בבקשה" },
+  { ja: "ごちそうさまでした。", ro: "Gochisōsama deshita.", he: "תודה על הארוחה (אומרים ביציאה)" },
+];
+DATA.dishes = [
+  { h: "מה לטעום בכל מקום", items: [
+    "טוקיו: סופלה פנקייק, סושי מסוע, ראמן",
+    "קיוטו: ממתקי מאצ'ה, טמאגויאקי ב-Nishiki, יודופו בארשיאמה",
+    "קנזאווה: גלידה בעלה זהב, קנזאווה אודן, <span lang=ja>kaisendon</span> ב-Omicho",
+    "טקאיאמה: Hida beef, וסושי Hida beef על קרקר אורז",
+    "Okuhida: ארוחת קאיסקי בריוקאן",
+    "מצומוטו: שינשו סובה"] },
+  { h: "נימוסים קטנים", items: [
+    "לא משאירים טיפ. זה נחשב מוזר",
+    "משלמים בקופה, לא לשולחן. בהרבה מקומות מניחים את הכסף במגש הקטן",
+    "במסעדות ראמן רבות מזמינים מראש במכונה בכניסה",
+    "לא הולכים ואוכלים ברחוב. אוכלים ליד הדוכן",
+    "מקומות קטנים ודוכנים בשווקים עובדים לפעמים רק במזומן"] },
+];
+/* food:<region> lists. src: "sheet" = from the sheet, "sug" = suggestion */
+[
+  ["tokyo", "שיבויה", "Hoshino Coffee", "בית קפה", "sheet", "ליד פסל Hachiko. לטעום את הסופלה פנקייק המפורסם.", "Hoshino Coffee Shibuya"],
+  ["tokyo", "שיבויה", "The SG Club", "בר", "sheet", "תשע דקות מהמלון. אדום בגיליון.", "The SG Club, Shibuya", { red: 1 }],
+  ["tokyo", "שיבויה", "The Bellwood", "בר", "sheet", "בר מאוד שווה, מקום 48 בעולם. אדום בגיליון.", "The Bellwood, Shibuya", { red: 1 }],
+  ["tokyo", "הארג'וקו ואומוטסנדו", "Kaiten Sushi Ginza", "סושי מסוע", "sheet", "סושי מסוע עם כוכב מישלן.", "Ginza Onodera Kaiten Sushi, Omotesando"],
+  ["tokyo", "הארג'וקו ואומוטסנדו", "Menchirashi", "אודון", "sheet", "אודון קרבונרה.", "Menchirashi, Harajuku"],
+  ["tokyo", "הארג'וקו ואומוטסנדו", "Luke's Lobster", "כריכי לובסטר", "sheet", "", "Luke's Lobster Omotesando"],
+  ["tokyo", "הארג'וקו ואומוטסנדו", "רחוב Takeshita", "אוכל רחוב", "sheet", "רחוב אוכל צבעוני, טוסט קשת בענן.", "Takeshita Street"],
+  ["tokyo", "שינג'וקו", "Isetan Shinjuku", "כלבו אוכל", "sheet", "כלבו אוכל ענק, עם חנות השוקולד <b>Jean-Paul Hévin</b>.", "Isetan Shinjuku"],
+  ["tokyo", "שינג'וקו", "Bam Bi Coffee", "בית קפה", "sheet", "קפה ופנקייק יפני אוורירי.", "bam bi coffee, Shinjuku"],
+  ["tokyo", "שינג'וקו", "odeo shinjukuminami guchiten", "סושי מסוע", "sheet", "אופציה לצהריים.", ""],
+  ["tokyo", "שינג'וקו", "Omoide Yokocho", "ברים", "sheet", "רחוב הברים, לערב.", "Omoide Yokocho"],
+  ["tokyo", "גינזה וצוקיג'י", "Ginza Hachigou", "ראמן", "sheet", "אופציה לצהריים ב-3.11.", "Ginza Hachigou"],
+  ["tokyo", "גינזה וצוקיג'י", "Tsukiji Outer Market", "שוק", "sheet", "בוקר של 4.11. להגיע לפני 9:00, רוב הדוכנים נסגרים עד 14:00.", "Tsukiji Outer Market"],
+  ["tokyo", "גינזה וצוקיג'י", "קומת האוכל ב-Mitsukoshi", "כלבו אוכל", "sheet", "קומה תת-קרקעית של אוכל ומתוקים.", "Ginza Mitsukoshi"],
+  ["tokyo", "גינזה וצוקיג'י", "ארוחה שווה בגינזה", "ערב חגיגי", "sheet", "4.11 בערב. עוד לא נבחר מקום, ברשימת ההזמנות.", "", { red: 1, bookAhead: 1, book: "tb-ginza-dinner" }],
+  ["kyoto", "מרכז העיר", "Nishiki Market", "שוק", "sug", "טמאגויאקי, תמנון קטן על שיפוד עם ביצה בפנים, וממתקי מאצ'ה. נסגר בסביבות 17:00-18:00.", "Nishiki Market, Kyoto"],
+  ["kyoto", "מרכז העיר", "סמטת Pontocho", "ארוחת ערב", "sug", "מסעדות לאורך הנהר.", "Pontocho Alley"],
+  ["kyoto", "מרכז העיר", "Kawaramachi ו-Kiyamachi", "ארוחת ערב", "sug", "אזור עם הרבה מסעדות, קרוב לרוב המלונות.", "Kiyamachi Street, Kyoto"],
+  ["kyoto", "היגשיאמה", "סטארבקס בבית עץ", "בית קפה", "sug", "ב-Ninenzaka, עם חדרי טטאמי.", "Starbucks Kyoto Ninenzaka Yasaka Chaya"],
+  ["kyoto", "ארשיאמה", "יודופו או סובה", "צהריים", "sug", "יודופו (טופו חם) הוא מאכל מקומי של ארשיאמה.", ""],
+  ["alps", "קנזאווה", "גלידה בעלה זהב", "מתוק", "sug", "ב-Higashi Chaya.", "Higashi Chaya District"],
+  ["alps", "קנזאווה", "בית התה Shima", "בית תה", "sug", "בית תה היסטורי ב-Higashi Chaya.", "Shima Teahouse, Kanazawa"],
+  ["alps", "קנזאווה", "Omicho Market", "שוק", "sheet", "<b>kaisendon</b>, קערת אורז עם פירות ים. בשעות השיא יש תורים.", "Omicho Market"],
+  ["alps", "קנזאווה", "קנזאווה אודן ב-Katamachi", "ארוחת ערב", "sug", "", "Katamachi, Kanazawa"],
+  ["alps", "טקאיאמה", "Maruaki", "Hida beef", "sug", "המסעדה לבשר לפי ההערה שלכם. ליד התחנה.", "Maruaki, Takayama"],
+  ["alps", "טקאיאמה", "סושי Hida beef", "אוכל רחוב", "sug", "ב-Sanmachi Suji, מוגש על קרקר אורז.", "Sanmachi Suji, Takayama"],
+  ["alps", "טקאיאמה", "מבשלות הסאקה", "טעימות", "sug", "מזהים לפי כדור ענפי הארז בכניסה. ברובן יש טעימות.", "Sanmachi Suji, Takayama"],
+  ["alps", "מצומוטו ועמק קיסו", "שינשו סובה", "סובה", "sug", "הסובה המקומית של נאגאנו. ב-Onyado Nono מגישים גם ראמן חינם בלילה.", ""],
+  ["alps", "מצומוטו ועמק קיסו", "צהריים במגומה", "צהריים", "sug", "לפני ההליכה לצומגו.", "Magome-juku"],
+].forEach(([r, area, title, type, src, desc, map, x], i) => DATA.items.push({ id: `f-${r}-${i}`, list: "food:" + r, area, title, type, src, desc, ...(map ? { map } : {}), ...(x || {}), order: i }));
+
+DATA.shopIntro = {
+  tokyo: "רוב הקניות של הטיול בטוקיו: שיבויה והארג'וקו בהתחלה, וגינזה בסוף. ב-3.11 (חג) הרחוב הראשי של גינזה הופך למדרחוב מהצהריים. <b>מ-1.11 שיטת החזר המס משתנה</b>, הפרטים למטה.",
+  mtn: "בקיוטו ובהרים חנויות קטנות ושווקים נסגרים מוקדם, לפעמים כבר ב-17:00. את הקניות הגדולות אפשר להשאיר לגינזה.",
+};
+DATA.shopping = {
+  tokyo: [
+    { name: "שיבויה", tags: ["אנימה", "רשתות", "ליד המלון"], desc: "<b>Shibuya Parco</b> (קומה 6: אנימה), <b>Center Gai</b> עם דון קיחוטה, <b>Miyashita Park</b>, ו-<b>Shibuya Scramble Square</b> מתחת ל-Shibuya Sky.", map: "Shibuya PARCO" },
+    { name: "Pokémon Center Shibuya", tags: ["לרומי"], desc: "להביא לרומי בובה קטנה :) יש גם Pokémon Center בקיוטו, בבניין Takashimaya.", map: "Pokemon Center Shibuya" },
+    { name: "הארג'וקו ואומוטסנדו", tags: ["נעליים", "בוטיקים", "יד שנייה"], desc: "רחוב <b>Takeshita</b>, שדרת <b>Omotesando</b> היוקרתית, <b>ABC-Mart</b>, ו-<b>Onitsuka Tiger</b> לנעליים של רומי. ב-<b>Cat Street</b> בוטיקים ויד שנייה מקומיים.", map: "Omotesando" },
+    { name: "Kappabashi ו-Nakamise", tags: ["כלי מטבח", "מזכרות"], desc: "באסקוסה: Kappabashi הוא רחוב של כלי מטבח, ו-Nakamise רחוב של חטיפים ומזכרות בדרך למקדש.", map: "Kappabashi Dougu Street" },
+    { name: "אקיהברה", tags: ["אלקטרוניקה", "ארקייד"], desc: "<b>Yodobashi Akiba</b> ו-<b>TAITO Station</b>.", hours: "רוב החנויות נסגרות ב-20:00", map: "Yodobashi Camera Multimedia Akiba" },
+    { name: "שינג'וקו", tags: ["כלבו", "רשתות"], desc: "<b>Isetan</b>, ודון קיחוטה ויוניקלו באזור.", map: "Isetan Shinjuku" },
+    { name: "גינזה", tags: ["יוקרה", "כלבו", "צעצועים"], desc: "<b>Mitsukoshi</b>, <b>Matsuya</b>, <b>Ginza Six</b>, חנות הדגל של <b>Uniqlo</b>, <b>Hakuhinkan Toy Park</b>, <b>Wako</b> ו-<b>Seiko</b> מתחת למגדל השעון, ו-<b>Hankyu</b> לאופנת גברים.", map: "Ginza Six" },
+  ],
+  mtn: [
+    { name: "Teramachi ו-Shinkyogoku", tags: ["קיוטו", "רחובות מקורים"], desc: "שני רחובות קניות מקורים שמתחברים לשוק Nishiki.", map: "Teramachi Street, Kyoto" },
+    { name: "Takashimaya קיוטו", tags: ["קיוטו", "נינטנדו", "פוקימון"], desc: "<b>Nintendo Kyoto</b> ו-<b>Pokémon Center Kyoto</b>, ב-Kawaramachi.", map: "Kyoto Takashimaya S.C." },
+    { name: "Sannenzaka ו-Ninenzaka", tags: ["קיוטו", "מזכרות"], desc: "רחובות אבן עתיקים עם חנויות ובתי תה, בדרך מ-Kiyomizu-dera.", map: "Ninenzaka, Kyoto" },
+    { name: "Higashi Chaya", tags: ["קנזאווה", "עלי זהב"], desc: "קנזאווה מייצרת כמעט את כל עלי הזהב ביפן, וברובע יש חנויות של מוצרים בעלה זהב.", hours: "רוב החנויות נסגרות בסביבות 17:00", map: "Higashi Chaya District" },
+    { name: "Miyagawa ו-Sanmachi Suji", tags: ["טקאיאמה", "סאקה", "מלאכת יד"], desc: "שוק הבוקר לאורך הנהר: מיסו, חמוצים ומלאכת יד. בעיר העתיקה: מבשלות סאקה.", hours: "השוק פתוח עד הצהריים", map: "Miyagawa Morning Market" },
+    { name: "Nakamachi ו-Nawate-dori", tags: ["מצומוטו"], desc: "רחוב של מחסנים לבנים, ורחוב הצפרדעים.", map: "Nakamachi Street, Matsumoto" },
+  ],
+};
+DATA.taxfree = [
+  "בחנויות עם שלט <b>Tax-Free</b>: מעל ¥5,000 בחנות אחת ביום, ומציגים דרכון בקופה.",
+  "<b>עד 31.10</b> (טוקיו, קיוטו, קנזאווה): לא משלמים את המס בכלל, כבר בקופה.",
+  "<b>מ-1.11</b> (גינזה): משלמים את המחיר המלא, ומקבלים את המס בחזרה במכס בשדה, לפני הצ'ק-אין לטיסה.",
+  "לכן ב-5.11 שמים את הקניות מגינזה בתיק שקל לפתוח ולהראות, ומגיעים לשדה עם זמן.",
+  "התנאים המלאים: <a href=\"https://www.japan-guide.com/news/tax-free-shopping.html\" target=\"_blank\" rel=\"noopener\">japan-guide.com</a>.",
+];
+
+DATA.packGroups = [
+  { id: "docs", label: "מסמכים וכסף" },
+  { id: "clothes", label: "בגדים" },
+  { id: "tech", label: "אלקטרוניקה" },
+  { id: "health", label: "בריאות ושונות" },
+];
+[
+  ["docs", "דרכונים"],
+  ["docs", "ביטוח נסיעות"],
+  ["docs", "כרטיס אשראי + כרטיס גיבוי"],
+  ["docs", "מזומן ביין", "בכפרים, במקדשים ובאוטובוסים בהרים לפעמים רק מזומן"],
+  ["docs", "Suica או PASMO בטלפון"],
+  ["docs", "צילום של הדרכונים בטלפון ובמייל"],
+  ["clothes", "נעלי הליכה נוחות", "לקמיקוצ'י ולדרך Nakasendo"],
+  ["clothes", "מעיל חם, כובע ושכבות", "בטקאיאמה, ב-Okuhida ובקמיקוצ'י 0°-12°"],
+  ["clothes", "סווטשירט וג'קט קל", "בטוקיו ובקיוטו 13°-21°"],
+  ["clothes", "מטרייה קטנה", "בקנזאווה גשום לעתים קרובות"],
+  ["clothes", "גרביים שלמות", "חולצים נעליים במקדשים, בריוקן ובחלק מהמסעדות"],
+  ["clothes", "תיק קטן לשלושת הימים בהרים", "אם המזוודות נשלחות מקיוטו"],
+  ["tech", "מטען + סוללה ניידת"],
+  ["tech", "מתאם לשקע יפני (Type A)", "שני פינים שטוחים, 100V. רוב המטענים מתאימים"],
+  ["tech", "eSIM או חבילת גלישה"],
+  ["tech", "אוזניות"],
+  ["health", "תרופות קבועות + כדורים לכאב ראש"],
+  ["health", "מגבת יד קטנה", "בהרבה שירותים ציבוריים אין מגבות נייר"],
+  ["health", "שקית קטנה לאשפה", "כמעט אין פחים ברחוב"],
+  ["health", "מקום פנוי במזוודה", "לקניות, ולבובה של רומי"],
+].forEach(([g, title, note], i) => DATA.items.push({ id: `p-${g}-${i}`, list: "pack:" + g, title, note: note || "", order: i }));
+
+DATA.items.push(
+  { id: "sp-depachika", list: "spare", title: "קומות האוכל של הכלבו", type: "ליום גשום", src: "sug", desc: "בקומה התחתונה של כל כלבו גדול (Isetan, Mitsukoshi, Matsuya) יש שוק אוכל ומתוקים ענק.", order: 1 },
+  { id: "sp-character", list: "spare", title: "Tokyo Character Street", type: "ליום גשום", src: "sug", desc: "בקומה התחתונה של תחנת טוקיו: חנויות של דמויות מצוירות, 10 דקות מגינזה.", map: "Tokyo Character Street", order: 2 },
+  { id: "sp-narai", list: "spare", title: "Narai-juku", type: "יום קל", src: "sug", desc: "במקום ההליכה ב-2.11: עיירת דואר באורך קילומטר, כשעה ברכבת ממצומוטו.", map: "Narai-juku", order: 3 },
+  { id: "sp-ryoanji", list: "spare", title: "Ryoan-ji", type: "קיוטו", src: "sug", desc: "גן הסלעים ליד ביתן הזהב, אם נשאר זמן ב-27.10.", map: "Ryoan-ji", order: 4 }
+);
+DATA.info = [
+  { icon: "bag", h: "מזוודות", open: true, body: `
+    <p><b>א. מקיוטו ישר לגינזה (מומלץ).</b> ב-27.10 בערב שולחים את המזוודות הגדולות מהקבלה במלון בקיוטו, בשירות <b>Yamato TA-Q-BIN</b>, למלון בגינזה, עם תאריך הגעה 3.11. בערך ¥2,000-3,000 למזוודה. את 28.10 עד 3.11 עוברים עם תיק גב או תיק קטן, וזה עוזר במיוחד באוטובוסים לשיראקאווה-גו ולקמיקוצ'י. לפני כן: לסגור את המלון בגינזה ולוודא במייל שהם שומרים מזוודות לאורח שמגיע רק בעוד שבוע.</p>
+    <p><b>ב. מקיוטו למצומוטו.</b> שולחים ל-Onyado Nono לתאריך 1.11. המלון צריך לשמור את המזוודות רק כמה ימים, ומלונות מסכימים לזה בקלות רבה יותר. ב-3.11 לוקחים אותן ברכבת Azusa, שיש בה מדפים למזוודות.</p>
+    <p><b>שינקנסן ב-25.10.</b> מזוודה שסכום המידות שלה (אורך + רוחב + גובה) מעל 160 ס"מ צריכה מושב עם אזור מזוודות, שמזמינים יחד עם הכרטיס. אפשרות אחרת: לשלוח ממלון All Day Place ב-23.10 למלון בקיוטו. לפי ההערה שלכם, לוקח למזוודות יומיים להגיע.</p>` },
+  { icon: "train", h: "תחבורה ו-JR Pass", body: `
+    <table class="tbl">
+      <thead><tr><th>תאריך</th><th>קטע</th><th>לאדם</th></tr></thead>
       <tbody>
-        <tr><td>25/10</td><td>שינגאווה ← קיוטו · Nozomi</td><td><span class="jr">JR</span></td><td>~¥14,000</td></tr>
-        <tr><td>28/10</td><td>קיוטו ← קנזאווה · Thunderbird + שינקנסן</td><td><span class="jr">JR</span></td><td>~¥8,000</td></tr>
-        <tr><td>30/10</td><td>קנזאווה ← שיראקאווה-גו ← טקאיאמה</td><td><span class="bus">אוטובוס</span></td><td>~¥5,600</td></tr>
-        <tr><td>31/10</td><td>טקאיאמה ← Hirayu Onsen</td><td><span class="bus">אוטובוס</span></td><td>~¥1,600</td></tr>
-        <tr><td>1/11</td><td>Hirayu ← קמיקוצ'י ← מצומוטו</td><td><span class="bus">אוטובוס</span></td><td>~¥5,300</td></tr>
-        <tr><td>2/11</td><td>מצומוטו ← Nakatsugawa, ומ-Nagiso חזרה, כולל אוטובוסים</td><td><span class="jr">JR</span></td><td>~¥6,500</td></tr>
-        <tr><td>3/11</td><td>מצומוטו ← שינג'וקו · Azusa</td><td><span class="jr">JR</span></td><td>~¥6,600</td></tr>
+        <tr><td>25.10</td><td>שינגאווה ← קיוטו, Nozomi <span class="k jr">JR</span></td><td>~¥14,000</td></tr>
+        <tr><td>28.10</td><td>קיוטו ← קנזאווה, Thunderbird ושינקנסן <span class="k jr">JR</span></td><td>~¥8,000</td></tr>
+        <tr><td>30.10</td><td>קנזאווה ← שיראקאווה-גו ← טקאיאמה <span class="k">אוטובוס</span></td><td>~¥5,600</td></tr>
+        <tr><td>31.10</td><td>טקאיאמה ← Hirayu Onsen <span class="k">אוטובוס</span></td><td>~¥1,600</td></tr>
+        <tr><td>1.11</td><td>Hirayu ← קמיקוצ'י ← מצומוטו <span class="k">אוטובוס</span></td><td>~¥5,300</td></tr>
+        <tr><td>2.11</td><td>מצומוטו ← Nakatsugawa, ומ-Nagiso חזרה, כולל אוטובוסים <span class="k jr">JR</span></td><td>~¥6,500</td></tr>
+        <tr><td>3.11</td><td>מצומוטו ← שינג'וקו, Azusa <span class="k jr">JR</span></td><td>~¥6,600</td></tr>
       </tbody>
-      <tfoot><tr><td></td><td>סה״כ בין ערים</td><td></td><td>~¥47,600</td></tr></tfoot>
+      <tfoot><tr><td></td><td>סה״כ בין ערים</td><td>~¥47,600</td></tr></tfoot>
     </table>
-  </div>
-  <div class="card prose" style="margin-top:10px">
-    <p><b>המסקנה: לא לקנות JR Pass ארצי.</b> פס ל-7 ימים עולה בערך ¥50,000 ומעלה. הקטעים שהוא מכסה אצלכם מסתכמים בערך ב-¥35,000, ו-7 ימים ממילא לא יכולים לכסות גם את 25/10 וגם את 3/11. גם כל הקטעים ההרריים הם באוטובוסים, שהפס לא מכסה.</p>
-    <p>הכי פשוט: כרטיסים רגילים לכל נסיעה, וכרטיס <b>Suica</b> או <b>PASMO</b> בטלפון לנסיעות בתוך הערים.</p>
-    <p style="font-size:13px;color:var(--muted)">המחירים בטבלה משוערים ויכולים להשתנות.</p>
-  </div>
-</section>
+    <p><b>המסקנה: לא לקנות JR Pass ארצי.</b> פס ל-7 ימים עולה בערך ¥50,000 ומעלה. הקטעים שהוא מכסה אצלכם מסתכמים בערך ב-¥35,000, ו-7 ימים ממילא לא יכולים לכסות גם את 25.10 וגם את 3.11. גם כל הקטעים ההרריים הם באוטובוסים, שהפס לא מכסה.</p>
+    <p>הכי פשוט: כרטיסים רגילים לכל נסיעה, ו-<b>Suica</b> או <b>PASMO</b> בטלפון לנסיעות בתוך הערים. המחירים משוערים.</p>` },
+  { icon: "sun", h: "מזג אוויר", body: `<ul>
+    <li><b>טוקיו וקיוטו:</b> בסביבות 13°-21°, נעים. מספיק סווטשירט וג'קט קל.</li>
+    <li><b>קנזאווה:</b> 10°-19°, ולעתים קרובות גשום. כדאי מטרייה קטנה.</li>
+    <li><b>טקאיאמה, Okuhida וקמיקוצ'י:</b> 0°-12°. צריך מעיל חם, כובע ושכבות. זה החלק הכי קר בטיול.</li>
+    <li><b>שלכת:</b> בקמיקוצ'י, בטקאיאמה ובקנזאווה השלכת בשיאה בדיוק בתאריכים שלכם. בקיוטו היא רק מתחילה (השיא באמצע נובמבר).</li>
+  </ul>` },
+  { icon: "flag", h: "מה מסומן איך", body: `
+    <p><b>תחנה מלאה על הקו</b>: מהגיליון, כמו שכתבתם. <b>תחנה מקווקוות עם תווית "הצעה"</b>: תוספת שלא הייתה בגיליון, בימים שהיו ריקים או רשומים בשורה אחת.</p>
+    <p>תווית <b>"אדום בגיליון"</b>: מה שסימנתם באדום. <b>"לברר אם שווה"</b>: מה שסימנתם בכתום.</p>
+    <p>אפשר לסמן כל תחנה כבוצעת, לערוך אותה, להוסיף הערה או למחוק. אחרי מחיקה מופיע למטה כפתור "ביטול" לכמה שניות.</p>` },
+];
 
-<section id="weather">
-  <h2>מזג אוויר וציוד</h2>
-  <div class="card prose">
-    <ul>
-      <li><b>טוקיו וקיוטו:</b> בסביבות 13°–21°, נעים. מספיק סווטשירט וג'קט קל.</li>
-      <li><b>קנזאווה:</b> 10°–19°, ולעתים קרובות גשום. כדאי מטרייה קטנה.</li>
-      <li><b>טקאיאמה, Okuhida וקמיקוצ'י:</b> 0°–12°. צריך מעיל חם, כובע ושכבות. זה החלק הכי קר בטיול.</li>
-      <li><b>שלכת:</b> בקמיקוצ'י, בטקאיאמה ובקנזאווה השלכת בשיאה בדיוק בתאריכים שלכם. בקיוטו היא רק מתחילה (השיא באמצע נובמבר).</li>
-      <li>נעליים נוחות להליכה בקמיקוצ'י ובדרך Nakasendo.</li>
-    </ul>
-  </div>
-</section>
+/* generated by tools/gen-photos.mjs: photo credits (Wikimedia Commons) */
+DATA.photos = {"shibuya":{"by":"David Kernan","lic":"CC BY 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=142353780"},
+  "scramble":{"by":"Sakura Torch","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=141804891"},
+  "meiji":{"by":"Akonnchiroll","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=130582980"},
+  "omotesando":{"by":"Kakidai","lic":"CC BY-SA 3.0","page":"https://commons.wikimedia.org/w/index.php?curid=19346649"},
+  "sensoji":{"by":"Akonnchiroll","lic":"CC0","page":"https://commons.wikimedia.org/w/index.php?curid=140103480"},
+  "kappabashi":{"by":"Basile Morin","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=87999066"},
+  "akiba":{"by":"Phineyes","lic":"CC0","page":"https://commons.wikimedia.org/w/index.php?curid=144975426"},
+  "kabukicho":{"by":"Basile Morin","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=81420139"},
+  "tmg":{"by":"Kakidai","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=156219543"},
+  "gion":{"by":"663highland","lic":"CC BY 2.5","page":"https://commons.wikimedia.org/w/index.php?curid=38978940"},
+  "nishiki":{"by":"matsuyuki","lic":"CC BY-SA 2.0","page":"https://commons.wikimedia.org/w/index.php?curid=2657121"},
+  "yasaka":{"by":"Wikimedia Commons","lic":"CC BY-SA 3.0","page":"https://commons.wikimedia.org/w/index.php?curid=102062"},
+  "pontocho":{"by":"Wolfiewolf from Pontocho street in Nakagyo, Kyoto","lic":"CC BY 2.0","page":"https://commons.wikimedia.org/w/index.php?curid=2726783"},
+  "inari":{"by":"Basile Morin","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=81034484"},
+  "kiyomizu":{"by":"Jordy Meow","lic":"CC BY-SA 3.0","page":"https://commons.wikimedia.org/w/index.php?curid=30895839"},
+  "ninenzaka":{"by":"Basile Morin","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=80363268"},
+  "philosopher":{"by":"David Monniaux","lic":"CC BY-SA 3.0","page":"https://commons.wikimedia.org/w/index.php?curid=90527"},
+  "bamboo":{"by":"Basile Morin","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=82606736"},
+  "tenryuji":{"by":"osakaosaka","lic":"CC BY-SA 3.0","page":"https://commons.wikimedia.org/w/index.php?curid=8767864"},
+  "kinkakuji":{"by":"Nacaru","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=147825830"},
+  "tsuzumimon":{"by":"663highland","lic":"CC BY 2.5","page":"https://commons.wikimedia.org/w/index.php?curid=29528313"},
+  "kenrokuen":{"by":"Japanexperterna.se","lic":"CC BY-SA 3.0","page":"https://commons.wikimedia.org/w/index.php?curid=34244591"},
+  "kzcastle":{"by":"663highland","lic":"CC BY 2.5","page":"https://commons.wikimedia.org/w/index.php?curid=198478695"},
+  "museum21":{"by":"金沢市","lic":"CC BY 2.1 jp","page":"https://commons.wikimedia.org/w/index.php?curid=32373408"},
+  "shirakawa":{"by":"663highland","lic":"CC BY 2.5","page":"https://commons.wikimedia.org/w/index.php?curid=8011205"},
+  "jinya":{"by":"K.F.","lic":"CC BY 2.5","page":"https://commons.wikimedia.org/w/index.php?curid=1078072"},
+  "kamikochi":{"by":"lumoplank","lic":"CC0","page":"https://commons.wikimedia.org/w/index.php?curid=195791930"},
+  "matsumoto":{"by":"Lightning toothed whale (稲妻ノ歯鯨) This photo was taken with Canon EOS 500D","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=126963382"},
+  "magome":{"by":"Chensiyuan","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=157238204"},
+  "tsumago":{"by":"Chensiyuan","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=157359254"},
+  "narai":{"by":"Chensiyuan","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=157318976"},
+  "ginza":{"by":"Kakidai","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=72903634"},
+  "sanmachi":{"by":"Ankur P from Pune, India","lic":"CC BY 2.0","page":"https://commons.wikimedia.org/w/index.php?curid=61069630"},
+  "higashichaya":{"by":"Andrea Schaffer from Sydney, Australia","lic":"CC BY 2.0","page":"https://commons.wikimedia.org/w/index.php?curid=75235390"},
+  "omicho":{"by":"User: (WT-shared) Jpatokal at wts wikivoyage","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=22923165"},
+  "nagamachi":{"by":"Douglas Perkins","lic":"CC BY-SA 2.0","page":"https://commons.wikimedia.org/w/index.php?curid=90616548"},
+  "tsukiji":{"by":"Aimaimyi","lic":"CC BY-SA 3.0","page":"https://commons.wikimedia.org/w/index.php?curid=19258428"},
+  "togetsukyo":{"by":"Tomomarusan","lic":"CC BY 2.5","page":"https://commons.wikimedia.org/w/index.php?curid=1984660"},
+  "gyoen":{"by":"Terabita34","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=103550122"},
+  "takeshita":{"by":"japanvlogjp","lic":"CC BY-SA 4.0","page":"https://commons.wikimedia.org/w/index.php?curid=132399491"},
+  "hachiko":{"by":"Asanagi","lic":"CC0","page":"https://commons.wikimedia.org/w/index.php?curid=89261661"}};
 
-<p class="foot"><span class="offline" id="offline"></span> מבוסס על הגיליון JAPAN 2026. תוספות ההצעה, המחירים והשעות משוערים, וכדאי לאמת אותם מול האתרים הרשמיים לפני שמזמינים.</p>
-</div>
+/* Which photo goes where. Keys are files in /img (credits in data_photos.js). */
+DATA.dayHero = {
+  "2026-10-21": "shibuya", "2026-10-22": "meiji", "2026-10-23": "sensoji", "2026-10-24": "gyoen",
+  "2026-10-25": "gion", "2026-10-26": "inari", "2026-10-27": "kinkakuji",
+  "2026-10-28": "tsuzumimon", "2026-10-29": "kenrokuen", "2026-10-30": "shirakawa", "2026-10-31": "sanmachi",
+  "2026-11-01": "kamikochi", "2026-11-02": "tsumago", "2026-11-03": "ginza", "2026-11-04": "tsukiji",
+};
+DATA.itemPhoto = {
+  "d1021-hachiko": "hachiko", "d1021-sky": "scramble",
+  "d1022-takeshita": "takeshita", "d1022-omotesando": "omotesando",
+  "d1023-kappabashi": "kappabashi", "d1023-akiba": "akiba",
+  "d1024-kabukicho": "kabukicho", "d1024-tmg": "tmg",
+  "d1025-nishiki": "nishiki", "d1025-yasaka": "yasaka", "d1025-pontocho": "pontocho",
+  "d1026-kiyomizu": "kiyomizu", "d1026-sannenzaka": "ninenzaka", "d1026-pm": "philosopher",
+  "d1027-bamboo": "bamboo", "d1027-tenryuji": "tenryuji", "d1027-togetsukyo": "togetsukyo",
+  "d1028-chaya": "higashichaya",
+  "d1029-castle": "kzcastle", "d1029-museum": "museum21", "d1029-omicho": "omicho", "d1029-nagamachi": "nagamachi",
+  "d1031-jinya": "jinya",
+  "d1102-castle": "matsumoto", "d1102-hike": "magome", "d1102-easy": "narai",
+  "d1104-clock": "ginza",
+  "f-tokyo-6": "takeshita", "f-tokyo-12": "tsukiji", "f-kyoto-15": "nishiki", "f-kyoto-16": "pontocho", "f-alps-22": "omicho", "f-alps-25": "sanmachi",
+  "sp-narai": "narai",
+};
+DATA.shopPhoto = {
+  "שיבויה": "shibuya", "הארג'וקו ואומוטסנדו": "omotesando", "Kappabashi ו-Nakamise": "kappabashi", "אקיהברה": "akiba", "גינזה": "ginza",
+  "Sannenzaka ו-Ninenzaka": "ninenzaka", "Higashi Chaya": "higashichaya", "Miyagawa ו-Sanmachi Suji": "sanmachi",
+};
+</script>
+<script>/* ---------- helpers ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const ico = (n, cls = "") => `<svg class="ic ${cls}" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+const photoKey = it => { const k = DATA.itemPhoto[it.id]; return k && DATA.photos[k] ? k : null; };
+function pic(k, title, cls = "") {
+  const P = DATA.photos[k]; if (!P) return "";
+  return `<button type="button" class="pic ${cls}" data-photo="${k}" data-ptitle="${esc(title)}" aria-label="הגדלת התמונה: ${esc(title)}"><img src="/img/${k}.jpg" alt="" loading="lazy" decoding="async"${P.pos ? ` style="object-position:${P.pos}"` : ""}></button>${P.ill ? `<span class="pic-cap">אילוסטרציה של סוג האוכל</span>` : ""}`;
+}
+const mapUrl = q => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+const WD = ["א׳", "ב׳", "ג׳", "ד׳", "ה׳", "ו׳", "ש׳"];
+const WDL = ["ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"];
+const MON = ["בינואר", "בפברואר", "במרץ", "באפריל", "במאי", "ביוני", "ביולי", "באוגוסט", "בספטמבר", "באוקטובר", "בנובמבר", "בדצמבר"];
+const dOf = iso => { const [y, m, d] = iso.split("-").map(Number); return new Date(y, m - 1, d); };
+// The trip runs on Japan time, whatever the phone's clock is set to.
+function jpNow() {
+  try {
+    const p = Object.fromEntries(new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date()).map(x => [x.type, x.value]));
+    return { iso: `${p.year}-${p.month}-${p.day}`, hm: `${p.hour}:${p.minute}` };
+  } catch {
+    const t = new Date(), z = n => String(n).padStart(2, "0");
+    return { iso: `${t.getFullYear()}-${z(t.getMonth() + 1)}-${z(t.getDate())}`, hm: `${z(t.getHours())}:${z(t.getMinutes())}` };
+  }
+}
+const todayIso = () => jpNow().iso;
+const store = {
+  get(k, f) { try { const v = localStorage.getItem("trip." + k); return v == null ? f : JSON.parse(v); } catch { return f; } },
+  set(k, v) { try { localStorage.setItem("trip." + k, JSON.stringify(v)); } catch { } }
+};
 
-<script src="app.js" defer></script>
+/* ---------- state ---------- */
+const S = {
+  over: {},        // items/<id> docs: overrides of base items + custom items
+  notes: {},       // notes/<key> docs
+  mode: "connecting", // connecting | live | offline | nosync
+  tab: "plan",
+  day: null,
+  city: { food: "tokyo", shop: "tokyo" },
+  editing: null,   // item id being edited, or "new:<list>"
+  pendingRender: false,
+  fx: {},          // one-shot effects for the next render: enter (reveal content), day (pop the chosen tile), toggled (item id)
+  open: {},        // <details data-open> key -> open, so re-renders and the 20s sync don't collapse what the user opened
+};
+DATA.items.push(...DATA.packGroups.map((g, i) => ({ id: "pg-" + g.id, list: "packgroups", title: g.label, key: g.id, order: i })));
+const BASE = new Map(DATA.items.map(i => [i.id, i]));
+// Most of the sheet's stops have no clock time, or only "morning" / "evening". Each gets a sort key from the
+// last time before it, so the day keeps the sheet's order and a stop added at 14:00 still lands in the right place.
+for (const d of DATA.days) {
+  let k = "00:00";
+  for (const it of DATA.items) if (it.list === "day:" + d.date) {
+    const t = it.time || DATA.whenKey[it.when];
+    if (t && t > k) k = t;
+    it.sk = k;
+  }
+}
+
+function merged(list) {
+  const out = [];
+  for (const b of DATA.items) if (b.list === list) out.push({ ...b, ...(S.over[b.id] || {}) });
+  for (const [id, o] of Object.entries(S.over)) if (o.custom && o.list === list && !BASE.has(id)) out.push({ id, ...o });
+  return out.filter(i => !i.hidden).sort((a, b) => {
+    // a time set in the editor wins over the sort key
+    const ta = a.time || a.sk || "99:99", tb = b.time || b.sk || "99:99";
+    return ta === tb ? (a.order ?? 0) - (b.order ?? 0) || (a.createdAt || 0) - (b.createdAt || 0) : ta < tb ? -1 : 1;
+  });
+}
+const item = id => ({ ...(BASE.get(id) || {}), ...(S.over[id] || {}), id });
+const openAttr = (key, def) => (S.open[key] ?? def) ? " open" : "";
+const listStats = list => { const m = merged(list); return { done: m.filter(i => i.done).length, total: m.length }; };
+
+/* ---------- persistence: local cache + /api/state sync ---------- */
+// Each device keeps a copy of the shared state and a queue of writes not yet sent,
+// so the app opens and edits offline; the queue is flushed when the connection returns.
+S.over = store.get("cache.items", {});
+S.notes = store.get("cache.notes", {});
+S.queue = store.get("queue", {}); // "items/<id>" | "notes/<key>" -> body
+const qCount = () => Object.keys(S.queue).length;
+function saveCache() { store.set("cache.items", S.over); store.set("cache.notes", S.notes); store.set("queue", S.queue); }
+function applyQueue() {
+  for (const [p, body] of Object.entries(S.queue)) {
+    const [col, id] = p.split("/");
+    (col === "items" ? S.over : S.notes)[id] = body;
+  }
+}
+function writeDoc(path, body) {
+  S.queue[path] = body;
+  saveCache();
+  flush();
+}
+let flushing = false;
+async function flush() {
+  if (flushing || !qCount()) return;
+  flushing = true;
+  setSave("saving");
+  try {
+    for (const [path, body] of Object.entries(S.queue)) {
+      const [col, id] = path.split("/");
+      const r = await fetch("/api/state", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ col, id, doc: body }) });
+      if (r.status === 503) { S.mode = "nosync"; break; }
+      if (r.status === 413 || r.status === 400) { delete S.queue[path]; saveCache(); setSave("error"); continue; }
+      if (!r.ok) throw new Error(String(r.status));
+      if (S.queue[path] === body) delete S.queue[path];
+      saveCache();
+      S.mode = "live";
+    }
+  } catch { S.mode = navigator.onLine ? S.mode : "offline"; }
+  finally { flushing = false; }
+  status();
+}
+async function pull() {
+  try {
+    const r = await fetch("/api/state", { cache: "no-store" });
+    if (r.status === 503) { S.mode = "nosync"; status(); return; }
+    if (!r.ok) throw new Error(String(r.status));
+    const j = await r.json();
+    const before = JSON.stringify([S.over, S.notes]);
+    S.over = j.items || {}; S.notes = j.notes || {};
+    applyQueue(); saveCache();
+    S.mode = "live";
+    // only redraw when the other phone changed something, so the 20s poll doesn't restart animations
+    if (JSON.stringify([S.over, S.notes]) !== before) render();
+    if (qCount()) flush();
+  } catch { S.mode = "offline"; }
+  status();
+}
+function status() {
+  if (S.mode === "nosync") return setSave("nosync");
+  if (S.mode === "offline" || !navigator.onLine) return setSave(qCount() ? "offline-q" : "offline");
+  if (qCount()) return setSave("saving");
+  setSave(S.mode === "live" ? "saved" : "connecting");
+}
+function patchItem(id, patch) {
+  const base = BASE.get(id);
+  const next = { ...(S.over[id] || {}), ...patch, list: base ? base.list : (patch.list ?? (S.over[id] || {}).list), updatedAt: Date.now() };
+  S.over[id] = next;
+  render();
+  writeDoc("items/" + id, next);
+}
+function addItem(list, fields) {
+  const id = "c-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+  patchItem(id, { ...fields, list, custom: true, createdAt: Date.now() });
+}
+function setNote(key, text) {
+  if ((S.notes[key] || {}).text === text) return;
+  S.notes[key] = { text, updatedAt: Date.now() };
+  writeDoc("notes/" + key, S.notes[key]);
+}
+
+let saveTimer;
+function setSave(st) {
+  const el = $("#save");
+  if (!el) return;
+  const txt = {
+    saving: "שומר…", saved: "נשמר", live: "מסונכרן", error: "שינוי אחד לא נשמר",
+    offline: "אין חיבור", "offline-q": "אין חיבור, השינויים יישלחו כשיחזור",
+    nosync: "נשמר רק בטלפון הזה", connecting: "מתחבר…"
+  }[st] || "";
+  el.textContent = txt;
+  el.dataset.state = st === "offline-q" ? "offline" : st;
+  clearTimeout(saveTimer);
+  if (st === "saved") saveTimer = setTimeout(() => { el.textContent = "מסונכרן"; el.dataset.state = "live"; }, 1600);
+}
+
+function connect() {
+  pull();
+  setInterval(() => { if (document.visibilityState === "visible") pull(); }, 20000);
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") pull(); });
+  window.addEventListener("online", () => { flush().then(pull); });
+  window.addEventListener("offline", status);
+}
+
+/* ---------- rendering ---------- */
+function render() {
+  const ae = document.activeElement;
+  if (ae && ae.closest && ae.closest("#view") && /^(INPUT|TEXTAREA|SELECT)$/.test(ae.tagName)) { S.pendingRender = true; return; }
+  S.pendingRender = false;
+  const view = $("#view");
+  const y = window.scrollY;
+  view.innerHTML = ({ plan: vPlan, book: vBook, food: vFood, shop: vShop, more: vMore }[S.tab] || vPlan)();
+  navState();
+  renderHead();
+  window.scrollTo({ top: y, behavior: "instant" });
+  effects();
+}
+const TABS = ["plan", "book", "food", "shop", "more"];
+document.addEventListener("focusout", () => setTimeout(() => { if (S.pendingRender) render(); }, 0));
+
+function renderHead() {
+  const t = todayIso(), first = DATA.days[0].date, last = DATA.days[DATA.days.length - 1].date;
+  let line;
+  if (t < first) { const n = Math.round((dOf(first) - dOf(t)) / 864e5); line = n === 1 ? "נוחתים ביפן מחר" : `עוד ${n} ימים ליפן`; }
+  else if (t > last) line = "הטיול הסתיים";
+  else { const i = DATA.days.findIndex(d => d.date === t); line = `היום: יום ${i + 1} מתוך ${DATA.days.length}, ${DATA.regions[DATA.days[i].city].label}`; }
+  $("#countdown").textContent = line;
+}
+
+/* plan */
+// Each day wears the color of the region where it ends; a travel day is split between the two.
+const regCls = d => `r-${d.city}${d.from ? " split" : ""}`;
+const splitVars = d => d.from ? ` style="--c1:var(--${d.from});--s1:var(--${d.from}-soft)"` : "";
+function dayTile(d, i) {
+  const dt = dOf(d.date), sel = d.date === S.day, today = d.date === todayIso();
+  const st = listStats("day:" + d.date);
+  return `<button class="tile ${regCls(d)}${sel ? " sel" : ""}${today ? " today" : ""}"${splitVars(d)} data-day="${d.date}" aria-pressed="${sel}" aria-label="${WDL[dt.getDay()]} ${dt.getDate()} ${MON[dt.getMonth()]}, ${DATA.regions[d.city].label}${today ? ", היום" : ""}">
+    <span class="wd">${WD[dt.getDay()]}</span><span class="dn">${dt.getDate()}</span>
+    <span class="pips" aria-hidden="true">${st.total ? `<i style="--p:${st.done / st.total}"></i>` : ""}</span>
+  </button>`;
+}
+function vPlan() {
+  const d = DATA.days.find(x => x.date === S.day) || DATA.days[0];
+  const dt = dOf(d.date);
+  const list = "day:" + d.date;
+  const items = merged(list);
+  const idx = DATA.days.indexOf(d);
+  const hero = DATA.photos[DATA.dayHero[d.date]] ? DATA.dayHero[d.date] : null;
+  // a day the sheet left empty: one line says so, instead of a label on every stop
+  const base = DATA.items.filter(x => x.list === list), allSug = base.length > 0 && base.every(x => x.sug);
+  return `
+  <section class="cal" aria-label="ימי הטיול">
+    ${DATA.rows.map(r => `<div class="calrow"><div class="calcity"><span>${r.label}</span><small>${r.sub}</small></div><div class="tiles">${DATA.days.slice(r.from, r.to).map(dayTile).join("")}</div></div>`).join("")}
+    <p class="legend" aria-label="מקרא"><span><i class="lg own"></i>מהגיליון</span><span><i class="lg sug"></i>הצעה</span><span>${tagChip("red")}</span></p>
+  </section>
+  <section class="day ${regCls(d)}"${splitVars(d)}>
+    <header class="dayhead${hero ? " has-hero" : ""}">
+      ${hero ? pic(hero, d.title, "hero").replace('loading="lazy"', 'fetchpriority="high"') : ""}
+      <div class="dayhead-t">
+        <div class="dayno"><span>יום ${idx + 1}</span></div>
+        <div>
+          <h1>${WDL[dt.getDay()]}, ${dt.getDate()} ${MON[dt.getMonth()]}</h1>
+          <p class="daytitle">${esc(d.title)}</p>
+        </div>
+      </div>
+    </header>
+    ${d.sheet ? `<p class="sheet"><span>בגיליון</span><bdi dir="ltr">${esc(d.sheet)}</bdi></p>` : ""}
+    ${d.brief ? `<p class="brief">${d.brief}</p>` : ""}
+    ${allSug ? `<p class="tip allsug">${SUG}<span>${d.sheet ? "בגיליון היום הזה רשום בשורה אחת" : "בגיליון אין תכנון מפורט ליום הזה"}, אז כל התחנות כאן הן הצעות.</span></p>` : ""}
+    <ol class="timeline">${items.map((it, i) => itemRow(it, { hero, allSug, cls: stationCls(d, items, i) })).join("")}</ol>
+    ${addRow(list, "הוספת פעילות ליום")}
+    <label class="notes"><span>הערות ליום</span>
+      <textarea id="note-${d.date}" data-note="${d.date}" rows="3" placeholder="מה היה, מה לזכור, לאן לחזור">${esc((S.notes[d.date] || {}).text || "")}</textarea>
+    </label>
+    <nav class="daynav">
+      ${idx > 0 ? dayNavBtn(DATA.days[idx - 1], idx - 1, "prev") : "<span></span>"}
+      ${idx < DATA.days.length - 1 ? dayNavBtn(DATA.days[idx + 1], idx + 1, "next") : "<span></span>"}
+    </nav>
+    <p class="swipehint">אפשר גם להחליק ימינה ושמאלה בין הימים</p>
+  </section>`;
+}
+// The day's plan is drawn as a metro line: each item a station, colored by the region it happens in.
+// On a travel day the stops up to the train or bus are on the line of the region being left.
+function stationCls(d, items, i) {
+  const it = items[i], c = [];
+  if (d.from) { const t = items.findIndex(x => x.id === d.switchAt); if (t >= 0 && i <= t) c.push("r-" + d.from); }
+  const tags = it.tags || [];
+  if ((tags.includes("rest") || (tags.includes("move") && !it.book)) && it.kind !== "fixed") c.push("minor");
+  if (it.sug) c.push("sug");
+  if (d.date === todayIso() && !it.done && it.id === nextStop(items)) c.push("next");
+  return c.join(" ");
+}
+function nextStop(items) {
+  const now = jpNow().hm;
+  const open = items.filter(x => !x.done), at = x => x.time || (x.when && x.sk);
+  // the latest open item that has started, else the first one still ahead
+  const started = open.filter(x => at(x) && at(x) <= now).pop();
+  return (started || open.find(x => at(x)) || {}).id;
+}
+function dayNavBtn(d, i, dir) {
+  return `<button class="dnav ${dir} r-${d.city}" data-day="${d.date}">${dir === "prev" ? ico("chev-r") : ""}<span><small>${dir === "prev" ? "היום הקודם" : "היום הבא"}, יום ${i + 1}</small><b>${esc(d.title)}</b></span>${dir === "next" ? ico("chev-l") : ""}</button>`;
+}
+function tagChip(t) {
+  const T = DATA.tags[t]; if (!T) return "";
+  return `<span class="tag t-${t}">${ico(T.icon)}${T.label}</span>`;
+}
+function linksOf(it) {
+  const L = [];
+  if (it.map) L.push(`<a href="${mapUrl(it.map)}" target="_blank" rel="noopener">${ico("pin")}מפה</a>`);
+  if (it.url) L.push(`<a href="${esc(it.url)}" target="_blank" rel="noopener">${ico("ext")}${esc(it.urlLabel || "אתר")}</a>`);
+  if (it.book) {
+    const have = DATA.bookings.some(b => b.id === it.book), b = item(it.book);
+    L.push(`<button class="linkbtn" data-goto-book="${it.book}">${ico("ticket")}${have ? "פרטי ההזמנה" : b.done ? "הוזמן" : "צריך להזמין"}</button>`);
+  }
+  return L.length ? `<div class="links">${L.join("")}</div>` : "";
+}
+// additions that are not in the sheet carry this label, as on the old page
+const SUG = `<span class="pill sug">הצעה</span>`;
+function itemRow(it, opts = {}) {
+  if (S.editing === it.id) return `<li class="it editing">${editor(it)}</li>`;
+  const fixed = it.kind === "fixed";
+  return `<li class="it${it.done ? " done" : ""}${fixed ? " fixed" : ""}${opts.cls ? " " + opts.cls : ""}" id="it-${it.id}">
+    ${opts.noTime ? "" : `<div class="tm${!it.time && it.when ? " when" : ""}">${esc(it.time || it.when || "")}</div>`}
+    <button class="chk" data-toggle="${it.id}" role="checkbox" aria-checked="${!!it.done}" aria-label="${it.done ? "בוצע" : "סמן כבוצע"}: ${esc(it.title)}">${ico("check")}</button>
+    <div class="body">
+      <div class="ttl">${fixed ? ico("lock", "lock") : ""}<span>${esc(it.title)}</span>${(opts.cls || "").includes("next") ? `<span class="pill now">הבא</span>` : ""}${it.sug && !opts.allSug ? SUG : ""}</div>
+      ${(it.tags || []).length ? `<div class="tags">${it.tags.map(tagChip).join("")}</div>` : ""}
+      ${photoKey(it) && photoKey(it) !== opts.hero ? pic(photoKey(it), it.title) : ""}
+      ${it.desc ? `<p class="desc">${it.desc}</p>` : ""}
+      ${it.tip ? `<p class="tip">${SUG}<span>${it.tip}</span></p>` : ""}
+      ${it.note ? `<p class="unote">${ico("pencil")}<span>${esc(it.note)}</span></p>` : ""}
+      ${linksOf(it)}
+    </div>
+    <button class="more" data-edit="${it.id}" aria-label="עריכה: ${esc(it.title)}">${ico("pencil")}</button>
+  </li>`;
+}
+function editor(it) {
+  const isNew = String(it.id).startsWith("new:");
+  const custom = !BASE.has(it.id);
+  const f = S.draft || {};
+  return `<form class="ed" data-form="${esc(it.id)}">
+    ${it.noTime ? "" : `<label>שעה<input id="ed-time" name="time" type="time" value="${esc(f.time ?? it.time ?? "")}"></label>`}
+    <label class="grow">${esc(it.titleLabel || "מה")}<input id="ed-title" name="title" required value="${esc(f.title ?? it.title ?? "")}"></label>
+    ${it.noNote ? "" : `<label class="full">הערה<textarea id="ed-note" name="note" rows="2">${esc(f.note ?? it.note ?? "")}</textarea></label>`}
+    <div class="edact">
+      <button type="submit" class="primary">${isNew ? "הוספה" : "שמירה"}</button>
+      <button type="button" class="ghost" data-cancel>ביטול</button>
+      ${isNew ? "" : `<button type="button" class="danger" data-remove="${esc(it.id)}">${esc(it.removeLabel || (custom ? "מחיקה" : "הסרה מהרשימה"))}</button>`}
+    </div>
+    ${!isNew && !custom && (it.title !== BASE.get(it.id).title || it.time !== BASE.get(it.id).time || it.hidden) ? `<button type="button" class="linkbtn reset" data-reset="${esc(it.id)}">החזרה לגרסה המקורית</button>` : ""}
+  </form>`;
+}
+function addRow(list, label, noTime, opts = {}) {
+  const key = "new:" + list;
+  if (S.editing === key) return `<div class="it editing add">${editor({ id: key, list, noTime, ...opts })}</div>`;
+  return `<button class="addbtn" data-add="${list}"${noTime ? " data-notime" : ""}>${ico("plus")}${label}</button>`;
+}
+
+/* bookings */
+function vBook() {
+  const todo = merged("tobook");
+  const catOf = x => DATA.bookCats.some(c => c.id === x.cat) ? x.cat : "other";
+  const cur = S.bookCat || "all";
+  const cats = DATA.bookCats.map(c => ({ ...c, have: DATA.bookings.filter(b => catOf(b) === c.id), todo: todo.filter(t => catOf(t) === c.id) }))
+    .filter(c => c.have.length || c.todo.length);
+  const open = c => c.todo.filter(t => !t.done).length;
+  const chips = [{ id: "all", label: "הכל" }, ...cats].map(c =>
+    `<button class="chip" data-bookcat="${c.id}" aria-pressed="${cur === c.id}">${c.icon ? ico(c.icon) : ""}${c.label}${c.id !== "all" && open(c) ? `<span class="cnt-dot" aria-label="${open(c)} עוד להזמין">${open(c)}</span>` : ""}</button>`).join("");
+  const shown = cur === "all" ? cats : cats.filter(c => c.id === cur);
+  return `
+  <h1 class="pageh">הזמנות וכרטיסים</h1>
+  <p class="lede">לפי סוג. בכל סוג: קודם מה שכבר סגור, ואחריו מה שעוד צריך להזמין. המספר על הכפתור הוא כמה עוד פתוחים.</p>
+  <div class="chips" role="group" aria-label="סינון לפי סוג">${chips}</div>
+  ${shown.map(c => `<section class="bcat" id="cat-${c.id}">
+    <h2 class="sech bcat-h">${ico(c.icon)}${c.label}</h2>
+    ${c.have.length ? `<div class="tickets">${c.have.map(ticket).join("")}</div>` : ""}
+    ${c.todo.length ? `${c.have.length ? `<h3 class="subh">עוד להזמין</h3>` : ""}<ol class="todo">${c.todo.map(t => todoRow(t)).join("")}</ol>` : ""}
+  </section>`).join("")}
+  ${addRow("tobook", "הוספת הזמנה לרשימה", true)}`;
+}
+function ticket(b) {
+  const o = item(b.id);
+  return `<article class="ticket" id="${b.id}">
+    ${photoKey(b) ? pic(photoKey(b), b.title, "wide") : ""}
+    <div class="tk-top">${ico(b.icon)}<div><h3>${esc(b.title)}</h3><p>${esc(b.sub)}</p></div></div>
+    ${b.route ? `<div class="tk-route">
+      <div><b>${esc(b.route[0].t)}</b><span>${esc(b.route[0].p)}</span></div>
+      <div class="tk-mid">${esc(b.route[2] || "")}</div>
+      <div><b>${esc(b.route[1].t)}</b><span>${esc(b.route[1].p)}</span></div>
+    </div>` : ""}
+    <dl class="tk-facts">${b.facts.map(([k, v, copy]) => `<div><dt>${esc(k)}</dt><dd>${copy ? `<span class="code">${esc(v)}</span><button class="copy" data-copy="${esc(v)}" aria-label="העתקת ${esc(k)}">${ico("copy")}</button>` : v}</dd></div>`).join("")}</dl>
+    ${b.missing ? `<p class="missing">${ico("alert")}<span>חסר: ${esc(b.missing)}</span></p>` : ""}
+    ${o.note ? `<p class="unote">${ico("pencil")}<span>${esc(o.note)}</span></p>` : ""}
+    <div class="links">
+      ${b.map ? `<a href="${mapUrl(b.map)}" target="_blank" rel="noopener">${ico("pin")}מפה</a>` : ""}
+      ${b.url ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">${ico("ext")}${esc(b.urlLabel || "אתר")}</a>` : ""}
+      <button class="linkbtn" data-bnote="${b.id}">${ico("pencil")}${o.note ? "עריכת הערה" : "הוספת הערה"}</button>
+    </div>
+    ${S.editing === "bn:" + b.id ? `<form class="ed" data-bnoteform="${b.id}"><label class="full">פרט או הערה<textarea id="bn-${b.id}" name="note" rows="2">${esc(o.note || "")}</textarea></label><div class="edact"><button type="submit" class="primary">שמירה</button><button type="button" class="ghost" data-cancel>ביטול</button></div></form>` : ""}
+  </article>`;
+}
+function todoRow(t) {
+  if (S.editing === t.id) return `<li class="it editing">${editor({ ...t, noTime: true, titleLabel: "מה להזמין" })}</li>`;
+  return `<li class="it todo-it${t.done ? " done" : ""}" id="it-${t.id}">
+    <button class="chk" data-toggle="${t.id}" role="checkbox" aria-checked="${!!t.done}" aria-label="${t.done ? "הוזמן" : "סמן שהוזמן"}: ${esc(t.title)}">${ico("check")}</button>
+    <div class="body">
+      <div class="ttl"><span>${esc(t.title)}</span>${t.done ? `<span class="pill ok">הוזמן</span>` : t.urgent ? `<span class="pill warn">${esc(t.urgent)}</span>` : ""}${t.sug ? SUG : ""}</div>
+      ${t.desc ? `<p class="desc">${t.desc}</p>` : ""}
+      ${t.code ? `<p class="codeline"><span>${esc(t.code[0])}:</span><span class="code">${esc(t.code[1])}</span><button class="copy" data-copy="${esc(t.code[1])}" aria-label="העתקת ${esc(t.code[0])}">${ico("copy")}</button></p>` : ""}
+      ${t.note ? `<p class="unote">${ico("pencil")}<span>${esc(t.note)}</span></p>` : ""}
+      ${linksOf(t)}
+    </div>
+    <button class="more" data-edit="${t.id}" aria-label="עריכה: ${esc(t.title)}">${ico("pencil")}</button>
+  </li>`;
+}
+
+/* food */
+function seg(kind) {
+  const c = S.city[kind];
+  const opts = kind === "food" ? [["tokyo", "טוקיו"], ["kyoto", "קיוטו"], ["alps", "האלפים"]] : [["tokyo", "טוקיו"], ["mtn", "קיוטו וההרים"]];
+  const i = Math.max(0, opts.findIndex(([k]) => k === c));
+  return `<div class="seg" role="tablist"><span class="seg-thumb" style="--si:${i};--sn:${opts.length}" aria-hidden="true"></span>${opts.map(([k, l]) =>
+    `<button role="tab" aria-selected="${c === k}" data-city="${kind}:${k}">${l}</button>`).join("")}</div>`;
+}
+function vFood() {
+  const c = S.city.food;
+  const list = "food:" + c;
+  const all = merged(list);
+  const groups = [];
+  for (const r of all) { const g = r.area || "הוספנו בעצמנו"; let G = groups.find(x => x.g === g); if (!G) groups.push(G = { g, items: [] }); G.items.push(r); }
+  return `
+  <h1 class="pageh">אוכל</h1>
+  <p class="lede">המקומות מהגיליון, והמאכלים המקומיים שכדאי לטעום בכל עצירה. מה שלא מהגיליון מסומן "הצעה".</p>
+  <details class="waiter" data-open="waiter"${openAttr("waiter", false)}>
+    <summary>${ico("chat")}משפטים למסעדה, ביפנית</summary>
+    <div class="phr">${DATA.phrases.map(p => `<div class="ph"><p class="es" lang="ja" dir="ltr">${esc(p.ja)}</p><p class="ro" lang="ja-Latn" dir="ltr">${esc(p.ro)}</p><p class="he">${esc(p.he)}</p><button class="copy" data-copy="${esc(p.ja)}" aria-label="העתקה: ${esc(p.he)}">${ico("copy")}</button></div>`).join("")}</div>
+  </details>
+  <details class="watch" data-open="watch"${openAttr("watch", false)}>
+    <summary>${ico("food")}מה לטעום, ונימוסים</summary>
+    <div class="cols">${DATA.dishes.map(g => `<div><h3>${g.h}</h3><ul>${g.items.map(x => `<li>${x}</li>`).join("")}</ul></div>`).join("")}</div>
+  </details>
+  ${seg("food")}
+  ${groups.map(G => `<h2 class="sech">${esc(G.g)}</h2><ol class="places">${G.items.map(placeRow).join("")}</ol>`).join("")}
+  ${addRow(list, "הוספת מקום שמצאנו", true)}`;
+}
+function placeRow(r) {
+  if (S.editing === r.id) return `<li class="it editing">${editor({ ...r, noTime: true, titleLabel: "שם המקום" })}</li>`;
+  return `<li class="it place${r.done ? " done" : ""}" id="it-${r.id}">
+    <button class="chk" data-toggle="${r.id}" role="checkbox" aria-checked="${!!r.done}" aria-label="${r.done ? "היינו שם" : "סמן שהיינו"}: ${esc(r.title)}">${ico("check")}</button>
+    <div class="body">
+      <div class="ttl"><span>${esc(r.title)}</span>${r.src === "sug" ? SUG : ""}</div>
+      <div class="tags">${r.type ? `<span class="tag plain">${esc(r.type)}</span>` : ""}${r.red ? tagChip("red") : ""}${r.bookAhead ? `<span class="tag plain">${ico("clock")}כדאי להזמין מקום</span>` : ""}</div>
+      ${photoKey(r) ? pic(photoKey(r), r.title) : ""}
+      ${r.desc ? `<p class="desc">${r.desc}</p>` : ""}
+      ${r.note ? `<p class="unote">${ico("pencil")}<span>${esc(r.note)}</span></p>` : ""}
+      ${linksOf(r)}
+    </div>
+    <button class="more" data-edit="${r.id}" aria-label="עריכה: ${esc(r.title)}">${ico("pencil")}</button>
+  </li>`;
+}
+
+/* shopping */
+function vShop() {
+  const c = S.city.shop;
+  const areas = DATA.shopping[c];
+  return `
+  <h1 class="pageh">קניות</h1>
+  <p class="lede">${DATA.shopIntro[c]}</p>
+  ${seg("shop")}
+  <ol class="areas">${areas.map(a => `<li class="area">
+    <h3>${esc(a.name)}</h3>
+    ${a.tags ? `<div class="tags">${a.tags.map(t => `<span class="tag plain">${esc(t)}</span>`).join("")}</div>` : ""}
+    ${DATA.photos[DATA.shopPhoto[a.name]] ? pic(DATA.shopPhoto[a.name], a.name) : ""}
+    <p class="desc">${a.desc}</p>
+    ${a.hours ? `<p class="hours">${ico("clock")}<span>${a.hours}</span></p>` : ""}
+    <div class="links">${a.map ? `<a href="${mapUrl(a.map)}" target="_blank" rel="noopener">${ico("pin")}מפה</a>` : ""}${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${ico("ext")}${esc(a.urlLabel || "אתר")}</a>` : ""}</div>
+  </li>`).join("")}</ol>
+  <section class="box">
+    <h2>${ico("receipt")}קניות בלי מס (Tax Free)</h2>
+    <ol class="steps">${DATA.taxfree.map(s => `<li>${s}</li>`).join("")}</ol>
+  </section>`;
+}
+
+/* more */
+function vMore() {
+  const groupOpts = { noTime: true, noNote: true, titleLabel: "שם הרשימה", removeLabel: "מחיקת הרשימה" };
+  const packs = merged("packgroups").map(g => {
+    const list = "pack:" + (g.key || g.id); const st = listStats(list);
+    if (S.editing === g.id) return `<section class="pack pack-ed">${editor({ ...g, ...groupOpts })}</section>`;
+    return `<section class="pack"><h3><span>${esc(g.title)}</span><span class="cnt">${st.done}/${st.total}</span><button class="more sm" data-edit="${g.id}" aria-label="עריכת הרשימה: ${esc(g.title)}">${ico("pencil")}</button></h3>
+      ${merged(list).length ? "" : `<p class="empty">הרשימה ריקה. אפשר להוסיף פריט ראשון.</p>`}
+      <ol class="checks">${merged(list).map(p => S.editing === p.id ? `<li class="it editing">${editor({ ...p, noTime: true, titleLabel: "פריט" })}</li>` :
+      `<li class="ck${p.done ? " done" : ""}"><button class="chk" data-toggle="${p.id}" role="checkbox" aria-checked="${!!p.done}" aria-label="${esc(p.title)}">${ico("check")}</button><span>${esc(p.title)}${p.note ? `<small>${esc(p.note)}</small>` : ""}</span><button class="more sm" data-edit="${p.id}" aria-label="עריכה: ${esc(p.title)}">${ico("pencil")}</button></li>`).join("")}</ol>
+      ${addRow(list, "הוספת פריט", true)}</section>`;
+  }).join("");
+  const spare = merged("spare");
+  return `
+  <h1 class="pageh">ציוד ומידע</h1>
+  <h2 class="sech">רשימת אריזה</h2>
+  <div class="packs">${packs}</div>
+  ${addRow("packgroups", "הוספת רשימה חדשה", true, groupOpts)}
+  <h2 class="sech">רעיונות רזרבה</h2>
+  <p class="lede">אם יתפנה זמן, ירד גשם או שמשהו יהיה סגור.</p>
+  <ol class="places">${spare.map(placeRow).join("")}</ol>
+  ${addRow("spare", "הוספת רעיון", true)}
+  <h2 class="sech">מידע שימושי</h2>
+  <div class="info">${DATA.info.map(s => `<details class="inf" data-open="inf:${esc(s.h)}"${openAttr("inf:" + s.h, !!s.open)}><summary>${ico(s.icon)}${s.h}</summary><div class="inf-b">${s.body}</div></details>`).join("")}</div>
+  ${Object.keys(DATA.photos).length ? `<details class="inf" data-open="inf:credits"${openAttr("inf:credits", false)}><summary>${ico("eye")}קרדיט לתמונות</summary><div class="inf-b">
+    <p>התמונות מוויקישיתוף (Wikimedia Commons), ברישיונות חופשיים. תמונות שמסומנות "אילוסטרציה" מראות את סוג האוכל, לא את המסעדה עצמה.</p>
+    <ul class="credits">${photoCredits()}</ul>
+  </div></details>` : ""}
+  <p class="sources">מבוסס על הגיליון JAPAN 2026. ההצעות, המחירים והשעות נאספו בספטמבר 2026 והם משוערים, כדאי לבדוק באתר הרשמי לפני שמזמינים.</p>`;
+}
+
+function photoLabel(k) {
+  const d = DATA.days.find(x => DATA.dayHero[x.date] === k); if (d) return d.title;
+  const id = Object.keys(DATA.itemPhoto).find(i => DATA.itemPhoto[i] === k); if (id) return item(id).title || (DATA.bookings.find(b => b.id === id) || {}).title || k;
+  return Object.keys(DATA.shopPhoto).find(n => DATA.shopPhoto[n] === k) || k;
+}
+const credit = P => `צילום: <bdi>${esc(P.by)}</bdi>, רישיון <bdi>${esc(P.lic)}</bdi>`;
+function photoCredits() {
+  return Object.entries(DATA.photos).map(([k, P]) => `<li><a href="${esc(P.page)}" target="_blank" rel="noopener">${esc(photoLabel(k))}</a><small>${credit(P)}</small></li>`).join("");
+}
+function openPhoto(k, title, from) {
+  const P = DATA.photos[k], dlg = $("#lb"); if (!P || !dlg) return;
+  dlg.querySelector("img").src = "/img/" + k + ".jpg";
+  dlg.querySelector("figcaption").innerHTML = `<b>${esc(title)}</b>${P.ill ? "<small>אילוסטרציה של סוג האוכל, לא המקום עצמו</small>" : ""}<small>${credit(P)}</small><a href="${esc(P.page)}" target="_blank" rel="noopener">לעמוד התמונה בוויקישיתוף</a>`;
+  const show = () => { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", ""); };
+  // the tapped photo grows into the viewer
+  const thumb = from && from.querySelector("img"), big = dlg.querySelector("img");
+  if (!thumb || !document.startViewTransition || RM()) return show();
+  lbFrom = thumb;
+  thumb.style.viewTransitionName = "photo";
+  go("photo", () => { thumb.style.viewTransitionName = ""; big.style.viewTransitionName = "photo"; show(); })
+    .finally(() => { big.style.viewTransitionName = ""; });
+}
+let lbFrom = null;
+function closePhoto(morph = true) {
+  const dlg = $("#lb"); if (!dlg || !dlg.open) return;
+  const shut = () => { dlg.classList.remove("out"); dlg.querySelector("figure").style.cssText = ""; dlg.close ? dlg.close() : dlg.removeAttribute("open"); };
+  const big = dlg.querySelector("img"), thumb = lbFrom && lbFrom.isConnected ? lbFrom : null;
+  lbFrom = null;
+  if (RM()) return shut();
+  if (morph && thumb && document.startViewTransition) {
+    big.style.viewTransitionName = "photo";
+    go("photo", () => { big.style.viewTransitionName = ""; shut(); thumb.style.viewTransitionName = "photo"; })
+      .finally(() => { thumb.style.viewTransitionName = ""; });
+    return;
+  }
+  dlg.classList.add("out");
+  setTimeout(shut, 200);
+}
+document.addEventListener("click", e => {
+  const dlg = $("#lb"); if (!dlg || !dlg.open) return;
+  if (e.target === dlg || e.target.closest(".lb-x")) closePhoto();
+});
+document.addEventListener("cancel", e => { if (e.target.id === "lb") { e.preventDefault(); closePhoto(); } }, true);
+
+/* ---------- events ---------- */
+document.addEventListener("click", e => {
+  const t = e.target.closest("button, a"); if (!t) return;
+  const ds = t.dataset;
+  // Mobile Safari doesn't move focus to a tapped button, so a focused note/editor field would
+  // otherwise swallow the render (see render()) and the tap would look like it did nothing.
+  const ae = document.activeElement;
+  if (ae && ae !== t && /^(INPUT|TEXTAREA|SELECT)$/.test(ae.tagName) && ae.closest("#view")) ae.blur();
+  if (ds.photo) { openPhoto(ds.photo, ds.ptitle, t); return; }
+  if (ds.tab) {
+    // tapping the current tab again scrolls back to the top, as in iOS apps
+    if (ds.tab === S.tab) { window.scrollTo({ top: 0, behavior: RM() ? "instant" : "smooth" }); return; }
+    switchTab(ds.tab);
+    return;
+  }
+  if (ds.day) { changeDay(ds.day, 0, t.classList.contains("dnav")); return; }
+  if (ds.toggle) {
+    const it = item(ds.toggle), done = !it.done;
+    haptic(); S.fx.toggled = ds.toggle;
+    patchItem(ds.toggle, { done });
+    if (done) celebrate(it.list, ds.toggle);
+    return;
+  }
+  if (ds.edit) { S.editing = ds.edit; S.draft = null; render(); focusEditor(); return; }
+  if (ds.add) { S.editing = "new:" + ds.add; S.draft = null; render(); focusEditor(); return; }
+  if (ds.bnote) { S.editing = "bn:" + ds.bnote; render(); focusEditor(); return; }
+  if ("cancel" in ds) { S.editing = null; S.draft = null; render(); return; }
+  if (ds.remove) {
+    if (t.dataset.armed) {
+      const id = ds.remove, title = item(id).title; S.editing = null;
+      if (BASE.has(id)) patchItem(id, { hidden: true }); else patchItem(id, { hidden: true, deleted: true });
+      toast(`הוסר: ${title}`, "ביטול", () => patchItem(id, { hidden: false, deleted: false }));
+      return;
+    }
+    const label = t.textContent; t.dataset.armed = "1"; t.textContent = "ללחוץ שוב לאישור"; setTimeout(() => { if (t.isConnected) { delete t.dataset.armed; t.textContent = label; } }, 3000); return;
+  }
+  if (ds.reset) { const id = ds.reset; const cur = S.over[id] || {}; S.editing = null; patchItem(id, { title: BASE.get(id).title, time: BASE.get(id).time, hidden: false, note: cur.note || "" }); return; }
+  if (ds.bookcat) { if (S.bookCat === ds.bookcat) return; S.bookCat = ds.bookcat; store.set("bookCat", S.bookCat); S.editing = null; render(); return; }
+  if (ds.city) {
+    const [k, v] = ds.city.split(":"); if (S.city[k] === v) return;
+    S.city[k] = v; store.set("city", S.city); S.editing = null;
+    // the thumb slides from the old option to the new one, like the iOS segmented control
+    const was = $(".seg-thumb"), x0 = was && was.getBoundingClientRect().left;
+    render();
+    const now = $(".seg-thumb");
+    if (was && now && !RM()) now.animate([{ transform: `translateX(${x0 - now.getBoundingClientRect().left}px)` }, { transform: "none" }], { duration: 240, easing: "cubic-bezier(.3,1.15,.5,1)" });
+    return;
+  }
+  if (ds.gotoBook) {
+    S.tab = "book"; S.bookCat = "all"; S.editing = null; store.set("tab", S.tab); store.set("bookCat", "all");
+    try { history.replaceState(null, "", "#book"); } catch { }
+    render();
+    const el = document.getElementById("it-" + ds.gotoBook) || document.getElementById(ds.gotoBook);
+    if (el) { el.scrollIntoView({ block: "center" }); el.classList.add("flash"); setTimeout(() => el.classList.remove("flash"), 1800); }
+    return;
+  }
+  if (ds.copy) {
+    const v = ds.copy; const done = () => { t.classList.add("copied"); setTimeout(() => t.classList.remove("copied"), 1200); };
+    try { navigator.clipboard.writeText(v).then(done, () => selectText(t)); } catch { selectText(t); }
+    return;
+  }
+});
+let toastTimer;
+function toast(msg, action, fn) {
+  const el = $("#toast");
+  el.innerHTML = `<span>${esc(msg)}</span>${action ? `<button type="button">${esc(action)}</button>` : ""}`;
+  el.classList.remove("out"); el.hidden = false;
+  const btn = el.querySelector("button");
+  if (btn) btn.onclick = () => { hideToast(); fn(); };
+  clearTimeout(toastTimer); toastTimer = setTimeout(hideToast, action ? 6000 : 3200);
+}
+function hideToast() {
+  const el = $("#toast"); clearTimeout(toastTimer);
+  if (el.hidden) return;
+  if (RM()) { el.hidden = true; return; }
+  el.classList.add("out"); toastTimer = setTimeout(() => { el.hidden = true; el.classList.remove("out"); }, 220);
+}
+document.addEventListener("toggle", e => {
+  const d = e.target; if (!d.dataset || !d.dataset.open) return;
+  S.open[d.dataset.open] = d.open; store.set("open", S.open);
+  if (d.open && !RM()) { d.classList.add("opening"); setTimeout(() => d.classList.remove("opening"), 200); }
+}, true);
+function selectText(btn) { const el = btn.parentElement.querySelector(".code, .es"); if (!el) return; const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+function focusEditor() { requestAnimationFrame(() => { const f = $("#view form.ed input[name=title], #view form.ed textarea"); if (f) f.focus(); }); }
+
+document.addEventListener("input", e => {
+  const f = e.target.closest("form.ed"); if (f && f.dataset.form) { S.draft = Object.fromEntries(new FormData(f)); }
+});
+document.addEventListener("submit", e => {
+  const f = e.target; e.preventDefault();
+  const v = Object.fromEntries(new FormData(f));
+  if (f.dataset.bnoteform) { const id = f.dataset.bnoteform; S.editing = null; f.querySelector("textarea").blur(); patchItem(id, { note: (v.note || "").trim() }); return; }
+  const id = f.dataset.form; if (!id) return;
+  const title = (v.title || "").trim(); if (!title) { f.querySelector("[name=title]").focus(); return; }
+  const fields = { title }; if ("note" in v) fields.note = v.note.trim(); if ("time" in v) fields.time = v.time;
+  if (id === "new:packgroups") fields.order = 100 + merged("packgroups").length;
+  S.editing = null; S.draft = null;
+  document.activeElement && document.activeElement.blur();
+  if (id.startsWith("new:")) addItem(id.slice(4), fields); else patchItem(id, fields);
+});
+let noteTimer;
+document.addEventListener("input", e => {
+  const ta = e.target.closest("textarea[data-note]"); if (!ta) return;
+  clearTimeout(noteTimer); noteTimer = setTimeout(() => setNote(ta.dataset.note, ta.value), 900);
+});
+document.addEventListener("change", e => { const ta = e.target.closest("textarea[data-note]"); if (ta) { clearTimeout(noteTimer); setNote(ta.dataset.note, ta.value); } });
+
+/* ---------- motion ---------- */
+const RM = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+const EASE = "cubic-bezier(.2,.8,.2,1)";
+// A view transition tagged with a kind that the CSS picks up; only the photo viewer uses one.
+function go(kind, f) {
+  if (!document.startViewTransition || RM()) { f(); return Promise.resolve(); }
+  const r = document.documentElement; r.dataset.vt = kind;
+  const vt = document.startViewTransition(f);
+  return vt.finished.catch(() => { }).finally(() => { if (r.dataset.vt === kind) delete r.dataset.vt; });
+}
+function effects() {
+  const fx = S.fx; S.fx = {};
+  if (RM()) return;
+  if (fx.day) { const t = $(".tile.sel"); if (t) t.classList.add("pop"); }
+  if (fx.toggled) {
+    const b = document.querySelector(`[data-toggle="${CSS.escape(fx.toggled)}"]`);
+    if (b) { b.classList.add("just"); const row = b.closest("li"); if (row) row.classList.add("just"); }
+  }
+}
+function navState(ti = TABS.indexOf(S.tab)) {
+  document.querySelectorAll(".nav button").forEach(b => b.setAttribute("aria-current", b.dataset.tab === S.tab ? "page" : "false"));
+  $(".nav-in").style.setProperty("--ti", ti);
+}
+// Moving to another day or tab. The new page is drawn at once and only eases in, so nothing waits.
+// After a swipe the old page carries on the way the finger pushed it, then the new one comes in from
+// the other side. RTL: the next day or tab sits to the left, so going forward the page moves right.
+let changing = false;
+async function swapPage(el, dir, fromX, draw) {
+  changing = true;
+  let out;
+  if (el && fromX && !RM()) {
+    out = el.animate([{ transform: `translateX(${fromX}px)`, opacity: el.style.opacity || 1 }, { transform: `translateX(${fromX + dir * 70}px)`, opacity: 0 }], { duration: 90, easing: "ease-in", fill: "forwards" });
+    try { await out.finished; } catch { }
+  }
+  if (el) { unswipe(el); if (out) out.cancel(); }
+  let n;
+  try { n = draw(); } finally { changing = false; }
+  if (n && !RM()) n.animate([{ transform: `translateX(${-dir * (fromX ? 44 : 20)}px)`, opacity: 0 }, { transform: "none", opacity: 1 }], { duration: fromX ? 220 : 170, easing: EASE });
+}
+function changeDay(date, fromX = 0, scroll = false) {
+  const cur = DATA.days.findIndex(d => d.date === S.day), nxt = DATA.days.findIndex(d => d.date === date);
+  if (nxt < 0 || nxt === cur || changing) return;
+  swapPage($(".day"), nxt > cur ? 1 : -1, fromX, () => {
+    S.day = date; S.editing = null; store.set("day", S.day); S.fx.day = true;
+    render();
+    const n = $(".day");
+    if (n && (scroll || n.getBoundingClientRect().top < 0)) n.scrollIntoView({ block: "start", behavior: "instant" });
+    return n;
+  });
+}
+function switchTab(tab, fromX = 0) {
+  if (!TABS.includes(tab) || tab === S.tab || changing) return;
+  const dir = TABS.indexOf(tab) > TABS.indexOf(S.tab) ? 1 : -1;
+  S.tab = tab; S.editing = null; store.set("tab", S.tab); try { history.replaceState(null, "", "#" + S.tab); } catch { }
+  navState(); // the pill moves right away, before the page
+  swapPage($("#view"), dir, fromX, () => { render(); window.scrollTo({ top: 0, behavior: "instant" }); return $("#view"); });
+}
+
+// Swiping: on the plan tab it moves between days (past the last day, on to the next tab); elsewhere between tabs.
+// Pointer events over touch-action:pan-y, so vertical scrolling stays with the browser and never waits on script.
+const view = $("#view"), navIn = $(".nav-in");
+let sw = null, swallowUntil = 0;
+function swipeTarget(sign) {
+  if (S.tab === "plan") {
+    const i = DATA.days.findIndex(d => d.date === S.day) + sign;
+    if (i >= 0 && i < DATA.days.length) return { day: DATA.days[i].date, el: $(".day") };
+  }
+  return { tab: TABS[TABS.indexOf(S.tab) + sign], el: view };
+}
+function unswipe(el) { el.classList.remove("swiping"); el.style.transform = el.style.opacity = el.style.transition = ""; }
+function settleBack(el) {
+  if (!el) return;
+  el.style.transition = `transform .24s ${EASE}, opacity .2s ease`; el.style.transform = el.style.opacity = "";
+  setTimeout(() => { if (!el.style.transform) unswipe(el); }, 260);
+}
+view.addEventListener("pointerdown", e => {
+  sw = null;
+  if (e.pointerType === "mouse" || !e.isPrimary || changing || S.editing) return;
+  if (e.target.closest("input, textarea, select, form")) return;
+  sw = { id: e.pointerId, x: e.clientX, y: e.clientY, lock: false, dx: 0, px: e.clientX, pt: e.timeStamp, v: 0 };
+});
+view.addEventListener("pointermove", e => {
+  const s = sw; if (!s || e.pointerId !== s.id) return;
+  const dx = e.clientX - s.x, dy = e.clientY - s.y;
+  if (!s.lock) {
+    if (Math.hypot(dx, dy) < 8) return;
+    if (Math.abs(dx) < Math.abs(dy) * 1.2) { sw = null; return; }
+    s.lock = true;
+  }
+  const dt = e.timeStamp - s.pt;
+  if (dt > 0) { s.v = .7 * (e.clientX - s.px) / dt + .3 * s.v; s.px = e.clientX; s.pt = e.timeStamp; }
+  const tg = swipeTarget(dx > 0 ? 1 : -1);
+  if (s.tg && s.tg.el !== tg.el) unswipe(s.tg.el);
+  s.tg = tg;
+  if (!tg.el) return;
+  const edge = !tg.day && !tg.tab;
+  s.dx = edge ? dx * .2 : dx; // at the ends it only gives a little
+  tg.el.classList.add("swiping");
+  tg.el.style.transition = "none";
+  tg.el.style.transform = `translateX(${s.dx}px)`;
+  tg.el.style.opacity = String(1 - Math.min(Math.abs(s.dx) / 600, .35));
+  if (tg.tab) { navIn.classList.add("drag"); navState(TABS.indexOf(S.tab) + Math.sign(dx) * Math.min(Math.abs(dx) / innerWidth, 1)); }
+  else if (navIn.classList.contains("drag")) { navIn.classList.remove("drag"); navState(); }
+});
+view.addEventListener("pointerup", e => {
+  const s = sw; sw = null;
+  if (!s || !s.lock || e.pointerId !== s.id || !s.tg) return;
+  swallowUntil = performance.now() + 300;
+  navIn.classList.remove("drag");
+  const tg = s.tg, fling = Math.abs(s.dx) > 20 && Math.abs(s.v) > .35 && Math.sign(s.v) === Math.sign(s.dx);
+  if ((tg.day || tg.tab) && (Math.abs(s.dx) > 60 || fling)) { haptic(); if (tg.day) changeDay(tg.day, s.dx); else switchTab(tg.tab, s.dx); return; }
+  navState(); settleBack(tg.el);
+});
+view.addEventListener("pointercancel", () => {
+  if (sw && sw.tg) { navIn.classList.remove("drag"); navState(); settleBack(sw.tg.el); }
+  sw = null;
+});
+// a finger that swiped doesn't also tap what it was on
+document.addEventListener("click", e => { if (e.isTrusted && performance.now() < swallowUntil) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+// Tab bar, as in iOS 26: the pill jumps to the tab as soon as it's touched and grows into a lens;
+// slide along the bar and it follows the finger, and the tab under it opens on release.
+let nd = null;
+function navPos(x) {
+  const r = navIn.getBoundingClientRect(), w = (r.width - 8) / TABS.length;
+  const p = (document.dir === "rtl" ? r.right - 4 - x : x - r.left - 4) / w - .5;
+  return Math.max(0, Math.min(TABS.length - 1, p));
+}
+navIn.addEventListener("pointerdown", e => {
+  if (!e.isPrimary || e.button > 0) return;
+  nd = { id: e.pointerId, x: e.clientX, moved: false };
+  navIn.classList.add("press");
+  navState(Math.round(navPos(e.clientX)));
+});
+navIn.addEventListener("pointermove", e => {
+  if (!nd || e.pointerId !== nd.id) return;
+  if (!nd.moved) {
+    if (Math.abs(e.clientX - nd.x) < 8) return;
+    nd.moved = true; navIn.classList.add("drag");
+    try { navIn.setPointerCapture(e.pointerId); } catch { }
+  }
+  navState(navPos(e.clientX));
+});
+function navEnd(e) {
+  if (!nd || e.pointerId !== nd.id) return;
+  const d = nd; nd = null;
+  navIn.classList.remove("press", "drag");
+  if (e.type === "pointerup" && d.moved) {
+    swallowUntil = performance.now() + 300;
+    const t = TABS[Math.round(navPos(e.clientX))];
+    if (t !== S.tab) { haptic(); switchTab(t); return; }
+  }
+  // a plain tap opens the tab through the click; if no click comes, the pill goes back
+  if (e.type === "pointerup" && !d.moved) { setTimeout(() => navState(), 350); return; }
+  navState();
+}
+navIn.addEventListener("pointerup", navEnd);
+navIn.addEventListener("pointercancel", navEnd);
+// photo viewer: drag down to dismiss
+let lbDrag = null;
+document.addEventListener("touchstart", e => {
+  const f = e.target.closest("#lb figure"); lbDrag = null;
+  if (!f || e.touches.length !== 1 || e.target.closest("a")) return;
+  lbDrag = { y: e.touches[0].clientY, f, dy: 0 };
+}, { passive: true });
+document.addEventListener("touchmove", e => {
+  if (!lbDrag) return;
+  lbDrag.dy = Math.max(0, e.touches[0].clientY - lbDrag.y);
+  lbDrag.f.style.transition = "none";
+  lbDrag.f.style.transform = `translateY(${lbDrag.dy}px) scale(${1 - Math.min(lbDrag.dy / 1600, .12)})`;
+  lbDrag.f.style.opacity = String(1 - Math.min(lbDrag.dy / 500, .5));
+}, { passive: true });
+document.addEventListener("touchend", () => {
+  const d = lbDrag; lbDrag = null; if (!d) return;
+  if (d.dy > 110) { closePhoto(false); return; }
+  d.f.style.transition = `transform .24s ${EASE}, opacity .2s ease`; d.f.style.transform = ""; d.f.style.opacity = "";
+});
+// Taptic feedback. iOS Safari has no vibrate(), but toggling an <input switch> through its label ticks the Taptic Engine.
+const haptic = (() => {
+  let lbl;
+  return () => {
+    try {
+      if (navigator.vibrate) { navigator.vibrate(8); return; }
+      if (!lbl) {
+        lbl = document.createElement("label"); lbl.setAttribute("aria-hidden", "true");
+        lbl.style.cssText = "position:fixed;left:-99px;top:0;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none";
+        const i = document.createElement("input"); i.type = "checkbox"; i.setAttribute("switch", ""); i.tabIndex = -1;
+        lbl.append(i); document.body.append(lbl);
+      }
+      lbl.click();
+    } catch { }
+  };
+})();
+// the last stop of a day (or the last item of a packing list): a burst in the city colors
+function celebrate(list, id) {
+  if (!list || !/^(day|pack):/.test(list)) return;
+  const st = listStats(list); if (st.total < 2 || st.done !== st.total) return;
+  const b = document.querySelector(`[data-toggle="${CSS.escape(id)}"]`);
+  const r = b ? b.getBoundingClientRect() : { left: innerWidth / 2, top: innerHeight / 2, width: 0, height: 0 };
+  if (list.startsWith("day:")) { const i = DATA.days.findIndex(d => "day:" + d.date === list); toast(`יום ${i + 1} הושלם. כל התחנות סומנו`); }
+  else toast("הרשימה הזאת ארוזה");
+  setTimeout(haptic, 120);
+  if (RM()) return;
+  const cs = getComputedStyle(document.documentElement), cols = ["--tokyo", "--kyoto", "--kanazawa", "--takayama", "--onsen", "--matsumoto"].map(v => cs.getPropertyValue(v).trim());
+  const box = document.createElement("div"); box.className = "burst";
+  box.style.left = r.left + r.width / 2 + "px"; box.style.top = r.top + r.height / 2 + "px";
+  document.body.append(box);
+  for (let i = 0; i < 22; i++) {
+    const c = document.createElement("i"); c.style.background = cols[i % cols.length]; box.append(c);
+    const a = Math.random() * Math.PI * 2, v = 70 + Math.random() * 120, x = Math.cos(a) * v, y = Math.sin(a) * v - 40, rot = (Math.random() - .5) * 900;
+    c.animate([
+      { transform: "translate(0,0) rotate(0) scale(.4)", opacity: 1 },
+      { transform: `translate(${x}px,${y}px) rotate(${rot / 2}deg) scale(1)`, opacity: 1, offset: .45 },
+      { transform: `translate(${x * 1.15}px,${y + 140}px) rotate(${rot}deg) scale(.8)`, opacity: 0 }
+    ], { duration: 800 + Math.random() * 300, easing: "cubic-bezier(.2,.7,.4,1)", fill: "forwards" });
+  }
+  setTimeout(() => box.remove(), 1200);
+}
+
+// The page before this one kept its booking checklist in localStorage["japan2026-todo"]. Ticks made there
+// are carried over once, so nothing booked shows up as open again.
+function migrateOldTodo() {
+  let old;
+  try { old = JSON.parse(localStorage.getItem("japan2026-todo") || "null"); } catch { }
+  if (!old || store.get("oldTodoDone", false)) return;
+  for (const [k, ids] of Object.entries(DATA.oldTodo)) if (old[k]) for (const id of ids) if (!item(id).done) {
+    S.over[id] = { ...(S.over[id] || {}), done: true, list: BASE.get(id).list, updatedAt: Date.now() };
+    writeDoc("items/" + id, S.over[id]);
+  }
+  store.set("oldTodoDone", true);
+}
+
+/* ---------- boot ---------- */
+(function boot() {
+  const h = (location.hash || "").slice(1);
+  S.tab = ["plan", "book", "food", "shop", "more"].includes(h) ? h : store.get("tab", "plan");
+  S.city = Object.assign(S.city, store.get("city", {}));
+  S.bookCat = store.get("bookCat", "all");
+  S.open = store.get("open", {});
+  const t = todayIso();
+  S.day = DATA.days.some(d => d.date === t) ? t : store.get("day", DATA.days[0].date);
+  if (!DATA.days.some(d => d.date === S.day)) S.day = DATA.days[0].date;
+  migrateOldTodo();
+  render();
+  setSave("connecting");
+  connect();
+})();
+</script>
+<script>/* ---------- install + offline ---------- */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => { navigator.serviceWorker.register("/sw.js").catch(() => { }); });
+}
+(function installHint() {
+  const box = document.getElementById("install");
+  const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  if (standalone || store.get("installDismissed", false)) return;
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const close = `<button class="x" data-install-x aria-label="סגירה">${ico("plus").replace('class="ic ', 'style="transform:rotate(45deg)" class="ic ')}</button>`;
+  const icon = `<img src="/icons/icon-192.png" alt="">`;
+  let deferred = null;
+  function show(html) { box.innerHTML = html; box.hidden = false; }
+  if (ios) {
+    show(`${icon}<p><b>להוספה למסך הבית:</b> ב-Safari לוחצים על <bdi>⋯</bdi> ליד שורת הכתובת, אחר כך "שיתוף" ו"הוספה למסך הבית".</p>${close}`);
+  }
+  window.addEventListener("beforeinstallprompt", e => {
+    e.preventDefault(); deferred = e;
+    show(`${icon}<p><b>אפשר להתקין את הטיול כאפליקציה</b>, והיא תעבוד גם בלי אינטרנט.</p><button class="primary" data-install-go>התקנה</button>${close}`);
+  });
+  window.addEventListener("appinstalled", () => { box.hidden = true; });
+  box.addEventListener("click", async e => {
+    if (e.target.closest("[data-install-x]")) { box.hidden = true; store.set("installDismissed", true); }
+    if (e.target.closest("[data-install-go]") && deferred) { deferred.prompt(); await deferred.userChoice; deferred = null; box.hidden = true; }
+  });
+})();
+</script>
 </body>
 </html>

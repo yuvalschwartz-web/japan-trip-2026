@@ -1,72 +1,38 @@
-// Offline cache for the Japan 2026 web app. Bump VERSION after changing the itinerary.
-var VERSION = 'japan2026-v1';
-var SHELL = [
-  './',
-  'index.html',
-  'app.js',
-  'manifest.webmanifest',
-  'icons/icon-192.png',
-  'icons/icon-512.png',
-  'icons/apple-touch-icon.png',
-  'icons/favicon-32.png'
-];
-
-self.addEventListener('install', function (e) {
-  e.waitUntil(caches.open(VERSION).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
+/* Offline support. The page is network-first (updates arrive whenever online, the cached copy opens offline);
+   icons, photos and fonts are cache-first. /api is never cached: the page keeps its own copy of the shared state.
+   Bump VERSION when a photo or icon changes (the page itself updates on its own). */
+const VERSION = "japan-v2";
+const SHELL = ["/", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png", "/icons/apple-touch-icon.png", "/icons/favicon-32.png"];
+self.addEventListener("install", e => {
+  e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
 });
-
-self.addEventListener('activate', function (e) {
-  e.waitUntil(
-    caches.keys().then(function (keys) {
-      return Promise.all(keys.filter(function (k) { return k !== VERSION; }).map(function (k) { return caches.delete(k); }));
-    }).then(function () { return self.clients.claim(); })
-  );
+self.addEventListener("activate", e => {
+  e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== VERSION && k !== "fonts").map(k => caches.delete(k)))).then(() => self.clients.claim()));
 });
-
-self.addEventListener('fetch', function (e) {
-  var req = e.request;
-  if (req.method !== 'GET') return;
-  var url = new URL(req.url);
-
-  // Pages: network first so updates show up, cached copy when offline.
-  if (req.mode === 'navigate') {
-    e.respondWith(
-      fetch(req).then(function (res) {
-        var copy = res.clone();
-        caches.open(VERSION).then(function (c) { c.put('index.html', copy); });
-        return res;
-      }).catch(function () { return caches.match('index.html'); })
-    );
+self.addEventListener("fetch", e => {
+  const req = e.request;
+  if (req.method !== "GET") return;
+  const url = new URL(req.url);
+  if (url.pathname.startsWith("/api/")) return;
+  if (url.hostname === "fonts.googleapis.com" || url.hostname === "fonts.gstatic.com") {
+    e.respondWith(caches.open("fonts").then(async c => {
+      const hit = await c.match(req);
+      if (hit) return hit;
+      const res = await fetch(req);
+      if (res.ok || res.type === "opaque") c.put(req, res.clone());
+      return res;
+    }));
     return;
   }
-
-  // Google Fonts: cache first.
-  if (url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com') {
-    e.respondWith(
-      caches.match(req).then(function (hit) {
-        return hit || fetch(req).then(function (res) {
-          var copy = res.clone();
-          caches.open(VERSION).then(function (c) { c.put(req, copy); });
-          return res;
-        });
-      })
-    );
+  if (url.origin !== location.origin) return;
+  if (req.mode === "navigate") {
+    e.respondWith(fetch(req).then(res => {
+      const copy = res.clone(); caches.open(VERSION).then(c => c.put("/", copy)); return res;
+    }).catch(() => caches.match("/")));
     return;
   }
-
-  // Own files: serve cached, refresh in the background.
-  if (url.origin === self.location.origin) {
-    e.respondWith(
-      caches.match(req).then(function (hit) {
-        var net = fetch(req).then(function (res) {
-          if (res.ok) {
-            var copy = res.clone();
-            caches.open(VERSION).then(function (c) { c.put(req, copy); });
-          }
-          return res;
-        }).catch(function () { return hit; });
-        return hit || net;
-      })
-    );
-  }
+  e.respondWith(caches.match(req).then(hit => hit || fetch(req).then(res => {
+    if (res.ok) { const copy = res.clone(); caches.open(VERSION).then(c => c.put(req, copy)); }
+    return res;
+  })));
 });

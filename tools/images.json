@@ -1,0 +1,371 @@
+{
+ "shibuya": {
+  "file": "Shibuya_Crossing,_Aerial.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=142353780",
+  "author": "David Kernan",
+  "license": "CC BY 4.0",
+  "w": 3840,
+  "h": 2160,
+  "src": "wiki:Shibuya Crossing"
+ },
+ "scramble": {
+  "file": "SHIBUYA_SCRAMBLE_SQUARE_East_Tower.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=141804891",
+  "author": "Sakura Torch",
+  "license": "CC BY-SA 4.0",
+  "w": 3247,
+  "h": 4870,
+  "src": "wiki:Shibuya Scramble Square"
+ },
+ "meiji": {
+  "file": "Meiji_Jingu_2023-3.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=130582980",
+  "author": "Akonnchiroll",
+  "license": "CC BY-SA 4.0",
+  "w": 4032,
+  "h": 2268,
+  "src": "wiki:Meiji Shrine"
+ },
+ "omotesando": {
+  "file": "Omotesando_Tokyo_spring_2012.JPG",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=19346649",
+  "author": "Kakidai",
+  "license": "CC BY-SA 3.0",
+  "w": 2500,
+  "h": 1521,
+  "src": "wiki:Omotesandō"
+ },
+ "sensoji": {
+  "file": "Sensoji_2023.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=140103480",
+  "author": "Akonnchiroll",
+  "license": "CC0",
+  "w": 3466,
+  "h": 2476,
+  "src": "wiki:Sensō-ji"
+ },
+ "kappabashi": {
+  "file": "Kappabashi-dori_streetcorner_(Kitchen_town_-_southern_end)_Tokyo_Japan.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=87999066",
+  "author": "Basile Morin",
+  "license": "CC BY-SA 4.0",
+  "w": 5328,
+  "h": 3847,
+  "src": "wiki:Kappabashi"
+ },
+ "akiba": {
+  "file": "Sotokanda,_Akihabara_Electric_Town_at_night_20231114.png",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=144975426",
+  "author": "Phineyes",
+  "license": "CC0",
+  "w": 4032,
+  "h": 3024,
+  "src": "wiki:Akihabara"
+ },
+ "kabukicho": {
+  "file": "Kabukicho_red_gate_and_colorful_neon_street_signs_at_night,_Shinjuku,_Tokyo,_Japan.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=81420139",
+  "author": "Basile Morin",
+  "license": "CC BY-SA 4.0",
+  "w": 4950,
+  "h": 4411,
+  "src": "wiki:Kabukichō"
+ },
+ "tmg": {
+  "file": "Tokyo_Metropolitan_Government_Building_2024.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=156219543",
+  "author": "Kakidai",
+  "license": "CC BY-SA 4.0",
+  "w": 2500,
+  "h": 2169,
+  "src": "wiki:Tokyo Metropolitan Government Building"
+ },
+ "gion": {
+  "file": "150124_Gion_Kyoto_Japan01s3.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=38978940",
+  "author": "663highland",
+  "license": "CC BY 2.5",
+  "w": 6000,
+  "h": 4000,
+  "src": "wiki:Gion"
+ },
+ "nishiki": {
+  "file": "Nishiki_Ichiba_by_matsuyuki.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=2657121",
+  "author": "matsuyuki",
+  "license": "CC BY-SA 2.0",
+  "w": 2448,
+  "h": 3264,
+  "src": "wiki:Nishiki Market"
+ },
+ "yasaka": {
+  "file": "Yasaka_jinja.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=102062",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "w": 1024,
+  "h": 768,
+  "src": "wiki:Yasaka Shrine"
+ },
+ "pontocho": {
+  "file": "Pontocho_by_Wolfiewolf_in_Nabeyacho,_Kyoto.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=2726783",
+  "author": "Wolfiewolf from Pontocho street in Nakagyo, Kyoto",
+  "license": "CC BY 2.0",
+  "w": 3840,
+  "h": 2160,
+  "src": "wiki:Pontochō"
+ },
+ "inari": {
+  "file": "Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine,_Kyoto,_Japan.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=81034484",
+  "author": "Basile Morin",
+  "license": "CC BY-SA 4.0",
+  "w": 5765,
+  "h": 3843,
+  "src": "wiki:Fushimi Inari-taisha"
+ },
+ "kiyomizu": {
+  "file": "Kiyomizu.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=30895839",
+  "author": "Jordy Meow",
+  "license": "CC BY-SA 3.0",
+  "w": 1452,
+  "h": 969,
+  "src": "wiki:Kiyomizu-dera"
+ },
+ "ninenzaka": {
+  "file": "Pedestrian_road_with_pavements_and_paper_umbrellas,_Higashiyama-ku,_Kyoto,_Japan,_early_morning.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=80363268",
+  "author": "Basile Morin",
+  "license": "CC BY-SA 4.0",
+  "w": 6438,
+  "h": 4292,
+  "src": "wiki:Ninenzaka"
+ },
+ "philosopher": {
+  "file": "Japan_Kyoto_philosophers_walk_DSC00297.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=90527",
+  "author": "David Monniaux",
+  "license": "CC BY-SA 3.0",
+  "w": 2592,
+  "h": 1728,
+  "src": "wiki:Philosopher's Walk"
+ },
+ "bamboo": {
+  "file": "Bamboo_Grove,_Arashiyama,_Kyoto,_Japan.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=82606736",
+  "author": "Basile Morin",
+  "license": "CC BY-SA 4.0",
+  "w": 4051,
+  "h": 6076,
+  "src": "wiki:Sagano Bamboo Forest"
+ },
+ "tenryuji": {
+  "file": "Tenryuji_Kyoto.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=8767864",
+  "author": "osakaosaka",
+  "license": "CC BY-SA 3.0",
+  "w": 3648,
+  "h": 2056,
+  "src": "wiki:Tenryū-ji"
+ },
+ "kinkakuji": {
+  "file": "Golden_Pavilion_Kinkaku-ji_water_mirror_2024.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=147825830",
+  "author": "Nacaru",
+  "license": "CC BY-SA 4.0",
+  "w": 4000,
+  "h": 6000,
+  "src": "wiki:Kinkaku-ji"
+ },
+ "tsuzumimon": {
+  "file": "131108_Kanazawa_Station_Kanazawa_Ishikawa_pref_Japan01s5.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=29528313",
+  "author": "663highland",
+  "license": "CC BY 2.5",
+  "w": 4050,
+  "h": 2700,
+  "src": "wiki:Kanazawa Station"
+ },
+ "kenrokuen": {
+  "file": "Stone_lantern_Kenrokuen.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=34244591",
+  "author": "Japanexperterna.se",
+  "license": "CC BY-SA 3.0",
+  "w": 5110,
+  "h": 3343,
+  "src": "wiki:Kenroku-en"
+ },
+ "kzcastle": {
+  "file": "131109_Kanazawa_Castle_Kanazawa_Ishikawa_pref_Japan01s5p.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=198478695",
+  "author": "663highland",
+  "license": "CC BY 2.5",
+  "w": 4912,
+  "h": 2763,
+  "src": "wiki:Kanazawa Castle"
+ },
+ "museum21": {
+  "file": "21st_Century_Museum_of_Contemporary_Art,_Kanazawa011.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=32373408",
+  "author": "金沢市",
+  "license": "CC BY 2.1 jp",
+  "w": 3861,
+  "h": 2574,
+  "src": "wiki:21st Century Museum of Contemporary Art, Kanazawa"
+ },
+ "shirakawa": {
+  "file": "Ogi_Shirakawa-gō,_Gifu,_Japan.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=8011205",
+  "author": "663highland",
+  "license": "CC BY 2.5",
+  "w": 3200,
+  "h": 2133,
+  "src": "wiki:Shirakawa-gō"
+ },
+ "jinya": {
+  "file": "Takayama_jinya.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=1078072",
+  "author": "K.F.",
+  "license": "CC BY 2.5",
+  "w": 2400,
+  "h": 1800,
+  "src": "wiki:Takayama Jin'ya"
+ },
+ "kamikochi": {
+  "file": "Kamikochi_-_Kamikochi6538.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=195791930",
+  "author": "lumoplank",
+  "license": "CC0",
+  "w": 5421,
+  "h": 3614,
+  "src": "wiki:Kamikōchi"
+ },
+ "matsumoto": {
+  "file": "Matsumoto_Castle_Keep_Tower.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=126963382",
+  "author": "Lightning toothed whale (稲妻ノ歯鯨) This photo was taken with Canon EOS 500D",
+  "license": "CC BY-SA 4.0",
+  "w": 4752,
+  "h": 3168,
+  "src": "wiki:Matsumoto Castle"
+ },
+ "magome": {
+  "file": "1_magome_juku_2024.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=157238204",
+  "author": "Chensiyuan",
+  "license": "CC BY-SA 4.0",
+  "w": 11648,
+  "h": 8088,
+  "src": "wiki:Magome-juku"
+ },
+ "tsumago": {
+  "file": "1_tsumago_juku_2024.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=157359254",
+  "author": "Chensiyuan",
+  "license": "CC BY-SA 4.0",
+  "w": 11648,
+  "h": 8736,
+  "src": "wiki:Tsumago-juku"
+ },
+ "narai": {
+  "file": "1_naraijuku_2024.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=157318976",
+  "author": "Chensiyuan",
+  "license": "CC BY-SA 4.0",
+  "w": 9504,
+  "h": 6336,
+  "src": "wiki:Narai-juku"
+ },
+ "ginza": {
+  "file": "Ginza-WAKO_at_night.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=72903634",
+  "author": "Kakidai",
+  "license": "CC BY-SA 4.0",
+  "w": 1999,
+  "h": 1500,
+  "src": "wiki:Ginza"
+ },
+ "sanmachi": {
+  "file": "Takayama Old Town (Sanmachi Suji) (35819349621).jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=61069630",
+  "author": "Ankur P from Pune, India",
+  "license": "CC BY 2.0",
+  "w": 4032,
+  "h": 3024,
+  "src": "file:Takayama Old Town (Sanmachi Suji) (35819349621).jpg"
+ },
+ "higashichaya": {
+  "file": "Higashi Chaya district, Kanazawa (3810704024).jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=75235390",
+  "author": "Andrea Schaffer from Sydney, Australia",
+  "license": "CC BY 2.0",
+  "w": 4272,
+  "h": 2848,
+  "src": "file:Higashi Chaya district, Kanazawa (3810704024).jpg"
+ },
+ "omicho": {
+  "file": "Omicho Market.JPG",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=22923165",
+  "author": "User: (WT-shared) Jpatokal at wts wikivoyage",
+  "license": "CC BY-SA 4.0",
+  "w": 3008,
+  "h": 2000,
+  "src": "file:Omicho Market.JPG"
+ },
+ "nagamachi": {
+  "file": "Onosho Waterway in Nagamachi Samurai District Apr 10, 2009.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=90616548",
+  "author": "Douglas Perkins",
+  "license": "CC BY-SA 2.0",
+  "w": 2400,
+  "h": 1800,
+  "src": "file:Onosho Waterway in Nagamachi Samurai District Apr 10, 2009.jpg"
+ },
+ "tsukiji": {
+  "file": "Tsukiji Outer Market -09.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=19258428",
+  "author": "Aimaimyi",
+  "license": "CC BY-SA 3.0",
+  "w": 2592,
+  "h": 1944,
+  "src": "file:Tsukiji Outer Market -09.jpg"
+ },
+ "togetsukyo": {
+  "file": "Arashiyama Togetsukyo-bridge.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=1984660",
+  "author": "Tomomarusan",
+  "license": "CC BY 2.5",
+  "w": 3008,
+  "h": 2000,
+  "src": "file:Arashiyama Togetsukyo-bridge.jpg"
+ },
+ "gyoen": {
+  "file": "Shinjuku Gyoen autumn season.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=103550122",
+  "author": "Terabita34",
+  "license": "CC BY-SA 4.0",
+  "w": 1600,
+  "h": 1200,
+  "src": "file:Shinjuku Gyoen autumn season.jpg"
+ },
+ "takeshita": {
+  "file": "Japan Tokyo Takeshita street at summer - 東京竹下.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=132399491",
+  "author": "japanvlogjp",
+  "license": "CC BY-SA 4.0",
+  "w": 1499,
+  "h": 844,
+  "src": "file:Japan Tokyo Takeshita street at summer - 東京竹下.jpg"
+ },
+ "hachiko": {
+  "file": "Hachiko square 2020-04-19.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=89261661",
+  "author": "Asanagi",
+  "license": "CC0",
+  "w": 3456,
+  "h": 2592,
+  "src": "file:Hachiko square 2020-04-19.jpg"
+ }
+}
