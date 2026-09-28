@@ -2,6 +2,8 @@
 
 טיול ליפן, 21/10 – 5/11/2026.
 
+**האפליקציה:** https://japan-trip-2026-azure.vercel.app
+
 - [`index.html`](index.html): ה-web app, אפשר להתקין אותו על מסך הבית
 - [`itinerary.md`](itinerary.md): המסלול המלא, יום אחרי יום, ברשימות רגילות
 - [`source/JAPAN_2026.pdf`](source/JAPAN_2026.pdf): הגיליון המקורי
