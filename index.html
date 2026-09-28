@@ -1,0 +1,608 @@
+<title>מסלול יפן 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F3F4F7;
+  --surface:#FFFFFF;
+  --ink:#1B2130;
+  --muted:#5C6478;
+  --line:#DCE0E8;
+  --accent:#C7362F;
+  --accent-soft:#FBE9E7;
+  --add:#2F5E8C;
+  --add-soft:#EAF1F8;
+  --tokyo:#9DB4F5;
+  --kyoto:#F9C68A;
+  --kanazawa:#94E39A;
+  --takayama:#6B50A8;
+  --onsen:#F3EC8C;
+  --matsumoto:#F2A5A5;
+  --home:#C9CED8;
+  --shadow:0 1px 2px rgba(27,33,48,.06),0 4px 14px rgba(27,33,48,.05);
+  --display:"Frank Ruhl Libre","David Libre",Georgia,serif;
+  --body:"IBM Plex Sans Hebrew","Rubik","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#11141B;--surface:#1A1F2A;--ink:#E7E9EF;--muted:#9BA3B5;--line:#2C3342;
+    --accent:#FF7B72;--accent-soft:#3A1F21;--add:#8DB8E6;--add-soft:#1B2838;
+    --tokyo:#6F8CE0;--kyoto:#D9964F;--kanazawa:#4FB45A;--takayama:#8A6FD0;--onsen:#C9BE3E;--matsumoto:#D46E6E;--home:#586070;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#11141B;--surface:#1A1F2A;--ink:#E7E9EF;--muted:#9BA3B5;--line:#2C3342;
+  --accent:#FF7B72;--accent-soft:#3A1F21;--add:#8DB8E6;--add-soft:#1B2838;
+  --tokyo:#6F8CE0;--kyoto:#D9964F;--kanazawa:#4FB45A;--takayama:#8A6FD0;--onsen:#C9BE3E;--matsumoto:#D46E6E;--home:#586070;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.6;margin:0}
+.wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:24px 64px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.2}
+b,strong{font-weight:600}
+a{color:var(--add)}
+:focus-visible{outline:2px solid var(--add);outline-offset:2px}
+
+/* header */
+.top{display:grid;gap:10px;margin-bottom:18px}
+.top .eyebrow{font-size:12.5px;letter-spacing:.08em;color:var(--muted);font-weight:600}
+.top h1{font-size:clamp(34px,8vw,52px);font-weight:900}
+.top p{margin:0;color:var(--muted);max-width:60ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--muted);margin-top:4px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+.sw.own{background:var(--surface)}
+.sw.add{background:var(--add-soft);border:1px dashed var(--add)}
+.sw.red{background:var(--accent)}
+
+/* route strip */
+.route{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;margin-inline:-16px;padding-inline:16px;border-bottom:1px solid var(--line)}
+.strip{display:grid;grid-template-columns:repeat(16,1fr);gap:3px}
+.strip a{display:grid;place-items:center;height:34px;border-radius:5px;text-decoration:none;color:#1B2130;font-size:11.5px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.05;text-align:center}
+.strip a small{display:block;font-weight:500;font-size:9.5px;opacity:.8}
+.strip a.dark{color:#fff}
+.cities{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:6px;font-size:11.5px;color:var(--muted)}
+.cities span{display:inline-flex;align-items:center;gap:5px}
+.cities i{width:9px;height:9px;border-radius:2px;display:inline-block}
+
+/* sections */
+section{margin-top:34px}
+section>h2{font-size:26px;font-weight:700;margin-bottom:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}
+
+/* checklist */
+.todo{list-style:none;margin:0;padding:6px 0}
+.todo li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:10px 14px;border-bottom:1px solid var(--line)}
+.todo li:last-child{border-bottom:0}
+.todo input{width:20px;height:20px;margin-top:3px;accent-color:var(--add)}
+.todo label{cursor:pointer}
+.todo .when{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:99px;margin-inline-end:6px;background:var(--accent-soft);color:var(--accent);font-variant-numeric:tabular-nums}
+.todo .when.soon{background:var(--add-soft);color:var(--add)}
+.todo li.done label{color:var(--muted);text-decoration:line-through}
+.todo .sub{display:block;font-size:13px;color:var(--muted)}
+
+/* city block */
+.city{margin-top:30px}
+.cityhead{display:grid;grid-template-columns:8px 1fr;gap:12px;align-items:stretch;margin-bottom:10px}
+.cityhead .bar{border-radius:4px}
+.cityhead h2{font-size:28px;font-weight:900}
+.cityhead .dates{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.hotel{margin-top:8px;font-size:14px;padding:10px 12px;border-radius:8px;background:var(--surface);border:1px solid var(--line)}
+.hotel .lbl{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--muted);display:block;margin-bottom:2px}
+.hotel ol{margin:0;padding-inline-start:20px}
+.hotel .pref{font-weight:600}
+.hotel .pref::after{content:"  · מודגש בגיליון";font-weight:400;font-size:12px;color:var(--muted)}
+
+/* day */
+.day{margin-top:12px;overflow:hidden}
+.dayhead{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
+.num{display:grid;place-items:center;min-width:46px;height:46px;border-radius:8px;font-family:var(--display);font-weight:900;font-size:22px;color:#1B2130;font-variant-numeric:tabular-nums}
+.num.dark{color:#fff}
+.dayhead h3{font-size:19px;font-weight:700}
+.dayhead .meta{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.daybody{padding:10px 14px 14px;display:grid;gap:10px}
+.own ul,.add ul{margin:0;padding-inline-start:18px;display:grid;gap:4px}
+.own li::marker{color:var(--muted)}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.05em;color:var(--muted);margin-bottom:4px}
+.add{background:var(--add-soft);border:1px dashed var(--add);border-radius:8px;padding:10px 12px}
+.add .tag{color:var(--add)}
+.add li::marker{color:var(--add)}
+.t{font-variant-numeric:tabular-nums;font-weight:600;color:var(--add);white-space:nowrap}
+.note{font-size:13.5px;border-inline-start:3px solid var(--muted);padding-inline-start:10px;color:var(--muted)}
+.note b{color:var(--ink)}
+.red{color:var(--accent);font-weight:700}
+.orange{color:#C8740A;font-weight:600}
+.empty{color:var(--muted);font-style:italic;font-size:14px}
+.move{font-size:13.5px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+.move .pill{background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:1px 10px;font-variant-numeric:tabular-nums}
+
+/* tables */
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{text-align:start;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.04em;color:var(--muted);font-weight:700}
+tfoot td{font-weight:700;border-bottom:0}
+.jr{font-size:11px;font-weight:700;padding:0 6px;border-radius:4px;background:var(--add-soft);color:var(--add)}
+.bus{font-size:11px;font-weight:700;padding:0 6px;border-radius:4px;background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.prose{padding:14px 16px;display:grid;gap:10px}
+.prose p{margin:0;max-width:65ch}
+.prose ul{margin:0;padding-inline-start:18px;display:grid;gap:6px}
+.opt{display:grid;gap:12px}
+.opt .card{padding:14px 16px}
+.opt h3{font-size:18px;margin-bottom:6px}
+.opt .rec{font-size:12px;font-weight:700;color:var(--add);background:var(--add-soft);border-radius:99px;padding:1px 8px;margin-inline-start:6px;font-family:var(--body)}
+.foot{margin-top:40px;font-size:12.5px;color:var(--muted)}
+@media (max-width:420px){
+  .strip a{height:30px;font-size:10.5px}
+  .strip a small{display:none}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="wrap" dir="rtl" lang="he">
+
+<header class="top">
+  <div class="eyebrow">21/10 – 5/11/2026 · 16 ימים · 6 אזורים</div>
+  <h1>יפן 2026</h1>
+  <p>התכנון שלכם מהגיליון נשאר בדיוק כמו שהוא. בימים שהיו ריקים או רשומים בשורה אחת הוספתי פירוט, וכל תוספת שלי מסומנת כ״הצעה״ במסגרת כחולה מקווקוות.</p>
+  <div class="legend">
+    <span><i class="sw own"></i>התכנון שלכם</span>
+    <span><i class="sw add"></i>הצעה שלי</span>
+    <span><i class="sw red"></i>מסומן באדום בגיליון</span>
+  </div>
+</header>
+
+<nav class="route" aria-label="ימי הטיול">
+  <div class="strip">
+    <a href="#d1" style="background:var(--tokyo)">1<small>21/10</small></a>
+    <a href="#d2" style="background:var(--tokyo)">2<small>22/10</small></a>
+    <a href="#d3" style="background:var(--tokyo)">3<small>23/10</small></a>
+    <a href="#d4" style="background:var(--tokyo)">4<small>24/10</small></a>
+    <a href="#d5" style="background:var(--kyoto)">5<small>25/10</small></a>
+    <a href="#d6" style="background:var(--kyoto)">6<small>26/10</small></a>
+    <a href="#d7" style="background:var(--kyoto)">7<small>27/10</small></a>
+    <a href="#d8" style="background:var(--kanazawa)">8<small>28/10</small></a>
+    <a href="#d9" style="background:var(--kanazawa)">9<small>29/10</small></a>
+    <a href="#d10" class="dark" style="background:var(--takayama)">10<small>30/10</small></a>
+    <a href="#d11" style="background:var(--onsen)">11<small>31/10</small></a>
+    <a href="#d12" style="background:var(--matsumoto)">12<small>1/11</small></a>
+    <a href="#d13" style="background:var(--matsumoto)">13<small>2/11</small></a>
+    <a href="#d14" style="background:var(--tokyo)">14<small>3/11</small></a>
+    <a href="#d15" style="background:var(--tokyo)">15<small>4/11</small></a>
+    <a href="#d16" style="background:var(--home)">✈<small>5/11</small></a>
+  </div>
+  <div class="cities">
+    <span><i style="background:var(--tokyo)"></i>טוקיו</span>
+    <span><i style="background:var(--kyoto)"></i>קיוטו</span>
+    <span><i style="background:var(--kanazawa)"></i>קנזאווה</span>
+    <span><i style="background:var(--takayama)"></i>טקאיאמה</span>
+    <span><i style="background:var(--onsen)"></i>אונסן</span>
+    <span><i style="background:var(--matsumoto)"></i>מצומוטו</span>
+  </div>
+</nav>
+
+<section id="todo">
+  <h2>להזמין עכשיו</h2>
+  <div class="card">
+    <ul class="todo" id="todolist">
+      <li><input type="checkbox" id="t1"><label for="t1"><span class="when">30/9</span><b>אוטובוס Nohi קנזאווה ← שיראקאווה-גו ל-30/10</b><span class="sub">ההזמנה נפתחת בדיוק חודש מראש, והמקומות מסוימים חובה. באותה הזדמנות להזמין גם שיראקאווה-גו ← טקאיאמה. באתר japanbusonline.com</span></label></li>
+      <li><input type="checkbox" id="t2"><label for="t2"><span class="when">1/10</span><b>אוטובוס קמיקוצ'י ← מצומוטו ל-1/11</b><span class="sub">מאז 2025 כל האוטובוסים של Alpico בקו הזה דורשים הזמנה. ההזמנה נפתחת חודש מראש</span></label></li>
+      <li><input type="checkbox" id="t3"><label for="t3"><span class="when">עכשיו</span><b>teamLab Planets ל-23/10</b><span class="sub">כניסה בחלונות זמן, והכרטיסים נגמרים מראש</span></label></li>
+      <li><input type="checkbox" id="t4"><label for="t4"><span class="when">עכשיו</span><b>Shibuya Sky ל-21/10, בערב</b><span class="sub">כרטיסים לשעות השקיעה נגמרים מהר. אם ההזמנה עוד לא נפתחה לתאריך, לבדוק שוב בתחילת אוקטובר</span></label></li>
+      <li><input type="checkbox" id="t5"><label for="t5"><span class="when">עכשיו</span><b>לסגור מלונות שעדיין פתוחים</b><span class="sub">קיוטו (3 אפשרויות), טקאיאמה (3), אונסן (2), גינזה (2). את המלון בגינזה כדאי לסגור לפני 27/10 בגלל שליחת המזוודות</span></label></li>
+      <li><input type="checkbox" id="t6"><label for="t6"><span class="when soon">עד שבוע לפני</span><b>רכבות</b><span class="sub">שינקנסן שינגאווה ← קיוטו (25/10), קיוטו ← קנזאווה (28/10), Azusa מצומוטו ← שינג'וקו (3/11)</span></label></li>
+      <li><input type="checkbox" id="t7"><label for="t7"><span class="when soon">מהגיליון</span><b>סדנת Chopsticks Studio Ginza</b><span class="sub">דרך Klook, קוד הנחה OMERZTRAVEL</span></label></li>
+      <li><input type="checkbox" id="t8"><label for="t8"><span class="when soon">מהגיליון</span><b>ארוחת ערב שווה בגינזה ב-4/11</b></label></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= TOKYO ================= -->
+<div class="city" id="tokyo1">
+  <div class="cityhead"><div class="bar" style="background:var(--tokyo)"></div>
+    <div><h2>טוקיו</h2><div class="dates">21/10 – 24/10 · 4 לילות</div>
+      <div class="hotel"><span class="lbl">מלון</span><b>All Day Place Shibuya</b></div>
+    </div>
+  </div>
+
+  <article class="card day" id="d1">
+    <div class="dayhead"><div class="num" style="background:var(--tokyo)">1</div><div><h3>שיבויה</h3><div class="meta">רביעי · 21/10</div></div></div>
+    <div class="daybody">
+      <div class="own"><ul>
+        <li>נוחתים ב-13:20, הגעה למלון ב-15:30.</li>
+        <li>הליכה ל-<b>shibuya crossing</b>, יש תצפית על הכביש מהסניף של סטארבקס.</li>
+        <li>פסל <b>Hachiko</b> + באותו איזור בית קפה <b>hoshino coffee</b> ולטעום את הסופלה פנקייק המפורסם.</li>
+        <li>קניון <b>Shibuya Parco</b> – קומה 6 קומת האנימה, הגג פתוח עם צמחיה.</li>
+        <li>רחוב <b>Center Gai</b> – אורות, מסעדות וחנויות. יש דון קיחוטה ופמילי מארט באיזור.</li>
+        <li>בערב – <span class="red">shibuya sky</span> תצפית ולבקר בקניון שתחתיו <b>shibuya scramble square</b>.</li>
+        <li>אפשר לעבור שוב ב-<b>shibuya crossing</b> ולראות את האיזור בחושך.</li>
+        <li>לסיים את היום בבר <span class="red">The SG club</span>, תשע דקות מהמלון.</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <article class="card day" id="d2">
+    <div class="dayhead"><div class="num" style="background:var(--tokyo)">2</div><div><h3>הארג'וקו</h3><div class="meta">חמישי · 22/10</div></div></div>
+    <div class="daybody">
+      <div class="own"><ul>
+        <li>טיול במקדש <b>meiji</b></li>
+        <li>להסתובב ב-<b>yoyogi park</b> הצמוד למקדש</li>
+        <li>רחוב <b>takeshita</b> – רחוב אוכל צבעוני, טוסט קשת בענן</li>
+        <li>רחוב <b>omotesando</b> יוקרתי – (נעליים – abc mart, נעליים לרומי Onitsuka Tiger)</li>
+        <li><i>המלצה</i> – סושי מסוע עם כוכב מישלן <b>Kaiten Sushi Ginza</b>, אודון קרבונרה <b>Menchirashi</b>, אפשר גם <b>luke's lobster</b></li>
+        <li>להסתובב ב-<b>cat street</b> – רחוב חנויות בוטיק ויד שנייה מקומיות</li>
+        <li>קניון <b>Miyashita Park</b> – קרוב למלון, חנויות בגדים ומותגים ובגג יש פארק חמוד.</li>
+      </ul></div>
+      <div class="note"><b>הערה שלכם:</b> לוקח למזוודות יומיים להגיע</div>
+    </div>
+  </article>
+
+  <article class="card day" id="d3">
+    <div class="dayhead"><div class="num" style="background:var(--tokyo)">3</div><div><h3>אסקוסה + אקיהברה</h3><div class="meta">שישי · 23/10</div></div></div>
+    <div class="daybody">
+      <div class="own"><ul>
+        <li>מתחילים ב-<b>Kappabashi Dori</b> – Kappabashi Hondōri Shopping Street – רחוב קניות לכלי מטבח</li>
+        <li>ממשיכים ל-<b>Nakamise Shopping Street</b> – חטיפים ואוכל יפניים, מזכרות וכו'.</li>
+        <li>מוביל ישירות למקדש <b>Senso-ji</b></li>
+        <li>רכבת ישירה / שיט ממפרץ אסאקוסה לכיוון אודהיבה, ורכבת Yurikamome ל-<span class="red">Teamlab Planets</span></li>
+        <li>בערב – אקיהברה (רוב החנויות נסגרות ב-20:00)</li>
+        <li>ללכת באיזור החנות <b>yodobashi akiba</b> והארקייד <b>TAITO Station Akihabara</b></li>
+        <li>א.ערב – לזרום באקיהברה/לחזור לשיבויה</li>
+        <li><b>Pokemon Center Shibuya</b> – להביא לרומי בובה קטנה :)</li>
+        <li><span class="red">The Bellwood</span> – בר מאוד שווה, מקום 48 בעולם</li>
+      </ul></div>
+      <div class="note"><b>הערה שלכם:</b> להזמין מראש נסיעות בין ערים</div>
+    </div>
+  </article>
+
+  <article class="card day" id="d4">
+    <div class="dayhead"><div class="num" style="background:var(--tokyo)">4</div><div><h3>שינג'וקו</h3><div class="meta">שבת · 24/10</div></div></div>
+    <div class="daybody">
+      <div class="own"><ul>
+        <li>לטייל בגנים יפניים – <b>shinjuku gyoen</b></li>
+        <li><i>אופציה א.בוקר</i> – <b>Isetan Shinjuku</b> כלבו אוכל ענק (דון קיחוטה ויוניקלו באיזור),</li>
+        <li>יש בכלבו חנות שוקולד בעבודת יד <b>Jean-Paul Hevin Shinjuku Isetan</b></li>
+        <li>להמשיך לאזור המרכזי ולראות את החתול המפורסם – <b>the giant 3d cat</b></li>
+        <li>לראות פסל גודזילה – <b>godzila head</b></li>
+        <li>להמשיך רובע האורות האדומים המפורסם – <b>Kabukicho</b></li>
+        <li><i>אופציה</i> לקפה ולפנקייק יפני אוורירי – <b>bam bi coffee</b></li>
+        <li><i>אופציית צהרים</i> – סושי מסוע <b>odeo shinjukuminami guchiten</b></li>
+        <li>תצפית חינמית יפה – <b>Tokyo Metropolitan Government Building</b></li>
+        <li>לטייל ב-<b>Shinjuku Central Park</b> וחזרה למלון</li>
+        <li>ללכת בערב לרחוב הברים – <b>omoide yokocho</b></li>
+      </ul></div>
+      <div class="add"><span class="tag">הצעה · לקראת מחר</span><ul>
+        <li>לארוז הערב את מה שצריך לקיוטו. אם אתם רוצים לנסוע בשינקנסן בלי מזוודות גדולות, ראו <a href="#bags">מזוודות</a>.</li>
+      </ul></div>
+    </div>
+  </article>
+</div>
+
+<!-- ================= KYOTO ================= -->
+<div class="city" id="kyoto">
+  <div class="cityhead"><div class="bar" style="background:var(--kyoto)"></div>
+    <div><h2>קיוטו</h2><div class="dates">25/10 – 27/10 · 3 לילות</div>
+      <div class="hotel"><span class="lbl">מלון · אפשרויות מהגיליון</span><ol>
+        <li class="pref">Kyoto Granbell Hotel</li>
+        <li>Aoi Hotel Kyoto</li>
+        <li>Mitsui Garden Hotel Kyoto Kawaramachi Jokyoji</li>
+      </ol></div>
+    </div>
+  </div>
+
+  <article class="card day" id="d5">
+    <div class="dayhead"><div class="num" style="background:var(--kyoto)">5</div><div><h3>מגיעים לקיוטו · מרכז העיר וגיון</h3><div class="meta">ראשון · 25/10</div></div></div>
+    <div class="daybody">
+      <div class="note"><b>הערה שלכם:</b> רכבת מ-Shinagawa station משיבויה לקיוטו</div>
+      <div class="add"><span class="tag">הצעה</span><ul>
+        <li><span class="t">בוקר</span> שינקנסן Nozomi משינגאווה לקיוטו, כשעתיים ורבע. כדאי לשבת בצד ימין (מושבים E) כדי לראות את הר פוג'י.</li>
+        <li><span class="t">צהריים</span> להשאיר מזוודות במלון (צ'ק-אין בדרך כלל מ-15:00) ולצאת ל-<b>Nishiki Market</b>, "המטבח של קיוטו": 400 מטר של דוכנים. לנסות טמאגויאקי, תמנון קטן על שיפוד עם ביצה בפנים וממתקי מאצ'ה. רוב הדוכנים נסגרים בסביבות 17:00–18:00.</li>
+        <li><span class="t">אחה״צ</span> להמשיך לקניות ב-<b>Teramachi</b> ו-<b>Shinkyogoku</b>, שני רחובות מקורים שמתחברים לנישיקי.</li>
+        <li><span class="t">שקיעה</span> לחצות את נהר הקאמו לגיון: <b>Hanamikoji</b> (רחוב בתי התה, ולפעמים רואים מאיקו בסביבות 18:00; אסור לצלם בסמטאות הפרטיות) ו-<b>Shirakawa</b>, התעלה עם עצי הערבה.</li>
+        <li><span class="t">ערב</span> <b>Yasaka Shrine</b> מואר בלילה, ואחר כך ארוחת ערב בסמטת <b>Pontocho</b> לאורך הנהר.</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <article class="card day" id="d6">
+    <div class="dayhead"><div class="num" style="background:var(--kyoto)">6</div><div><h3>פושימי אינארי + היגשיאמה</h3><div class="meta">שני · 26/10</div></div></div>
+    <div class="daybody">
+      <div class="add"><span class="tag">הצעה</span><ul>
+        <li><span class="t">07:00</span> <b>Fushimi Inari</b>: אלפי שערים כתומים. פתוח 24 שעות והכניסה חינם. בשעה הזאת כמעט אין אנשים. כדאי לעלות לפחות עד צומת <b>Yotsutsuji</b> (35–45 דקות עלייה), שם יש תצפית על העיר. מתחנת קיוטו זה 5 דקות ברכבת JR Nara לתחנת Inari.</li>
+        <li><span class="t">09:30</span> מונית או אוטובוס ל-<b>Kiyomizu-dera</b>, המקדש עם במת העץ הגדולה מעל העמק.</li>
+        <li>לרדת ברגל ב-<b>Sannenzaka</b> וב-<b>Ninenzaka</b>, רחובות אבן עתיקים עם חנויות ובתי תה. יש שם סטארבקס בבית עץ מסורתי עם חדרי טטאמי.</li>
+        <li>תמונה של פגודת <b>Yasaka (Hokan-ji)</b> מרחוב Yasaka-dori, ואחר כך הסמטה <b>Ishibe-koji</b> ומקדש <b>Kodai-ji</b>.</li>
+        <li><span class="t">אחה״צ</span> לבחור אחת משתי אפשרויות:
+          <br>א. <b>Philosopher's Path</b>, שביל לאורך תעלה, עד <b>Ginkaku-ji</b> (ביתן הכסף).
+          <br>ב. מנוחה וקניות ב-Kawaramachi, כולל <b>Pokémon Center Kyoto</b> ו-<b>Nintendo Kyoto</b> בבניין Takashimaya.</li>
+        <li><span class="t">ערב</span> ארוחה חופשית באזור Kawaramachi או Kiyamachi.</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <article class="card day" id="d7">
+    <div class="dayhead"><div class="num" style="background:var(--kyoto)">7</div><div><h3>ארשיאמה + ביתן הזהב</h3><div class="meta">שלישי · 27/10</div></div></div>
+    <div class="daybody">
+      <div class="note"><b>הערה שלכם:</b> לוודא מאיפה לאיפה כדי להשתמש בשירות של שליחת מזוודות ← ראו <a href="#bags">מזוודות</a></div>
+      <div class="add"><span class="tag">הצעה</span><ul>
+        <li><span class="t">07:30</span> רכבת JR Sagano מקיוטו ל-Saga-Arashiyama (15 דקות), ומשם ל-<b>יער הבמבוק</b> לפני ההמונים.</li>
+        <li><span class="t">08:30</span> הגן של <b>Tenryu-ji</b>, ואחריו <b>Okochi Sanso</b>: וילה עם גן ותצפית, והכרטיס כולל תה ירוק וממתק.</li>
+        <li>גשר <b>Togetsukyo</b> ורחוב הראשי. מי שרוצה יכול לטפס 20 דקות לפארק הקופים <b>Iwatayama</b>, עם תצפית על העיר.</li>
+        <li><span class="t">צהריים</span> יודופו (טופו חם, מאכל מקומי של ארשיאמה) או סובה באזור.</li>
+        <li><span class="t">אחה״צ</span> מונית ל-<b>Kinkaku-ji</b>, ביתן הזהב, כ-30 דקות. לידו נמצא גן הסלעים של <b>Ryoan-ji</b> למי שעוד יש כוח.</li>
+        <li><span class="t">ערב</span> לארוז ולשלוח את המזוודות הגדולות מהקבלה של המלון. סיום בארוחה ליד המלון.</li>
+      </ul></div>
+    </div>
+  </article>
+</div>
+
+<!-- ================= KANAZAWA ================= -->
+<div class="city" id="kanazawa">
+  <div class="cityhead"><div class="bar" style="background:var(--kanazawa)"></div>
+    <div><h2>קנזאווה</h2><div class="dates">28/10 – 29/10 · 2 לילות</div>
+      <div class="hotel"><span class="lbl">מלון</span><b>KUMU Kanazawa by THE SHARE HOTELS</b></div>
+    </div>
+  </div>
+
+  <article class="card day" id="d8">
+    <div class="dayhead"><div class="num" style="background:var(--kanazawa)">8</div><div><h3>Kyoto-Kanazawa</h3><div class="meta">רביעי · 28/10</div></div></div>
+    <div class="daybody">
+      <div class="own"><ul><li>Kyoto-Kanazawa</li></ul></div>
+      <div class="add"><span class="tag">הצעה</span><ul>
+        <li><span class="t">בוקר</span> רכבת <b>Thunderbird</b> מקיוטו ל-Tsuruga (כשעה) ומשם החלפה ל-<b>Hokuriku Shinkansen</b> עד קנזאווה. בסך הכל כשעתיים, בכרטיס אחד.</li>
+        <li>לצאת מהתחנה דרך שער העץ <b>Tsuzumi-mon</b> ולצלם אותו. משם מונית או אוטובוס קצר ל-KUMU להשאיר תיקים.</li>
+        <li><span class="t">אחה״צ</span> <b>Higashi Chaya</b>, רובע בתי התה של הגיישות. לטעום גלידה מצופה עלה זהב (קנזאווה מייצרת כמעט את כל עלי הזהב ביפן) ולהיכנס לבית התה ההיסטורי <b>Shima</b>. רוב החנויות נסגרות בסביבות 17:00.</li>
+        <li>הליכה על גדת נהר Asano לרובע <b>Kazuemachi</b>, שהוא קטן ושקט יותר.</li>
+        <li><span class="t">ערב</span> ארוחה באזור <b>Katamachi</b>. מאכל מקומי לנסות: <b>קנזאווה אודן</b>.</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <article class="card day" id="d9">
+    <div class="dayhead"><div class="num" style="background:var(--kanazawa)">9</div><div><h3>Kanazawa sites</h3><div class="meta">חמישי · 29/10</div></div></div>
+    <div class="daybody">
+      <div class="own"><ul><li>Kanazawa sites (<b>Kenrokuen garden</b>, <b>Omicho fish market</b>, <b>Nagamachi samurai district</b>)</li></ul></div>
+      <div class="add"><span class="tag">הצעה · סדר היום</span><ul>
+        <li><span class="t">08:00</span> <b>Kenrokuen</b>, אחד משלושת הגנים הכי מפורסמים ביפן. מאמצע אוקטובר הגן נפתח ב-8:00, ובבוקר הוא הכי שקט.</li>
+        <li>ישר ממנו לפארק <b>Kanazawa Castle</b> הצמוד, שהכניסה אליו חינם.</li>
+        <li><span class="t">10:00</span> <b>21st Century Museum</b>, 5 דקות הליכה. המיצג המפורסם הוא "הבריכה" של Leandro Erlich, והכניסה אליו בחלונות זמן. המוזיאון פתוח בחמישי (סגור בשני).</li>
+        <li><span class="t">צהריים</span> <b>Omicho market</b>, קרוב למלון. לאכול <b>kaisendon</b>, קערת אורז עם פירות ים טריים. יש תורות בשעות השיא.</li>
+        <li><span class="t">אחה״צ</span> <b>Nagamachi</b>, רובע הסמוראים: קירות בוץ, תעלות, ובית הסמוראים <b>Nomura-ke</b> עם גן קטן ויפה.</li>
+        <li><span class="t">ערב</span> לארוז תיק קטן לשלושת הימים בהרים.</li>
+      </ul></div>
+    </div>
+  </article>
+</div>
+
+<!-- ================= TAKAYAMA ================= -->
+<div class="city" id="takayama">
+  <div class="cityhead"><div class="bar" style="background:var(--takayama)"></div>
+    <div><h2>שיראקאווה-גו וטקאיאמה</h2><div class="dates">30/10 · לילה 1</div>
+      <div class="hotel"><span class="lbl">מלון · אפשרויות מהגיליון</span><ol>
+        <li class="pref">Hida Takayama Onsen Takayama Green Hotel – KEIO GROUP HOTELS</li>
+        <li>hotel around TAKAYAMA, an Ascend Collection Hotel</li>
+        <li>HOTEL AMANEK HidaTakayama</li>
+      </ol></div>
+    </div>
+  </div>
+
+  <article class="card day" id="d10">
+    <div class="dayhead"><div class="num dark" style="background:var(--takayama)">10</div><div><h3>Kanazawa-shirkawa go-takayama</h3><div class="meta">שישי · 30/10</div></div></div>
+    <div class="daybody">
+      <div class="own"><ul><li>Kanazawa-shirkawa go-takayama</li></ul></div>
+      <div class="note"><b>הערה שלכם:</b> קנזווה-טאקימה (מסעדת קובה ביף בטאקימה)-אונסן</div>
+      <div class="move"><span class="pill">קנזאווה ← שיראקאווה-גו · 75 דק' · ~¥2,800</span><span class="pill">שיראקאווה-גו ← טקאיאמה · 50 דק' · ~¥2,800</span></div>
+      <div class="add"><span class="tag">הצעה</span><ul>
+        <li><span class="t">בוקר</span> אוטובוס Nohi מתחנת קנזאווה. <b>מקום מסומן חובה</b>, וההזמנה נפתחת ב-30/9.</li>
+        <li><b>Shirakawa-go</b>, שלוש עד ארבע שעות: להתחיל בתצפית <b>Shiroyama</b> מלמעלה (שאטל קצר או 20 דקות הליכה בעלייה), אחר כך <b>Wada House</b>, הבית הגדול עם גג הקש שאפשר להיכנס אליו, מקדש <b>Myozen-ji</b>, וגשר התלייה <b>Deai-bashi</b>.</li>
+        <li><span class="t">אחה״צ</span> אוטובוס לטקאיאמה ובדיקה למלון. <b>Green Hotel</b> קרוב לתחנה.</li>
+        <li><span class="t">ערב</span> בשר לפי ההערה שלכם. הבשר המקומי בטקאיאמה נקרא <b>Hida beef</b>, ואגיו ברמה של קובה. מסעדה מוכרת: <b>Maruaki</b>, ליד התחנה.</li>
+      </ul></div>
+    </div>
+  </article>
+</div>
+
+<!-- ================= ONSEN ================= -->
+<div class="city" id="onsen">
+  <div class="cityhead"><div class="bar" style="background:var(--onsen)"></div>
+    <div><h2>אונסן · Okuhida</h2><div class="dates">31/10 · לילה 1</div>
+      <div class="hotel"><span class="lbl">ריוקאן · אפשרויות מהגיליון</span><ol>
+        <li class="pref">Miyama Ouan</li>
+        <li>Ryokan Kutsuroginoya Yuu</li>
+      </ol>
+      <div style="font-size:13px;color:var(--muted);margin-top:4px">שני הריוקנים נמצאים באזור האונסן <b>Okuhida</b>, כשעה מטקאיאמה ובדרך לקמיקוצ'י. Miyama Ouan נמצא ב-Hirayu Onsen ויש לו הסעה חינם מתחנת האוטובוס. Kutsuroginoya Yuu נמצא ב-Hitoegane, דקה מתחנת Ippousui.</div></div>
+    </div>
+  </div>
+
+  <article class="card day" id="d11">
+    <div class="dayhead"><div class="num" style="background:var(--onsen)">11</div><div><h3>Takayama-onsen</h3><div class="meta">שבת · 31/10</div></div></div>
+    <div class="daybody">
+      <div class="own"><ul><li>Takayama-onsen</li></ul></div>
+      <div class="move"><span class="pill">טקאיאמה ← Hirayu Onsen · כשעה · ~¥1,600 · בלי הזמנה</span></div>
+      <div class="add"><span class="tag">הצעה</span><ul>
+        <li><span class="t">07:30</span> שוק הבוקר <b>Miyagawa</b> לאורך הנהר: ירקות, מיסו, חמוצים ומלאכת יד. פתוח עד הצהריים.</li>
+        <li><b>Sanmachi Suji</b>, העיר העתיקה: בתי עץ כהים ומבשלות סאקה, שמזהים לפי כדור ענפי הארז שתלוי בכניסה (<i>sugidama</i>). ברוב המבשלות יש טעימות.</li>
+        <li>לנשנש ברחוב <b>סושי Hida beef</b>, שמוגש על קרקר אורז.</li>
+        <li><b>Takayama Jinya</b>, בית המושל ההיסטורי מתקופת אדו.</li>
+        <li><span class="t">~14:00</span> לאסוף את התיקים ולעלות לאוטובוס מתחנת Nohi (ליד תחנת הרכבת) ל-Okuhida. האוטובוסים יוצאים בערך כל שעה.</li>
+        <li><span class="t">ערב</span> צ'ק-אין, אונסן בחוץ, וארוחת <b>קאיסקי</b> בריוקאן. כדאי לאשר מראש את שעת הארוחה.</li>
+      </ul></div>
+    </div>
+  </article>
+</div>
+
+<!-- ================= MATSUMOTO ================= -->
+<div class="city" id="matsumoto">
+  <div class="cityhead"><div class="bar" style="background:var(--matsumoto)"></div>
+    <div><h2>קמיקוצ'י ומצומוטו</h2><div class="dates">1/11 – 2/11 · 2 לילות</div>
+      <div class="hotel"><span class="lbl">מלון</span><b>Onyado Nono Matsumoto Natural Hot Spring</b>
+        <div style="font-size:13px;color:var(--muted);margin-top:2px">גם כאן יש אונסן במלון, ובלילה מגישים ראמן חינם (<i>yonaki soba</i>).</div></div>
+    </div>
+  </div>
+
+  <article class="card day" id="d12">
+    <div class="dayhead"><div class="num" style="background:var(--matsumoto)">12</div><div><h3>Onsen- Kamikochi - Matsumoto</h3><div class="meta">ראשון · 1/11</div></div></div>
+    <div class="daybody">
+      <div class="own"><ul><li>Onsen- Kamikochi - Matsumoto</li></ul></div>
+      <div class="move"><span class="pill">Hirayu ← קמיקוצ'י · 25 דק' · ~¥1,500 · כרטיס ביום עצמו</span><span class="pill">קמיקוצ'י ← Shin-Shimashima ← מצומוטו · כשעה וחצי · ~¥3,800 · הזמנה חובה</span></div>
+      <div class="add"><span class="tag">הצעה</span><ul>
+        <li><span class="t">בוקר</span> אחרי ארוחת הבוקר בריוקאן, אוטובוס מ-Hirayu Onsen לקמיקוצ'י. אפשר לקנות כרטיס בתחנה ביום עצמו.</li>
+        <li>לרדת בתחנה <b>Taisho-ike</b>, לפני התחנה האחרונה, וללכת לאורך נהר Azusa דרך <b>Tashiro Pond</b> עד גשר <b>Kappa-bashi</b>. כשעה של הליכה שטוחה ויפה במיוחד.</li>
+        <li>מי שרוצה עוד: <b>Myojin Pond</b>, כשעה לכל כיוון מ-Kappa-bashi.</li>
+        <li>בתחילת נובמבר עצי הלגש בעמק צהובים-זהובים, זו עונה מצוינת. בבוקר הטמפרטורה קרובה ל-0°, אז צריך מעיל ושכבות. בסוף שבוע יש יותר מטיילים.</li>
+        <li>בתחנת האוטובוס בקמיקוצ'י יש לוקרים לתיקים קטנים.</li>
+        <li><span class="t">אחה״צ</span> אוטובוס Alpico ל-Shin-Shimashima (הזמנה מראש) ומשם רכבת קצרה למצומוטו.</li>
+        <li><span class="t">ערב</span> <b>Nawate-dori</b>, רחוב הצפרדעים, ו-<b>Nakamachi</b>, רחוב של מחסנים לבנים. ארוחת ערב: <b>שינשו סובה</b>, הסובה המקומית של נאגאנו.</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <article class="card day" id="d13">
+    <div class="dayhead"><div class="num" style="background:var(--matsumoto)">13</div><div><h3>Matsumoto - Kiso valley - Matsumoto</h3><div class="meta">שני · 2/11</div></div></div>
+    <div class="daybody">
+      <div class="own"><ul><li>Matsumoto - Kiso valley - Matsumoto</li></ul></div>
+      <div class="add"><span class="tag">הצעה</span><ul>
+        <li><span class="t">08:30</span> <b>Matsumoto Castle</b>, "טירת העורב" השחורה, בשעת הפתיחה. זו אחת מחמש הטירות ביפן שהוכרזו כאוצר לאומי, והמגדל מעץ מקורי. המדרגות בפנים תלולות מאוד. כשעה.</li>
+        <li><span class="t">~10:30</span> רכבת <b>Shinano</b> מהירה מתחנת מצומוטו ל-Nakatsugawa (כ-1:15), ומשם אוטובוס של 25 דקות ל-<b>Magome</b>.</li>
+        <li><span class="t">צהריים</span> ארוחה במגומה, ואחר כך הליכה בדרך <b>Nakasendo</b> העתיקה מ-<b>Magome</b> ל-<b>Tsumago</b>: 8 ק"מ, 2.5–3 שעות, ובכיוון הזה רוב הדרך בירידה. באמצע יש בית תה עתיק שמגיש תה חינם. לאורך הדרך תלויים פעמונים להרחקת דובים, ומצלצלים בהם כשעוברים.</li>
+        <li><span class="t">אחה״צ</span> להסתובב ב-Tsumago, עיירת דואר שמורה ובלי חוטי חשמל. משם אוטובוס של 15 דקות לתחנת Nagiso ורכבת חזרה למצומוטו (כשעתיים).</li>
+        <li><b>אם רוצים יום קל יותר:</b> לוותר על ההליכה ולנסוע ל-<b>Narai-juku</b>, עיירת דואר באורך קילומטר, כשעה ברכבת מקומית ממצומוטו.</li>
+        <li><span class="t">ערב</span> לארוז לטוקיו. החלק ההררי נגמר.</li>
+      </ul></div>
+    </div>
+  </article>
+</div>
+
+<!-- ================= TOKYO 2 ================= -->
+<div class="city" id="tokyo2">
+  <div class="cityhead"><div class="bar" style="background:var(--tokyo)"></div>
+    <div><h2>טוקיו · גינזה</h2><div class="dates">3/11 – 5/11 · 2 לילות</div>
+      <div class="hotel"><span class="lbl">מלון · אפשרויות מהגיליון</span><ol>
+        <li>ginza hotel by grandbell</li>
+        <li class="pref">millennium mitsui garden hotel tokyo</li>
+      </ol></div>
+    </div>
+  </div>
+
+  <article class="card day" id="d14">
+    <div class="dayhead"><div class="num" style="background:var(--tokyo)">14</div><div><h3>גינזה</h3><div class="meta">שלישי · 3/11</div></div></div>
+    <div class="daybody">
+      <div class="add"><span class="tag">הצעה · הגעה</span><ul>
+        <li>כדי להגיע לגינזה בסביבות 13:00: רכבת <b>Azusa</b> ממצומוטו לשינג'וקו (כ-2:40, בסביבות 10:00), ומשם קו Marunouchi לגינזה (17 דקות).</li>
+        <li>3/11 הוא <b>חג לאומי ביפן</b> (יום התרבות). בחגים סוגרים את הרחוב הראשי של גינזה, Chuo-dori, לרכבים מהצהריים, והוא הופך למדרחוב.</li>
+      </ul></div>
+      <div class="own"><ul>
+        <li>מגיעים בסביבות 13:00 לגינזה, א.צהריים – לזרום (<i>אופציה</i> – ראמן <b>Ginza Hachigou</b>)</li>
+        <li>סדנת צ'ופסטיקס <span class="red">Chopsticks Studio Ginza</span> – לקבוע דרך Klook, קוד הנחה OMERZTRAVEL</li>
+        <li><b>Mitsukoshi</b> – כלבו ענק, עם מיצג דגים נדירים בקומה 9, אופנת יוקרה, קומת אוכל תת-קרקעית</li>
+        <li>(בכל הרחוב הבא יש הרבה חנויות אופנה, גם <b>uniqlo</b> חנות הדגל)</li>
+        <li><b>Nissan Crossing</b> – תצוגת מכוניות עתידניות</li>
+        <li><b>Ginza six</b> – קניון חנויות יוקרה</li>
+        <li><b>HAKUHINKAN TOY PARK</b> – חנות צעצועים גדולה, מסלול מכוניות על שלט</li>
+        <li><i>אופציה אם לא נעשה קודם בערב</i> – שיבויה</li>
+        <li><b>Pokemon Center Shibuya</b> – להביא לרומי בובה קטנה :)</li>
+        <li><span class="red">The Bellwood</span> – בר מאוד שווה, מקום 48 בעולם</li>
+      </ul></div>
+      <div class="note"><b>הערה שלכם:</b> תכנית קנזווה, טאקימה, אונסן, מצאמוטו ← בוצע, ראו ימים 8–13</div>
+    </div>
+  </article>
+
+  <article class="card day" id="d15">
+    <div class="dayhead"><div class="num" style="background:var(--tokyo)">15</div><div><h3>גינזה</h3><div class="meta">רביעי · 4/11</div></div></div>
+    <div class="daybody">
+      <div class="own"><ul>
+        <li>לפתוח את הבוקר ב-<b>Fish Market Tsukiji Outer Market</b></li>
+        <li><b>Matsuya</b> – כלבו ענק (אופנה, גלריית אומנות ואוכל)</li>
+        <li><b>Seiko House Ginza Clock Tower</b> – השעון מצלצל כל שעה, מתחת יש חנויות מותגי יוקרה עילית כמו wako ו-seiko</li>
+        <li><b>Ginza Sony Park</b> – בניין סוני, <span class="orange">לברר האם שווה</span></li>
+        <li><b>Hankyu</b> – כלבו ענק אופנת גברים</li>
+        <li><span class="red">א.ערב – להזמין ארוחה שווה בגינזה</span></li>
+      </ul></div>
+      <div class="add"><span class="tag">הצעה</span><ul>
+        <li>בשוק <b>Tsukiji</b> כדאי להגיע לפני 9:00. רוב הדוכנים נסגרים עד 14:00.</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <article class="card day" id="d16">
+    <div class="dayhead"><div class="num" style="background:var(--home)">✈</div><div><h3>חזרה</h3><div class="meta">חמישי · 5/11</div></div></div>
+    <div class="daybody">
+      <div class="own"><ul><li>השלמת קניות ואוכל בגינזה והסביבה, ונסיעה לשדה מהמלון בסביבות 12:00 :)</li></ul></div>
+    </div>
+  </article>
+</div>
+
+<!-- ================= LOGISTICS ================= -->
+<section id="bags">
+  <h2>מזוודות</h2>
+  <div class="opt">
+    <div class="card"><h3>א. מקיוטו ישר לגינזה<span class="rec">מומלץ</span></h3>
+      <p style="margin:0">ב-27/10 בערב שולחים את המזוודות הגדולות מהקבלה במלון בקיוטו, בשירות <b>Yamato TA-Q-BIN</b>, למלון בגינזה, עם תאריך הגעה 3/11. המחיר בערך ¥2,000–3,000 למזוודה. את 28/10 עד 3/11 עוברים עם תיק גב או תיק קטן. זה עוזר במיוחד באוטובוסים לשיראקאווה-גו ובקמיקוצ'י.<br><b>לפני כן:</b> לסגור את המלון בגינזה ולשלוח להם מייל כדי לוודא שהם שומרים מזוודות לאורח שמגיע רק בעוד שבוע.</p></div>
+    <div class="card"><h3>ב. מקיוטו למצומוטו</h3>
+      <p style="margin:0">שולחים ל-<b>Onyado Nono Matsumoto</b> לתאריך 1/11. המלון צריך לשמור את המזוודות רק כמה ימים, ומלונות מסכימים לזה בקלות רבה יותר. ב-3/11 לוקחים אותן איתכם ברכבת Azusa, שיש בה מדפים למזוודות.</p></div>
+    <div class="card"><h3>שינקנסן ב-25/10</h3>
+      <p style="margin:0">בשינקנסן, מזוודה שסכום המידות שלה (אורך + רוחב + גובה) מעל 160 ס"מ צריכה מושב עם אזור מזוודות, שמזמינים יחד עם הכרטיס. אפשרות אחרת היא לשלוח את המזוודות ממלון All Day Place ב-23/10 למלון בקיוטו. לפי ההערה שלכם, לוקח להן יומיים להגיע.</p></div>
+  </div>
+</section>
+
+<section id="transport">
+  <h2>תחבורה ו-JR Pass</h2>
+  <div class="card tbl">
+    <table>
+      <thead><tr><th>תאריך</th><th>קטע</th><th>סוג</th><th>לאדם</th></tr></thead>
+      <tbody>
+        <tr><td>25/10</td><td>שינגאווה ← קיוטו · Nozomi</td><td><span class="jr">JR</span></td><td>~¥14,000</td></tr>
+        <tr><td>28/10</td><td>קיוטו ← קנזאווה · Thunderbird + שינקנסן</td><td><span class="jr">JR</span></td><td>~¥8,000</td></tr>
+        <tr><td>30/10</td><td>קנזאווה ← שיראקאווה-גו ← טקאיאמה</td><td><span class="bus">אוטובוס</span></td><td>~¥5,600</td></tr>
+        <tr><td>31/10</td><td>טקאיאמה ← Hirayu Onsen</td><td><span class="bus">אוטובוס</span></td><td>~¥1,600</td></tr>
+        <tr><td>1/11</td><td>Hirayu ← קמיקוצ'י ← מצומוטו</td><td><span class="bus">אוטובוס</span></td><td>~¥5,300</td></tr>
+        <tr><td>2/11</td><td>מצומוטו ← Nakatsugawa, ומ-Nagiso חזרה, כולל אוטובוסים</td><td><span class="jr">JR</span></td><td>~¥6,500</td></tr>
+        <tr><td>3/11</td><td>מצומוטו ← שינג'וקו · Azusa</td><td><span class="jr">JR</span></td><td>~¥6,600</td></tr>
+      </tbody>
+      <tfoot><tr><td></td><td>סה״כ בין ערים</td><td></td><td>~¥47,600</td></tr></tfoot>
+    </table>
+  </div>
+  <div class="card prose" style="margin-top:10px">
+    <p><b>המסקנה: לא לקנות JR Pass ארצי.</b> פס ל-7 ימים עולה בערך ¥50,000 ומעלה. הקטעים שהוא מכסה אצלכם מסתכמים בערך ב-¥35,000, ו-7 ימים ממילא לא יכולים לכסות גם את 25/10 וגם את 3/11. גם כל הקטעים ההרריים הם באוטובוסים, שהפס לא מכסה.</p>
+    <p>הכי פשוט: כרטיסים רגילים לכל נסיעה, וכרטיס <b>Suica</b> או <b>PASMO</b> בטלפון לנסיעות בתוך הערים.</p>
+    <p style="font-size:13px;color:var(--muted)">המחירים בטבלה משוערים ויכולים להשתנות.</p>
+  </div>
+</section>
+
+<section id="weather">
+  <h2>מזג אוויר וציוד</h2>
+  <div class="card prose">
+    <ul>
+      <li><b>טוקיו וקיוטו:</b> בסביבות 13°–21°, נעים. מספיק סווטשירט וג'קט קל.</li>
+      <li><b>קנזאווה:</b> 10°–19°, ולעתים קרובות גשום. כדאי מטרייה קטנה.</li>
+      <li><b>טקאיאמה, Okuhida וקמיקוצ'י:</b> 0°–12°. צריך מעיל חם, כובע ושכבות. זה החלק הכי קר בטיול.</li>
+      <li><b>שלכת:</b> בקמיקוצ'י, בטקאיאמה ובקנזאווה השלכת בשיאה בדיוק בתאריכים שלכם. בקיוטו היא רק מתחילה (השיא באמצע נובמבר).</li>
+      <li>נעליים נוחות להליכה בקמיקוצ'י ובדרך Nakasendo.</li>
+    </ul>
+  </div>
+</section>
+
+<p class="foot">מבוסס על הגיליון JAPAN 2026. תוספות ההצעה, המחירים והשעות משוערים, וכדאי לאמת אותם מול האתרים הרשמיים לפני שמזמינים.</p>
+</div>
+
+<script>
+(function(){
+  var key='japan2026-todo';
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(key)||'{}')||{}}catch(e){state={}}
+  document.querySelectorAll('#todolist input[type=checkbox]').forEach(function(cb){
+    var li=cb.closest('li');
+    if(state[cb.id]){cb.checked=true;li.classList.add('done')}
+    cb.addEventListener('change',function(){
+      li.classList.toggle('done',cb.checked);
+      state[cb.id]=cb.checked;
+      try{localStorage.setItem(key,JSON.stringify(state))}catch(e){}
+    });
+  });
+})();
+</script>
